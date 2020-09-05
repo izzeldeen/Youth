@@ -1,0 +1,52 @@
+﻿@model CMS.Models.CategoryModel
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Categories</h1>
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-12">
+            <!-- Basic Card Example -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Edit @Model.NameEn</h6>
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-controller="Categories" asp-action="EditAction" class="form-row" enctype="multipart/form-data">
+                        <div class="col-md-6">
+                            <label>
+                                Country Name(En)
+                            </label>
+                            <input type="text" placeholder="Ex : Yoghurt" name="NameEn" value="@Model.NameEn" class="form-control" />
+                        </div>
+                        <div class="col-md-6">
+                            <label>
+                                Country Name(Ar)
+                            </label>
+                            <input type="text" placeholder="مثال : البان " name="NameAr" value="@Model.NameAr" class="form-control" />
+                        </div>
+                        <div class="col-md-12 mt-3">
+                            <label>
+                                Category Banner
+                            </label>
+                            <input type="file" name="Banner" class="form-control-file" required />
+                        </div>
+                        <div class="col-md-12 text-center mt-5">
+                            <input type="hidden" value="@Model.Id" name="Id" class="btn btn-outline-primary" />
+                            <input type="hidden" value="@Model.CreatedAt" name="CreatedAt" class="btn btn-outline-primary" />
+                            <input type="hidden" value="@Model.UpdatedAt" name="UpdatedAt" class="btn btn-outline-primary" />
+                            <input type="submit" value="Submit" class="btn btn-outline-primary" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!-- /.container-fluid -->

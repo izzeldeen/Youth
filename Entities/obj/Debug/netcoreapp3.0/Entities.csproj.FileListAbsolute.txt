@@ -1,0 +1,8 @@
+D:\Freelance\YoghurtAlawaneh\Entities\bin\Debug\netcoreapp3.0\Entities.deps.json
+D:\Freelance\YoghurtAlawaneh\Entities\bin\Debug\netcoreapp3.0\Entities.dll
+D:\Freelance\YoghurtAlawaneh\Entities\bin\Debug\netcoreapp3.0\Entities.pdb
+D:\Freelance\YoghurtAlawaneh\Entities\obj\Debug\netcoreapp3.0\Entities.AssemblyInfoInputs.cache
+D:\Freelance\YoghurtAlawaneh\Entities\obj\Debug\netcoreapp3.0\Entities.AssemblyInfo.cs
+D:\Freelance\YoghurtAlawaneh\Entities\obj\Debug\netcoreapp3.0\Entities.dll
+D:\Freelance\YoghurtAlawaneh\Entities\obj\Debug\netcoreapp3.0\Entities.pdb
+D:\Freelance\YoghurtAlawaneh\Entities\obj\Debug\netcoreapp3.0\Entities.csprojAssemblyReference.cache
