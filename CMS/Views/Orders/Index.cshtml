@@ -1,4 +1,48 @@
-﻿
-@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model CMS.ViewModels.OrdersViewModel
+    <!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Orders</h1>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        @*<div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+            </div>*@
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Username</th>
+                            <th>Total Price</th>
+                            <th>Created At</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var elem in Model.Orders)
+                        {
+                        <tr>
+                            <td>@elem.Id</td>
+                            <td>@elem.Username</td>
+                            <td>@elem.TotalPrice</td>
+                            <td>@elem.CreatedAt</td>
+                            <td>@elem.OrderStatus</td>
+                            <td>
+                                <a class="fas fa-eye mr-2" asp-controller="Orders" asp-action="Details" asp-route-id="@elem.Id"></a>
+                            </td>
+                        </tr>
+
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->

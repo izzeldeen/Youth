@@ -42,7 +42,7 @@ namespace DAL.Implemntations
 
         public Product Insert(ProductDto model)
         {
-            var product = new Product { NameAr = model.NameAr, NameEn = model.NameEn, CreatedAt = DateTime.Now, CategoryId = model.CategoryId, CountryId = model.CountryId, DescreptionAr = model.DescreptionAr, DescreptionEn = model.DescreptionEn };
+            var product = new Product { NameAr = model.NameAr, NameEn = model.NameEn, CreatedAt = DateTime.Now, CategoryId = model.CategoryId, CountryId = model.CountryId, DescreptionAr = model.DescreptionAr, DescreptionEn = model.DescreptionEn, Quantity = model.Quantity};
 
             _repository.Insert(product);
 
@@ -60,7 +60,7 @@ namespace DAL.Implemntations
 
         public void InsertProductPicture(ProductPictureDto model)
         {
-            var productPicture = new ProductPicture { CreatedAt = DateTime.Now, Image = model.Image, ProductId = model.ProductId };
+            var productPicture = new ProductPicture { CreatedAt = DateTime.Now, Image = model.Image, ProductId = model.ProductId, IsMain = model.IsMain };
 
             context.ProductPictures.Add(productPicture);
 

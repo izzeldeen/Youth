@@ -422,7 +422,6 @@ D:\Freelance\YoghurtAlawaneh\CMS\obj\Debug\netcoreapp3.0\Razor\Views\Countries\A
 D:\Freelance\YoghurtAlawaneh\CMS\obj\Debug\netcoreapp3.0\Razor\Views\Categories\Index.cshtml.g.cs
 D:\Freelance\YoghurtAlawaneh\CMS\obj\Debug\netcoreapp3.0\Razor\Views\Categories\Add.cshtml.g.cs
 D:\Freelance\YoghurtAlawaneh\CMS\obj\Debug\netcoreapp3.0\Razor\Views\Orders\Index.cshtml.g.cs
-D:\Freelance\YoghurtAlawaneh\CMS\obj\Debug\netcoreapp3.0\Razor\Views\Orders\Add.cshtml.g.cs
 D:\Freelance\YoghurtAlawaneh\CMS\obj\Debug\netcoreapp3.0\Razor\Views\Products\Index.cshtml.g.cs
 D:\Freelance\YoghurtAlawaneh\CMS\obj\Debug\netcoreapp3.0\Razor\Views\Products\Add.cshtml.g.cs
 D:\Freelance\YoghurtAlawaneh\CMS\obj\Debug\netcoreapp3.0\Razor\Views\Users\Index.cshtml.g.cs
@@ -430,3 +429,5 @@ D:\Freelance\YoghurtAlawaneh\CMS\obj\Debug\netcoreapp3.0\Razor\Views\Users\Add.c
 D:\Freelance\YoghurtAlawaneh\CMS\obj\Debug\netcoreapp3.0\Razor\Views\Countries\Edit.cshtml.g.cs
 D:\Freelance\YoghurtAlawaneh\CMS\obj\Debug\netcoreapp3.0\Razor\Views\Categories\Edit.cshtml.g.cs
 D:\Freelance\YoghurtAlawaneh\CMS\obj\Debug\netcoreapp3.0\Razor\Views\Products\Edit.cshtml.g.cs
+D:\Freelance\YoghurtAlawaneh\CMS\obj\Debug\netcoreapp3.0\Razor\Views\Orders\Details.cshtml.g.cs
+D:\Freelance\YoghurtAlawaneh\CMS\obj\Debug\netcoreapp3.0\Razor\Views\Orders\Location.cshtml.g.cs

@@ -40,6 +40,11 @@ namespace DAL.Implemntations
             return _repository.GetAll();
         }
 
+        public Status GetStatusById(int statusId)
+        {
+            return context.Status.FirstOrDefault(x => x.Id == statusId);
+        }
+
         public IEnumerable<Order> GetUserOrders(int userId)
         {
             return context.Orders.Where(x => x.UserId == userId).AsEnumerable();
