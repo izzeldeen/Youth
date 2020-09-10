@@ -43,7 +43,6 @@ namespace CMS.Controllers
             {
                 var category = _categoriesRepository.GetCategoryById(elem.CategoryId);
                 var country = _countriesRepository.GetCountryById(elem.CountryId);
-
                 var product = new ProductViewModel();
                 product.Id = elem.Id;
                 product.NameAr = elem.NameAr;
@@ -53,10 +52,8 @@ namespace CMS.Controllers
                 product.CreatedAt = elem.CreatedAt;
                 product.CountryName = country.NameEn;
                 product.CategoryName = category.NameEn;
-
                 list.Add(product);
             }
-
             model.Products = list;
             return View(model);
         }

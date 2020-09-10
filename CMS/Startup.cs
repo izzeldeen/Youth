@@ -44,6 +44,7 @@ namespace CMS
             services.AddScoped<DataContext>();
             services.AddScoped<ModelValidations>();
             services.AddScoped<ImageUploader>();
+          
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,49 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model DAL.Dto.RegisterDto
+
+
+<section class="ftco-section contact-section bg-light">
+    <div class="container">
+        <div class="row block-9">
+            <div class="col-md-6 order-md-last d-flex mx-auto">
+
+                <form asp-controller="Auth" asp-action="Register" enctype="multipart/form-data" class="bg-white p-5 contact-form">
+                    @*@if (ViewBag["Message"] != null && ViewBag["Message"] != "")
+                        {
+                        <div class="form-group">
+                            <div class="alert alert-danger" role="alert">
+                                @ViewBag["Message"]
+                            </div>
+                        </div>
+                        }*@
+                    <h5 class="text-center">Sign In</h5>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Firstname" name="Firstname">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Lastname" name="Lastname">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Phonenumber" name="Phonenumber">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password" name="Password">
+                    </div>
+                    <div class="form-group">
+                        <input type="file" class="form-control-file" name="Avatar">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Sign In" class="btn btn-primary py-3 px-5">
+                        <a asp-controller="Auth" asp-action="Login" class="btn btn-success py-3 px-5" >Login</a>
+                    </div>
+                </form>
+
+            </div>
+
+
+        </div>
+    </div>
+</section>
+

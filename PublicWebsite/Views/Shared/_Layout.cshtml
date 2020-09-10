@@ -1,32 +1,37 @@
-﻿<!DOCTYPE html>
+﻿
+@{
+    @using System.Security.Claims;
+
+    @if (((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.Name) != null)
+    {
+        string name = ((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.Name).Value;
+        string avatar = ((ClaimsIdentity)User.Identity).FindFirst("Image").Value;
+    }
+
+
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Vegefoods - Free Bootstrap 4 Template by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="~/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="~/css/animate.css">
-
     <link rel="stylesheet" href="~/css/owl.carousel.min.css">
     <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="~/css/magnific-popup.css">
-
     <link rel="stylesheet" href="~/css/aos.css">
-
     <link rel="stylesheet" href="~/css/ionicons.min.css">
-
     <link rel="stylesheet" href="~/css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="~/css/jquery.timepicker.css">
-
-
     <link rel="stylesheet" href="~/css/flaticon.css">
     <link rel="stylesheet" href="~/css/icomoon.css">
     <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/StyleSheet.css" >
 </head>
 <body class="goto-here">
     <div class="py-1 bg-primary">
@@ -63,7 +68,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown04">
-                            <a class="dropdown-item" asp-controller="Home" asp-action="Shop">Shop</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="Index">Shop</a>
                             <a class="dropdown-item" asp-controller="Home" asp-action="WishList">Wishlist</a>
                             <a class="dropdown-item" asp-controller="Home" asp-action="Product">Single Product</a>
                             <a class="dropdown-item" asp-controller="Home" asp-action="Cart">Cart</a>
@@ -73,14 +78,36 @@
                     <li class="nav-item"><a asp-controller="Home" asp-action="About" class="nav-link">About</a></li>
                     <li class="nav-item"><a asp-controller="Home" asp-action="Blog" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a asp-controller="Home" asp-action="Contact" class="nav-link">Contact</a></li>
-                    <li class="nav-item cta cta-colored"><a asp-controller="Home" asp-action="Cart" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+                    <li class="nav-item cta cta-colored"><a asp-controller="Order" asp-action="Cart" class="nav-link"><span id="icon-shopping_cart" class="icon-shopping_cart"></span></a></li>
 
+
+                    @if (((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.Name) == null)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Auth" asp-action="Register">Sign In</a>
+                        </li>
+                    }
+                    else
+                    {
+                        string name = ((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.Name).Value;
+                        string avatar = ((ClaimsIdentity)User.Identity).FindFirst("Image").Value;
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@name</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                <a class="dropdown-item" asp-controller="Home" asp-action="Shop">Shop</a>
+                                <a class="dropdown-item" asp-controller="Home" asp-action="Shop">Personal Information</a>
+                                <a class="dropdown-item" asp-controller="Auth" asp-action="Logout">Log out</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <img style="height:50px; width:50px; border-radius:50%;" class="img-profile rounded-circle" src="../../@avatar">
+                        </li>
+                    }
                 </ul>
             </div>
         </div>
     </nav>
     <!-- END nav -->
-
     @RenderBody()
     <footer class="ftco-footer ftco-section">
         <div class="container">
@@ -146,7 +173,6 @@
             </div>
             <div class="row">
                 <div class="col-md-12 text-center">
-
                     <p>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         Copyright &copy;
@@ -157,12 +183,8 @@
             </div>
         </div>
     </footer>
-
-
-
     <!-- loader -->
     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
-
 
     <script src="../js/jquery.min.js"></script>
     <script src="../js/jquery-migrate-3.0.1.min.js"></script>
@@ -181,6 +203,117 @@
     <script src="../js/google-map.js"></script>
     <script src="../js/main.js"></script>
 
-    @RenderSection("Scripts", required: false)
+    <script>
+        
+var cartItems = [];
+CartCounterajax();
+     function CreateCart() {
+        setcookie("Cart",0, 1000000);
+        } 
+
+    function AddToCart(ProductId) {
+        if(cartItems[0] == "") {cartItems = ProductId}
+        else {cartItems += "-"  +  ProductId;}
+        CartLastValue();
+        CartCounterajax();
+    }
+function setCookie(name,value,exdays){
+    var date=new Date();
+    date.setTime(date.getTime()+(exdays*24*60*60*1000));
+    var expires="expires="+date.toGMTString();
+    document.cookie =name + "=" + value + "; " + expires + "path=/";
+    CartCounterajax();
+}
+     function CartLastValue(values)
+     {
+        if(getCookie('Cart') === '')
+        {
+              setCookie("Cart" , cartItems , 1000);
+              document.cookie = "Cart=0" + cartItems + ";" + "path=/";
+              console.log(document.cookie);
+        }
+        else
+        {
+          var str = document.cookie;
+          var res = str.split(";");
+          console.log(res);
+          var cartCookie = res[2];
+          var CartValue = res[2].split('=');
+          console.log(CartValue);
+          var items = CartValue[1];
+          console.log(items);
+          document.cookie = "Cart="  + items + cartItems  + ";" + "path=/";
+          cartItems = [];
+        }
+     }
+ function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+        function RemoveItem(value) {
+            listItems = [0];
+            var str = document.cookie;
+            var res = str.split(";");
+            var cartCookie = res[2];
+            var CartValue = res[2].split('=');
+            var Items = CartValue[1].split('-');
+            console.log(listItems)
+            for (var x= 0; x < Items.length ; x++)
+            {
+                if (value !=   Items[x]) {
+                    if(Items[x] != 0){ listItems += "-"  + Items[x]; }
+                  
+                } 
+            }
+            console.log("listItems");
+            console.log(listItems);
+             document.cookie = "Cart=" + listItems + ";" + "path=/";
+             loadDoc();
+        }
+    function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "/Order/Cart", true);
+  xhttp.send();
+  window.location.href = window.location.href;
+  CartCounterajax();
+}
+
+ function CartCounter()
+ {
+     var str = document.cookie;
+     var res = str.split(";");
+     var cartCookie = res[2];
+     var CartValue = res[2].split('=');
+    var Items = CartValue[1].split('-');
+    var counter =Items.length-1;
+    return counter;
+ }
+
+ function CartCounterajax() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("icon-shopping_cart").innerHTML =
+     [CartCounter()];
+    }
+
+  }
+  xhttp.open("GET", "/Order/Cart", true);
+  xhttp.send();
+}
+
+</script>
+  @RenderSection("Scripts", required: false)
 </body>
 </html>

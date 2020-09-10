@@ -19,7 +19,7 @@ namespace Context
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<Status> Status { get; set; }
-
+       
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Role>().HasData(new Role { Id = 1, Name = "Admin", CreatedAt = DateTime.Now });
@@ -38,8 +38,12 @@ namespace Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=YoghurtDbV2;User ID=sa;Password=P@ssw0rd;MultipleActiveResultSets=true;");
+            // optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=YoghurtDbV2;User ID=sa;Password=P@ssw0rd;MultipleActiveResultSets=true;");
             // optionsBuilder.UseSqlServer(@"Data Source=198.38.83.200;Initial Catalog=hafelaty_db;User ID=hafelaty_sa;Password=P@ssw0rd;");
+            //Add By izz
+            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-79MDV3E;Initial Catalog=YoghurtDbV2;Trusted_Connection=True;");
+            //Trusted_Connection=True;MultipleActiveResultSets=true
+
         }
     }
 }

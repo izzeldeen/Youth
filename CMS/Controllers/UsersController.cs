@@ -38,7 +38,6 @@ namespace CMS.Controllers
                 var user = new UserViewModel { Firstname = elem.Firstname, Lastname = elem.Lastname, CreatedAt = elem.CreatedAt, Id = elem.Id, IsActive = elem.IsActive, IsBlocked = elem.IsBlocked, Phonenumber = elem.Phonenumber, RoleId = elem.RoleId };
                 list.Add(user);
             }
-
             model.Users = list;
             return View(model);
         }

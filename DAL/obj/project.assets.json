@@ -4880,19 +4880,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mkisw\\.nuget\\packages\\": {}
+    "C:\\Users\\izzel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Freelance\\YoghurtAlawaneh\\DAL\\DAL.csproj",
+      "projectUniqueName": "E:\\Youth\\AlamanehYoghurt\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "D:\\Freelance\\YoghurtAlawaneh\\DAL\\DAL.csproj",
-      "packagesPath": "C:\\Users\\mkisw\\.nuget\\packages\\",
-      "outputPath": "D:\\Freelance\\YoghurtAlawaneh\\DAL\\obj\\",
+      "projectPath": "E:\\Youth\\AlamanehYoghurt\\DAL\\DAL.csproj",
+      "packagesPath": "C:\\Users\\izzel\\.nuget\\packages\\",
+      "outputPath": "E:\\Youth\\AlamanehYoghurt\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mkisw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\izzel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4905,11 +4905,11 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "D:\\Freelance\\YoghurtAlawaneh\\Context\\Context.csproj": {
-              "projectPath": "D:\\Freelance\\YoghurtAlawaneh\\Context\\Context.csproj"
+            "E:\\Youth\\AlamanehYoghurt\\Context\\Context.csproj": {
+              "projectPath": "E:\\Youth\\AlamanehYoghurt\\Context\\Context.csproj"
             },
-            "D:\\Freelance\\YoghurtAlawaneh\\Entities\\Entities.csproj": {
-              "projectPath": "D:\\Freelance\\YoghurtAlawaneh\\Entities\\Entities.csproj"
+            "E:\\Youth\\AlamanehYoghurt\\Entities\\Entities.csproj": {
+              "projectPath": "E:\\Youth\\AlamanehYoghurt\\Entities\\Entities.csproj"
             }
           }
         }
@@ -4938,12 +4938,18 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.0.1, 3.0.1]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

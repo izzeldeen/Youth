@@ -1,4 +1,63 @@
-﻿<section id="home-section" class="hero">
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@model PublicWebsite.ViewModels.CountriesViewModel
+
+
+<section id="home-section" class="hero">
+
+    @*add by izz*@
+    <h1>@localizer["HellowWorld"]</h1>
+
+
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h3 class="text-left" id="myModalLabel">Chose Contry</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <select onchange="choice1(this)" class="form-control">
+                        <option value="0">--Selet Country--</option>
+                        @foreach (var item in Model.Countries)
+                        {
+                            <option value="@item.Id">@item.English</option>
+                        }
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success" data-dismiss="modal" aria-hidden="true">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="modal" tabindex="-1" role="dialog" id="SuspendModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Suspension System</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>asd</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Okay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*end of add *@
     <div class="home-slider owl-carousel">
         <div class="slider-item" style="background-image: url(../images/bg_1.jpg);">
             <div class="overlay"></div>
@@ -159,7 +218,7 @@
                                 <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
                                     <span><i class="ion-ios-menu"></i></span>
                                 </a>
-                                <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                                <a onclick="AddToCart(1)" class="buy-now d-flex justify-content-center align-items-center mx-1">
                                     <span><i class="ion-ios-cart"></i></span>
                                 </a>
                                 <a href="#" class="heart d-flex justify-content-center align-items-center ">
@@ -530,3 +589,40 @@
         </div>
     </div>
 </section>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+    console.log(document.cookie);
+    if (getCookie('Contry') === "") {
+        $(document).ready(function () {
+            $('#myModal').modal('show');
+        });
+    }
+    else {
+        console.log("cookies is not null");
+    }
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+
+                return c.substring(name.length, c.length);
+            }
+        }
+
+        return "";
+    }
+    function choice1(select) {
+        document.cookie = 'Contry=' + select.options[select.selectedIndex].value + ';';
+        console.log(document.cookie);
+    };
+</script>
+
+
+

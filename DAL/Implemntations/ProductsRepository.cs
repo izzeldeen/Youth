@@ -2,6 +2,7 @@
 using DAL.Dto;
 using DAL.Interfaces;
 using Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,8 @@ namespace DAL.Implemntations
         {
             return context.Measurments.AsEnumerable();
         }
+
+      
 
         public Product GetProductById(int Id)
         {
@@ -71,5 +74,33 @@ namespace DAL.Implemntations
         {
             _repository.Update(model);
         }
+
+
+        public IEnumerable<Product> GetProductByContry(int CountryId , int CategoryId)
+        {
+            if(CategoryId == 0)
+            {
+                return context.Products.Where(x => x.CountryId == CountryId).ToList();
+            }
+
+            return context.Products.Where(x => x.CountryId == CountryId && x.CategoryId == CategoryId);
+        }
+
+        public ProductPicture GetProductPictuerById(int ProductId)
+        {
+            return context.ProductPictures.FirstOrDefault(x => x.ProductId == ProductId);
+        }
+
+        public ProductSpecification GetProductSpecification(int ProductId)
+        {
+            return context.ProductSpecifications.Include(x=> x.Product).FirstOrDefault(x => x.ProductId == ProductId);
+        }
+
+        public List<Product> GetProductByIDS(List<int> IDs)
+        {
+             return IDs.Select(id => context.Products.Find(id)).OrderBy(x=>x.Id).ToList();
+        }
+
+        
     }
 }

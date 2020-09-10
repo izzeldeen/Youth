@@ -6,3 +6,12 @@ D:\Freelance\YoghurtAlawaneh\Entities\obj\Debug\netcoreapp3.0\Entities.AssemblyI
 D:\Freelance\YoghurtAlawaneh\Entities\obj\Debug\netcoreapp3.0\Entities.dll
 D:\Freelance\YoghurtAlawaneh\Entities\obj\Debug\netcoreapp3.0\Entities.pdb
 D:\Freelance\YoghurtAlawaneh\Entities\obj\Debug\netcoreapp3.0\Entities.csprojAssemblyReference.cache
+E:\Youth\AlamanehYoghurt\Entities\bin\Debug\netcoreapp3.0\Entities.deps.json
+E:\Youth\AlamanehYoghurt\Entities\bin\Debug\netcoreapp3.0\Entities.dll
+E:\Youth\AlamanehYoghurt\Entities\bin\Debug\netcoreapp3.0\Entities.pdb
+E:\Youth\AlamanehYoghurt\Entities\obj\Debug\netcoreapp3.0\Entities.AssemblyInfoInputs.cache
+E:\Youth\AlamanehYoghurt\Entities\obj\Debug\netcoreapp3.0\Entities.AssemblyInfo.cs
+E:\Youth\AlamanehYoghurt\Entities\obj\Debug\netcoreapp3.0\Entities.csproj.CoreCompileInputs.cache
+E:\Youth\AlamanehYoghurt\Entities\obj\Debug\netcoreapp3.0\Entities.dll
+E:\Youth\AlamanehYoghurt\Entities\obj\Debug\netcoreapp3.0\Entities.pdb
+E:\Youth\AlamanehYoghurt\Entities\obj\Debug\netcoreapp3.0\Entities.csprojAssemblyReference.cache

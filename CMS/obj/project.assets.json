@@ -8304,19 +8304,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mkisw\\.nuget\\packages\\": {}
+    "C:\\Users\\izzel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Freelance\\YoghurtAlawaneh\\CMS\\CMS.csproj",
+      "projectUniqueName": "E:\\Youth\\AlamanehYoghurt\\CMS\\CMS.csproj",
       "projectName": "CMS",
-      "projectPath": "D:\\Freelance\\YoghurtAlawaneh\\CMS\\CMS.csproj",
-      "packagesPath": "C:\\Users\\mkisw\\.nuget\\packages\\",
-      "outputPath": "D:\\Freelance\\YoghurtAlawaneh\\CMS\\obj\\",
+      "projectPath": "E:\\Youth\\AlamanehYoghurt\\CMS\\CMS.csproj",
+      "packagesPath": "C:\\Users\\izzel\\.nuget\\packages\\",
+      "outputPath": "E:\\Youth\\AlamanehYoghurt\\CMS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mkisw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\izzel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8329,8 +8329,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "D:\\Freelance\\YoghurtAlawaneh\\DAL\\DAL.csproj": {
-              "projectPath": "D:\\Freelance\\YoghurtAlawaneh\\DAL\\DAL.csproj"
+            "E:\\Youth\\AlamanehYoghurt\\DAL\\DAL.csproj": {
+              "projectPath": "E:\\Youth\\AlamanehYoghurt\\DAL\\DAL.csproj"
             }
           }
         }
@@ -8377,6 +8377,16 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.0.1, 3.0.1]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.0.3, 3.0.3]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -8385,7 +8395,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

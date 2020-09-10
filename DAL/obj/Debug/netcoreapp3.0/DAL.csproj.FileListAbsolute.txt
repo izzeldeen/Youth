@@ -11,3 +11,17 @@ D:\Freelance\YoghurtAlawaneh\DAL\obj\Debug\netcoreapp3.0\DAL.AssemblyInfo.cs
 D:\Freelance\YoghurtAlawaneh\DAL\obj\Debug\netcoreapp3.0\DAL.csproj.CopyComplete
 D:\Freelance\YoghurtAlawaneh\DAL\obj\Debug\netcoreapp3.0\DAL.dll
 D:\Freelance\YoghurtAlawaneh\DAL\obj\Debug\netcoreapp3.0\DAL.pdb
+E:\Youth\AlamanehYoghurt\DAL\bin\Debug\netcoreapp3.0\DAL.deps.json
+E:\Youth\AlamanehYoghurt\DAL\bin\Debug\netcoreapp3.0\DAL.dll
+E:\Youth\AlamanehYoghurt\DAL\bin\Debug\netcoreapp3.0\DAL.pdb
+E:\Youth\AlamanehYoghurt\DAL\bin\Debug\netcoreapp3.0\Context.dll
+E:\Youth\AlamanehYoghurt\DAL\bin\Debug\netcoreapp3.0\Entities.dll
+E:\Youth\AlamanehYoghurt\DAL\bin\Debug\netcoreapp3.0\Context.pdb
+E:\Youth\AlamanehYoghurt\DAL\bin\Debug\netcoreapp3.0\Entities.pdb
+E:\Youth\AlamanehYoghurt\DAL\obj\Debug\netcoreapp3.0\DAL.csprojAssemblyReference.cache
+E:\Youth\AlamanehYoghurt\DAL\obj\Debug\netcoreapp3.0\DAL.AssemblyInfoInputs.cache
+E:\Youth\AlamanehYoghurt\DAL\obj\Debug\netcoreapp3.0\DAL.AssemblyInfo.cs
+E:\Youth\AlamanehYoghurt\DAL\obj\Debug\netcoreapp3.0\DAL.csproj.CoreCompileInputs.cache
+E:\Youth\AlamanehYoghurt\DAL\obj\Debug\netcoreapp3.0\DAL.csproj.CopyComplete
+E:\Youth\AlamanehYoghurt\DAL\obj\Debug\netcoreapp3.0\DAL.dll
+E:\Youth\AlamanehYoghurt\DAL\obj\Debug\netcoreapp3.0\DAL.pdb

@@ -2,6 +2,7 @@
 using Entities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace DAL.Interfaces
@@ -16,5 +17,11 @@ namespace DAL.Interfaces
         void Delete(int Id);
         void Update(Product model);
         Product GetProductById(int Id);
+        //Add By izz
+        IEnumerable<Product> GetProductByContry(int CountryId , int CategoryId);
+        public ProductPicture GetProductPictuerById(int ProductId);
+        public ProductSpecification GetProductSpecification(int ProductId);
+        public List<Product> GetProductByIDS(List<int> IDs);
+
     }
 }
