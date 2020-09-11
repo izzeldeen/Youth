@@ -73,7 +73,7 @@ namespace Context.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2020, 9, 9, 13, 3, 52, 87, DateTimeKind.Local).AddTicks(7367),
+                            CreatedAt = new DateTime(2020, 9, 11, 11, 31, 52, 125, DateTimeKind.Local).AddTicks(3834),
                             NameAr = "الاردن",
                             NameEn = "Jordan",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -107,7 +107,7 @@ namespace Context.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2020, 9, 9, 13, 3, 52, 87, DateTimeKind.Local).AddTicks(9091),
+                            CreatedAt = new DateTime(2020, 9, 11, 11, 31, 52, 125, DateTimeKind.Local).AddTicks(5982),
                             UnitAr = "كيلوجرام",
                             UnitEn = "Kilogram",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -115,7 +115,7 @@ namespace Context.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2020, 9, 9, 13, 3, 52, 87, DateTimeKind.Local).AddTicks(9298),
+                            CreatedAt = new DateTime(2020, 9, 11, 11, 31, 52, 125, DateTimeKind.Local).AddTicks(6236),
                             UnitAr = "جرام",
                             UnitEn = "gram",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -123,7 +123,7 @@ namespace Context.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2020, 9, 9, 13, 3, 52, 87, DateTimeKind.Local).AddTicks(9328),
+                            CreatedAt = new DateTime(2020, 9, 11, 11, 31, 52, 125, DateTimeKind.Local).AddTicks(6292),
                             UnitAr = "كبير",
                             UnitEn = "Large",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -131,7 +131,7 @@ namespace Context.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2020, 9, 9, 13, 3, 52, 87, DateTimeKind.Local).AddTicks(9353),
+                            CreatedAt = new DateTime(2020, 9, 11, 11, 31, 52, 125, DateTimeKind.Local).AddTicks(6324),
                             UnitAr = "متوسط",
                             UnitEn = "Medium",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -139,9 +139,17 @@ namespace Context.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2020, 9, 9, 13, 3, 52, 87, DateTimeKind.Local).AddTicks(9376),
+                            CreatedAt = new DateTime(2020, 9, 11, 11, 31, 52, 125, DateTimeKind.Local).AddTicks(6353),
                             UnitAr = "صغير",
                             UnitEn = "Small",
+                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CreatedAt = new DateTime(2020, 9, 11, 11, 31, 52, 125, DateTimeKind.Local).AddTicks(6395),
+                            UnitAr = "لتر",
+                            UnitEn = "Liter",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
@@ -184,6 +192,32 @@ namespace Context.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Orders");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(2020, 9, 11, 11, 31, 52, 125, DateTimeKind.Local).AddTicks(9985),
+                            DeliveryInfo = "Dahiet AlRashhed",
+                            DeliveryLatitude = 32f,
+                            DeliveryLongitude = 35f,
+                            StatusId = 1,
+                            TotalPrice = 15,
+                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(2020, 9, 11, 11, 31, 52, 126, DateTimeKind.Local).AddTicks(6867),
+                            DeliveryInfo = "Dahiet AlRashhed",
+                            DeliveryLatitude = 32f,
+                            DeliveryLongitude = 35f,
+                            StatusId = 1,
+                            TotalPrice = 15,
+                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 2
+                        });
                 });
 
             modelBuilder.Entity("Entities.OrderItem", b =>
@@ -221,6 +255,30 @@ namespace Context.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("OrderItems");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(2020, 9, 11, 11, 31, 52, 126, DateTimeKind.Local).AddTicks(3870),
+                            ItemPrice = 2,
+                            OrderId = 1,
+                            ProductId = 4,
+                            Quantity = 4,
+                            TotalPrice = 8,
+                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(2020, 9, 11, 11, 31, 52, 126, DateTimeKind.Local).AddTicks(6989),
+                            ItemPrice = 2,
+                            OrderId = 2,
+                            ProductId = 5,
+                            Quantity = 4,
+                            TotalPrice = 8,
+                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        });
                 });
 
             modelBuilder.Entity("Entities.Product", b =>
@@ -251,6 +309,9 @@ namespace Context.Migrations
                     b.Property<string>("NameEn")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("Quantity")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
 
@@ -275,6 +336,9 @@ namespace Context.Migrations
 
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsMain")
+                        .HasColumnType("bit");
 
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
@@ -344,51 +408,17 @@ namespace Context.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2020, 9, 9, 13, 3, 52, 83, DateTimeKind.Local).AddTicks(6268),
+                            CreatedAt = new DateTime(2020, 9, 11, 11, 31, 52, 118, DateTimeKind.Local).AddTicks(3153),
                             Name = "Admin",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2020, 9, 9, 13, 3, 52, 87, DateTimeKind.Local).AddTicks(5352),
+                            CreatedAt = new DateTime(2020, 9, 11, 11, 31, 52, 125, DateTimeKind.Local).AddTicks(1373),
                             Name = "User",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
-                });
-
-            modelBuilder.Entity("Entities.ShoppingCart", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("Count")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("UserId1")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.HasIndex("UserId1");
-
-                    b.ToTable("ShoppingCarts");
                 });
 
             modelBuilder.Entity("Entities.Status", b =>
@@ -418,7 +448,7 @@ namespace Context.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2020, 9, 9, 13, 3, 52, 88, DateTimeKind.Local).AddTicks(1271),
+                            CreatedAt = new DateTime(2020, 9, 11, 11, 31, 52, 125, DateTimeKind.Local).AddTicks(8298),
                             NameAr = "على الانتظار",
                             NameEn = "Pending",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -426,7 +456,7 @@ namespace Context.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2020, 9, 9, 13, 3, 52, 88, DateTimeKind.Local).AddTicks(1718),
+                            CreatedAt = new DateTime(2020, 9, 11, 11, 31, 52, 125, DateTimeKind.Local).AddTicks(8560),
                             NameAr = "تم القبول",
                             NameEn = "Accepted",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -434,15 +464,15 @@ namespace Context.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2020, 9, 9, 13, 3, 52, 88, DateTimeKind.Local).AddTicks(1827),
+                            CreatedAt = new DateTime(2020, 9, 11, 11, 31, 52, 125, DateTimeKind.Local).AddTicks(8604),
                             NameAr = "مرفوض",
-                            NameEn = "Removed",
+                            NameEn = "Rejected",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2020, 9, 9, 13, 3, 52, 88, DateTimeKind.Local).AddTicks(1903),
+                            CreatedAt = new DateTime(2020, 9, 11, 11, 31, 52, 125, DateTimeKind.Local).AddTicks(8635),
                             NameAr = "ملغي",
                             NameEn = "Canceled",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -563,19 +593,6 @@ namespace Context.Migrations
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Entities.ShoppingCart", b =>
-                {
-                    b.HasOne("Entities.ProductSpecification", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Entities.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId1");
                 });
 
             modelBuilder.Entity("Entities.User", b =>

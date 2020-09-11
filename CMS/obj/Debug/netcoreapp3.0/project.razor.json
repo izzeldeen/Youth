@@ -10195,11 +10195,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Orders\\Add.cshtml",
-      "TargetPath": "Views\\Orders\\Add.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Countries\\Add.cshtml",
       "TargetPath": "Views\\Countries\\Add.cshtml",
       "FileKind": "mvc"
@@ -10245,6 +10240,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Orders\\Details.cshtml",
+      "TargetPath": "Views\\Orders\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Categories\\Index.cshtml",
       "TargetPath": "Views\\Categories\\Index.cshtml",
       "FileKind": "mvc"
@@ -10267,6 +10267,11 @@
     {
       "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Auth\\Index.cshtml",
       "TargetPath": "Views\\Auth\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Orders\\Location.cshtml",
+      "TargetPath": "Views\\Orders\\Location.cshtml",
       "FileKind": "mvc"
     },
     {

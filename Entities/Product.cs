@@ -11,6 +11,7 @@ namespace Entities
         public string DescreptionAr { get; set; }
         public string DescreptionEn { get; set; }
         public int CategoryId { get; set; }
+        public int? Quantity { get; set; }
         public Category Category { get; set; }
         public int CountryId { get; set; }
         public Country Country { get; set; }

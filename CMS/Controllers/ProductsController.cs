@@ -92,18 +92,25 @@ namespace CMS.Controllers
             return View(model);
         }
 
-        public IActionResult Action(ProductModel model, IFormFile Image)
+        public IActionResult Action(ProductModel model, IFormFile Image, List<IFormFile> Images)
         {
             if (_modelValidations.IsObjectNull(model))
                 return RedirectToAction("Add", "Products");
 
             var imageUrl = _imageUploader.Upload(Image, Path);
 
-            var productDto = new ProductDto { NameAr = model.NameAr, NameEn = model.NameEn, DescreptionAr = model.DescreptionAr, DescreptionEn = model.DescreptionEn, CategoryId = model.CategoryId, CountryId = model.CountryId };
+            var productDto = new ProductDto { NameAr = model.NameAr, NameEn = model.NameEn, DescreptionAr = model.DescreptionAr, DescreptionEn = model.DescreptionEn, CategoryId = model.CategoryId, CountryId = model.CountryId, Quantity = model.Quantity };
             var product = _productsRepository.Insert(productDto);
 
-            var imageDto = new ProductPictureDto { ProductId = product.Id, Image = imageUrl };
+            var imageDto = new ProductPictureDto { ProductId = product.Id, Image = imageUrl, IsMain = true};
             _productsRepository.InsertProductPicture(imageDto);
+
+            foreach(var elem in Images)
+            {
+                var url = _imageUploader.Upload(elem, Path);
+                var newImageDto = new ProductPictureDto { ProductId = product.Id, Image = url, IsMain = false };
+                _productsRepository.InsertProductPicture(newImageDto);
+            }
 
             var measurmentDto = new ProductSpecificationDto { ProductId = product.Id, MeasurmentId = model.MeasurmentId, Price = model.Price };
             _productsRepository.InsertProductMeasurment(measurmentDto);

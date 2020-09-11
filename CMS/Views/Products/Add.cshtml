@@ -41,7 +41,7 @@
                             </label>
                             <textarea rows="5" name="DescreptionAr" class="form-control" required></textarea>
                         </div>
-                        <div class="col-md-6 mt-3">
+                        <div class="col-md-4 mt-3">
                             <label>
                                 Product Size
                             </label>
@@ -54,11 +54,17 @@
                                 }
                             </select>
                         </div>
-                        <div class="col-md-6 mt-3">
+                        <div class="col-md-4 mt-3">
                             <label>
                                 Product Price
                             </label>
                             <input type="number" name="Price" class="form-control" min="0" required />
+                        </div>
+                        <div class="col-md-4 mt-3">
+                            <label>
+                                Product Quantity
+                            </label>
+                            <input type="number" name="Quantity" class="form-control" min="0" required />
                         </div>
                         <div class="col-md-6 mt-3">
                             <label>
@@ -86,11 +92,15 @@
                                 }
                             </select>
                         </div>
-                        <div class="col-md-12 mt-3">
+                        <div class="col-md-6 mt-3">
                             <label>
-                                Product Image
+                                Product Main Image
                             </label>
                             <input type="file" name="Image" class="form-control-file" required />
+                        </div>
+                        <div class="col-md-6 mt-3">
+                            <label>Product Images</label>
+                            <input type="file" name="Images" class="form-control-file" required multiple />
                         </div>
                         <div class="col-md-12 text-center mt-5">
                             <input type="submit" value="Submit" class="btn btn-outline-primary" />

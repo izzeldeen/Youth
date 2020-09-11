@@ -12,6 +12,7 @@ namespace DAL.Interfaces
         User Register(RegisterDto model);
         User EditProfile(EditProfileDto model);
         User GetByPhonenumber(string phonenumber);
+        User GetUserById(int Id);
         IEnumerable<User> GetUsers();
         void ChangeAvatar(User user);
         void Logout(int Id);

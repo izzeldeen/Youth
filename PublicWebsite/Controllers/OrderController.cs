@@ -21,7 +21,10 @@ namespace PublicWebsite.Controllers
         [HttpGet]
         public IActionResult Cart()
         {
+
             var CartItems = Request.Cookies["Cart"];
+            ShoppingCart shoppingCart = new ShoppingCart();
+            if (CartItems == null) return View(shoppingCart);
             var Items = CartItems.Split("-");
             List<ShoppingCartItem> shoppingCartItems = new List<ShoppingCartItem>();
             double TotalPrice = 0.00;
@@ -55,7 +58,8 @@ namespace PublicWebsite.Controllers
                  }
             }
             }
-           ShoppingCart shoppingCart = new ShoppingCart() { ShoppingCartItems =shoppingCartItems, Price = TotalPrice };
+            shoppingCart.ShoppingCartItems = shoppingCartItems;
+            shoppingCart.Price = TotalPrice;
             return View(shoppingCart);
         }
     }

@@ -8,5 +8,6 @@ namespace DAL.Dto
     {
         public int ProductId { get; set; }
         public string Image { get; set; }
+        public bool IsMain { get; set; }
     }
 }

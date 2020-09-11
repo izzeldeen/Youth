@@ -35,6 +35,7 @@ namespace CMS.Controllers
         }
 
         public IActionResult Index()
+        
         {
             return View(new IndexViewModel { Products = _productsRepository.GetProducts().Count(), Orders = _ordersRepository.GetOrders().Count(), Categories = _categoriesRepository.GetCategories().Count(), Countries = _countriesRepository.GetCountries().Count(), Users = _usersRepository.GetUsers().Count()});
         }

@@ -121,5 +121,10 @@ namespace DAL.Implemntations
             user.IsBlocked = false;
             _repository.Update(user);
         }
+
+        public User GetUserById(int Id)
+        {
+            return _repository.GetById(Id);
+        }
     }
 }
