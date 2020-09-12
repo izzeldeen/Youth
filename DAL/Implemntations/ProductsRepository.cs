@@ -98,7 +98,7 @@ namespace DAL.Implemntations
 
         public List<Product> GetProductByIDS(List<int> IDs)
         {
-             return IDs.Select(id => context.Products.Find(id)).OrderBy(x=>x.Id).ToList();
+             return IDs.Select(id => context.Products.Find(id)).ToList();
         }
 
         

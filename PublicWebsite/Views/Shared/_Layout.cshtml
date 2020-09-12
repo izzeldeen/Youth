@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="~/css/icomoon.css">
     <link rel="stylesheet" href="~/css/style.css">
     <link rel="stylesheet" href="~/css/StyleSheet.css" >
+    <link href="../../fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 </head>
 <body class="goto-here">
     <div class="py-1 bg-primary">
@@ -66,7 +67,7 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a asp-controller="Home" asp-action="Index" class="nav-link">Home</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
+                        <a class="nav-link dropdown-toggle" asp-controller="Product" asp-action="Index" id="dropdown04">Shop</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown04">
                             <a class="dropdown-item" asp-controller="Product" asp-action="Index">Shop</a>
                             <a class="dropdown-item" asp-controller="Home" asp-action="WishList">Wishlist</a>
@@ -94,13 +95,13 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@name</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown04">
-                                <a class="dropdown-item" asp-controller="Home" asp-action="Shop">Shop</a>
-                                <a class="dropdown-item" asp-controller="Home" asp-action="Shop">Personal Information</a>
-                                <a class="dropdown-item" asp-controller="Auth" asp-action="Logout">Log out</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-list"></i> My Orders</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user"></i>Personal Information</a>
+                                <a class="dropdown-item" asp-controller="Auth" asp-action="Logout"><i class="fas fa-sign-out-alt"></i> Log out</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <img style="height:50px; width:50px; border-radius:50%;" class="img-profile rounded-circle" src="../../@avatar">
+                            <img style="height:41px; width:50px; border-radius:50%; margin-top:10px;" class="img-profile rounded-circle" src="../../@avatar">
                         </li>
                     }
                 </ul>
@@ -212,10 +213,10 @@ CartCounterajax();
         } 
 
     function AddToCart(ProductId) {
-        if(cartItems[0] == "") {cartItems = ProductId}
-        else {cartItems += "-"  +  ProductId;}
+        cartItems += "-"  +  ProductId;
         CartLastValue();
         CartCounterajax();
+        console.log(cartItems); 
     }
 function setCookie(name,value,exdays){
     var date=new Date();
@@ -231,6 +232,7 @@ function setCookie(name,value,exdays){
               setCookie("Cart" , cartItems , 1000);
               document.cookie = "Cart=0" + cartItems + ";" + "path=/";
               console.log(document.cookie);
+             cartItems = [];
         }
         else
         {
@@ -243,7 +245,7 @@ function setCookie(name,value,exdays){
           var items = CartValue[1];
           console.log(items);
           document.cookie = "Cart="  + items + cartItems  + ";" + "path=/";
-          cartItems = [];
+         cartItems = [];
         }
      }
  function getCookie(cname) {
@@ -278,7 +280,7 @@ function setCookie(name,value,exdays){
             }
             console.log("listItems");
             console.log(listItems);
-             document.cookie = "Cart=" + listItems + ";" + "path=/";
+            document.cookie = "Cart=" + listItems + ";" + "path=/";
              loadDoc();
         }
     function loadDoc() {
@@ -311,6 +313,37 @@ function setCookie(name,value,exdays){
   xhttp.open("GET", "/Order/Cart", true);
   xhttp.send();
 }
+
+function labelCounter(productId)
+{
+    console.log("input-number-" + productId)
+    var quntity = document.getElementById("input-number-" + productId).value;
+    console.log(quntity);
+    RemoveItemWithOutPostBack(productId);
+    for(var i =0; i< quntity; i++)
+    {
+        console.log("AddItem : Id:" + productId);
+        AddToCart(productId);
+    }
+}
+
+ function RemoveItemWithOutPostBack(value) {
+            listItems = [0];
+            var str = document.cookie;
+            var res = str.split(";");
+            var cartCookie = res[2];
+            var CartValue = res[2].split('=');
+            var Items = CartValue[1].split('-');
+            console.log(listItems)
+            for (var x= 0; x < Items.length ; x++)
+            {
+                if (value !=   Items[x]) {
+                    if(Items[x] != 0){ listItems += "-"  + Items[x]; }
+                  
+                } 
+            }
+             document.cookie = "Cart=" + listItems + ";" + "path=/";
+ }
 
 </script>
   @RenderSection("Scripts", required: false)

@@ -16,7 +16,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-3">
-
                     <div class="row justify-content-center">
                         <div class="col-md-10 mb-5 text-center">
                             <ul _ngcontent-eeg-c71="" class="list-group my-3 ng-star-inserted">
@@ -39,7 +38,7 @@
                         <div class="col-md-6 col-lg-4 ftco-animate fadeInUp ftco-animated">
                             <div class="product">
                                 <a href="#" class="img-prod">
-                                    <img class="img-fluid" src="..\@item.PictuerUrl" alt="Colorlib Template">
+                                    <img class="img-fluid" src="../Documents/Products/@item.PictuerUrl" alt="Colorlib Template">
                                     <span class="status">30%</span>
                                     <div class="overlay"></div>
                                 </a>
@@ -47,7 +46,7 @@
                                     <h3><a href="#">@item.Name</a></h3>
                                     <div class="d-flex">
                                         <div class="pricing">
-                                            <p class="price"><span class="mr-2 price-dc"></span><span class="price-sale">@item.Price</span></p>
+                                            <p class="price"><span class="mr-2 price-dc"></span><span class="price-sale">@item.Price $</span></p>
                                         </div>
                                     </div>
                                     <div class="bottom-area d-flex px-3">
@@ -70,10 +69,9 @@
                     }
 
                 </div>
-
             </div>
-            <div  page-model="@Model.PagingInfo" asp-action="Index" page-class="btn border mx-auto"
-                 page-class-normal="btn btn-light" page-class-selected="btn btn-info active" class="btn-group">
+            <div  page-model="@Model.PagingInfo" asp-action="Index" page-class="btn border"
+                 page-class-normal="btn btn-light" page-class-selected="btn btn-info active" class="btn-group" style="margin-left: 50%;">
             </div>
         </div>
 

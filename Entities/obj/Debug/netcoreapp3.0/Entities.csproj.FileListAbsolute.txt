@@ -14,3 +14,4 @@ E:\Youth\AlamanehYoghurt\Entities\obj\Debug\netcoreapp3.0\Entities.AssemblyInfo.
 E:\Youth\AlamanehYoghurt\Entities\obj\Debug\netcoreapp3.0\Entities.csproj.CoreCompileInputs.cache
 E:\Youth\AlamanehYoghurt\Entities\obj\Debug\netcoreapp3.0\Entities.dll
 E:\Youth\AlamanehYoghurt\Entities\obj\Debug\netcoreapp3.0\Entities.pdb
+E:\Youth\AlamanehYoghurt\Entities\obj\Debug\netcoreapp3.0\Entities.csprojAssemblyReference.cache

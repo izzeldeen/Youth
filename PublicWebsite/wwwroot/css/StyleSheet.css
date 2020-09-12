@@ -11,3 +11,11 @@ li:hover {
     margin-left: auto;
     margin-right: auto;
 }
+
+.Nav-image {
+    padding-top:10px;
+}
+
+.Pagination-div{
+    margin-left: 50% !important;
+}

@@ -3,8 +3,9 @@
 <section class="ftco-section ftco-cart">
     <div class="container">
 
-        @if (Model != null)
+        @if (Model.ShoppingCartItems != null)
         {
+             <form method="post" >
             <div class="row">
                 <div class="col-md-12 ftco-animate fadeInUp ftco-animated">
                     <div class="cart-list">
@@ -20,6 +21,9 @@
                                 </tr>
                             </thead>
                             <tbody>
+                               
+
+                               
                                 @foreach (var item in Model.ShoppingCartItems)
                                 {
                                     <tr class="text-center">
@@ -33,10 +37,10 @@
                                         </td>
 
                                         <td class="price">@item.ProductSpecification.Price</td>
-
                                         <td class="quantity">
                                             <div class="input-group mb-3">
-                                                <input type="text" name="quantity" class="quantity form-control input-number" value="@item.Quntity" min="1" max="100">
+                                               
+                                                 <input type="text" name="quantity" class="quantity form-control input-number" id="input-number-@item.ProductId" value="@item.Quntity" onchange="labelCounter(@item.ProductId)" name="Quntity" min="1" max="100"> 
                                             </div>
                                         </td>
 
@@ -108,13 +112,14 @@
                             <span>@Model.Price</span>
                         </p>
                     </div>
-                    <p><a href="checkout.html" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
+                    <p><a asp-controller="Order" asp-action="Order" asp-route-TotalPrice="@Model.Price"  class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
                 </div>
             </div>
-
+ </form>
         }
 
        <h1>Cart is Empty</h1>
 
     </div>          
 </section>
+

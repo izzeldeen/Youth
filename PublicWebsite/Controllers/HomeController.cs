@@ -55,11 +55,11 @@ namespace PublicWebsite.Controllers
         {
             return View();
         }
-        public IActionResult Blog()
-        {
+        // public IActionResult Blog()
+        // {
 
-            return View();
-        }
+        //     return View();
+        // }
         public IActionResult BlogSingle()
         {
             return View();
@@ -89,6 +89,13 @@ namespace PublicWebsite.Controllers
              productVM = new ProductViewModel() {Id = product.Id , CategoryId = product.Product.CategoryId , Description = product.Product.DescreptionAr , Name = product.Product.NameAr , Price = product.Price, PictuerUrl = _productRepository.GetProductPictuerById(Id).Image }; 
             }
             return View(productVM);
+        }
+
+        
+        public IActionResult Blog(int Id)
+        {
+           
+            return View();
         }
 
         public IActionResult Shop()
