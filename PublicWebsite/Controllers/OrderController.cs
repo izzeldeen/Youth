@@ -35,7 +35,7 @@ namespace PublicWebsite.Controllers
             var Items = CartItems.Split("-");
             List<ShoppingCartItem> shoppingCartItems = new List<ShoppingCartItem>();
             double TotalPrice = 0.00;
-            foreach(var item in Items)
+            foreach(var item in Items.Skip(1))
             {
                  var product = _productRepository.GetProductSpecification(Convert.ToInt32(item));
                  if(product != null)

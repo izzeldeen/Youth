@@ -19,3 +19,9 @@ li:hover {
 .Pagination-div{
     margin-left: 50% !important;
 }
+
+#map {
+    height: 100%;
+    width: 50%;
+    margin-left:20px;
+  }

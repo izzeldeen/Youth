@@ -124,59 +124,25 @@ namespace PublicWebsite.Controllers
 
                 return RedirectToAction("Index", "Home");
             }
+
+         public IActionResult Editprofile()
+        {
+           int userId = int.Parse(((ClaimsIdentity)User.Identity).FindFirst("UserId").Value);
+           var user =   _usersRepository.GetUserById(userId);
+           EditProfileDto profile = new EditProfileDto(){  Id = userId,  Phonenumber = user.Phonenumber ,Firstname = user.Firstname , Lastname = user.Lastname , Avatar = user.Avatar};
+           return View(profile);
         }
 
+        [HttpPost]
+        public IActionResult Editprofile(EditProfileDto profile){
+            if(!ModelState.IsValid) return View(profile);
+            _usersRepository.EditProfile(profile);
+            return RedirectToAction();
+        }
+    }
 
 
-        //public IActionResult Register(RegisterDto model, IFormFile avatar)
-        //{
-        //    if (_modelValidations.IsObjectNull(model))
-        //        return RedirectToAction("Register", "Auth");
 
-        //    if (!_modelValidations.IsValid(model))
-        //        return RedirectToAction("Register", "Home");
-
-
-        //    var user = _usersRepository.Register(new RegisterDto { Phonenumber = model.Phonenumber, Firstname = model.Firstname, Lastname = model.Lastname, Password = model.Password, RoleId = model.RoleId });
-
-        //    if (user == null)
-        //        return RedirectToAction("Register", "Home");
-
-        //    var imageUrl = _imageUploader.Upload(avatar, Path, user.Id);
-
-        //    user.Avatar = imageUrl;
-
-        //    _usersRepository.ChangeAvatar(user);
-        //    var cookie = new CookieDto() { Fullname = user.Firstname + " " + user.Lastname, Avatar = user.Avatar, Phonenumber = user.Phonenumber, UserId = user.Id, RoleId = user.RoleId };
-        //    CreateAuthCookie(cookie);
-
-        //    return RedirectToAction("Login", "Auth");
-
-
-        //}
-
-
-        //public IActionResult Login(LoginModel model)
-        //{
-        //    if (_modelValidations.IsObjectNull(model))
-        //        return View();
-
-        //    if (!_modelValidations.IsValid(model))
-        //        return View();
-
-        //    var user = _usersRepository.Login(new LoginDto { Phonenumber = model.Phonenumber, Password = model.Password });
-
-        //    if (user == null ||  user.IsBlocked == true)
-        //        return RedirectToAction("Login", "Auth");
-
-        //    string fullname = user.Firstname + " " + user.Lastname;
-
-        //    var cookie = new CookieDto { UserId = user.Id, Avatar = user.Avatar, Phonenumber = user.Phonenumber, RoleId = user.RoleId, Fullname = fullname };
-
-        //CreateAuthCookie(cookie);
-
-        //    return RedirectToAction("Index", "Home");
-        //}
 
     
 }

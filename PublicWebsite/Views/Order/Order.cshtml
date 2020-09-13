@@ -1,19 +1,4 @@
 
-<style>
-
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-#map {
-    height: 100%;
-    width: 50%;
-    margin-left:20px;
-  }
-</style>
-
  <div class="container">
             <div class="row">
                 <div class="col-6">
@@ -46,9 +31,6 @@
                     </div>
                     </div>
                     </div>
-
-<button onclick="getLocation()">Try It</button>
-
 <p id="demo"></p>
 
 
@@ -63,7 +45,6 @@
 
 <script async defer src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDlJbYPgHJ4CB-HVgUcBIAR1lxBft9UI3U&callback=initMap"> </script>
 <script>
-    
  function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom:15,
@@ -74,14 +55,9 @@
 
 
 </script> 
-
-
-
-
-
  <script>
 var x = document.getElementById("demo");
-getLocation();
+
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
