@@ -99,7 +99,7 @@ namespace CMS.Controllers
 
             var imageUrl = _imageUploader.Upload(Image, Path);
 
-            var productDto = new ProductDto { NameAr = model.NameAr, NameEn = model.NameEn, DescreptionAr = model.DescreptionAr, DescreptionEn = model.DescreptionEn, CategoryId = model.CategoryId, CountryId = model.CountryId, Quantity = model.Quantity };
+            var productDto = new ProductDto { NameAr = model.NameAr, NameEn = model.NameEn, DescreptionAr = model.DescreptionAr, DescreptionEn = model.DescreptionEn, CategoryId = model.CategoryId, CountryId = model.CountryId, Quantity = model.Quantity, Message = model.Message, IsFeatured = model.IsFeatured };
             var product = _productsRepository.Insert(productDto);
 
             var imageDto = new ProductPictureDto { ProductId = product.Id, Image = imageUrl, IsMain = true};

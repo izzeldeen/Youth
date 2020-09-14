@@ -8,6 +8,7 @@ namespace PublicWebsite.ViewModels
     public class CountriesViewModel
     {
         public List<CountryViewModel> Countries { get; set; }
+        public List<ProductViewModel> products { get; set; }
     }
 
     public class CountryViewModel

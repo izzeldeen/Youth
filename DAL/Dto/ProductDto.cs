@@ -16,5 +16,7 @@ namespace DAL.Dto
         public int Price { get; set; }
         public int CategoryId { get; set; }
         public int CountryId { get; set; }
+        public bool IsFeatured { get; set; }
+        public string Message { get; set; }
     }
 }

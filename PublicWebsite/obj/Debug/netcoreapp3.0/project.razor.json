@@ -10238,6 +10238,11 @@
   "RootNamespace": "PublicWebsite",
   "Documents": [
     {
+      "FilePath": "e:\\Youth\\AlamanehYoghurt\\PublicWebsite\\Views\\User\\Details.cshtml",
+      "TargetPath": "Views\\User\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\Youth\\AlamanehYoghurt\\PublicWebsite\\Views\\Home\\Cart.cshtml",
       "TargetPath": "Views\\Home\\Cart.cshtml",
       "FileKind": "mvc"
@@ -10323,6 +10328,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\Youth\\AlamanehYoghurt\\PublicWebsite\\Views\\User\\Index.cshtml",
+      "TargetPath": "Views\\User\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\Youth\\AlamanehYoghurt\\PublicWebsite\\Views\\Home\\Blog.cshtml",
       "TargetPath": "Views\\Home\\Blog.cshtml",
       "FileKind": "mvc"
@@ -10355,6 +10365,11 @@
     {
       "FilePath": "e:\\Youth\\AlamanehYoghurt\\PublicWebsite\\Views\\Order\\Order.cshtml",
       "TargetPath": "Views\\Order\\Order.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Youth\\AlamanehYoghurt\\PublicWebsite\\Views\\User\\UserOrders.cshtml",
+      "TargetPath": "Views\\User\\UserOrders.cshtml",
       "FileKind": "mvc"
     },
     {

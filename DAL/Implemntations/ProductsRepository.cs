@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DAL.Implemntations
 {
@@ -42,10 +43,14 @@ namespace DAL.Implemntations
         {
             return _repository.GetAll();
         }
+        public async Task<List<Product>> GetFeaturedProducts()
+        {
+            return await context.Products.Where(x => x.IsFeatured == true).Take(8).ToListAsync();
+        }
 
         public Product Insert(ProductDto model)
         {
-            var product = new Product { NameAr = model.NameAr, NameEn = model.NameEn, CreatedAt = DateTime.Now, CategoryId = model.CategoryId, CountryId = model.CountryId, DescreptionAr = model.DescreptionAr, DescreptionEn = model.DescreptionEn, Quantity = model.Quantity};
+            var product = new Product { NameAr = model.NameAr, NameEn = model.NameEn, CreatedAt = DateTime.Now, CategoryId = model.CategoryId, CountryId = model.CountryId, DescreptionAr = model.DescreptionAr, DescreptionEn = model.DescreptionEn, Quantity = model.Quantity, IsFeatured = model.IsFeatured, Message = model.Message};
 
             _repository.Insert(product);
 
@@ -55,7 +60,6 @@ namespace DAL.Implemntations
         public void InsertProductMeasurment(ProductSpecificationDto model)
         {
             var productMeasurment = new ProductSpecification { CreatedAt = DateTime.Now, MeasurmentId = model.MeasurmentId, ProductId = model.ProductId, Price = model.Price };
-
             context.ProductSpecifications.Add(productMeasurment);
             context.SaveChanges();
 

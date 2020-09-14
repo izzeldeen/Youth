@@ -1,36 +1,38 @@
 
- <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <div id="map" style="height: 500px; width:100%;" ></div>
-                    </div>
-                    <div class="col-6">
-                        <div class="col-md-12 order-md-last d-flex mx-auto">
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div id="myMap" style="height: 500px; width:100%;"></div>
 
-                <form  class="bg-white p-5 contact-form"  method="post">
+
+        </div>
+        <div class="col-6">
+            <div class="col-md-12 order-md-last d-flex mx-auto">
+
+                <form class="bg-white p-5 contact-form" method="post">
                     <h5 class="text-center">Place Order</h5>
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Delivery Info" name="DeliveryInfo">
                     </div>
-                 
-                     <div class="form-group">
+
+                    <div class="form-group">
                         <input type="text" class="form-control" id="lat" placeholder="Latuide" name="DeliveryLatitude" readonly>
                     </div>
-                     <div class="form-group">
-                        <input type="text" class="form-control" id="lng" placeholder="Longtuide"  name="DeliveryLongitude" readonly>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="lng" placeholder="Longtuide" name="DeliveryLongitude" readonly>
                     </div>
-                     <div class="form-group">
-                        <input type="text" class="form-control" id="lng" value="@ViewBag.TotalPrice" placeholder="Total Price"  name="TotalPrice" readonly>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="lng" value="@ViewBag.TotalPrice" placeholder="Total Price" name="TotalPrice" readonly>
                     </div>
 
-                       <div class="form-group">
+                    <div class="form-group">
                         <button type="submit" class="btn btn-primary py-3 px-5"> Place Order </button>
                     </div>
                 </form>
             </div>
-                    </div>
-                    </div>
-                    </div>
+        </div>
+    </div>
+</div>
 <p id="demo"></p>
 
 
@@ -43,37 +45,47 @@
 
 
 
-<script async defer src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDlJbYPgHJ4CB-HVgUcBIAR1lxBft9UI3U&callback=initMap"> </script>
 <script>
- function initMap() {
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom:15,
-    center: { lat: -33, lng: 151 },
-    disableDefaultUI: true
-  });
-}
+
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById("myMap"), {
+            center: { lat: 32.0045056, lng: 35.8776832 },
+            zoom: 15
+        });
+        var myLatLng = { lat: 32.0045056, lng: 35.8776832 };
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Hello World!'
+        });
+        //marker.setMap();
+
+    }
 
 
-</script> 
- <script>
-var x = document.getElementById("demo");
+</script>
+<script>
+    var x = document.getElementById("demo");
+    getLocation();
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+    var lat = document.getElementById("lat");
+    var lng = document.getElementById("lng");
+    function showPosition(position) {
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+        lat.value = latitude;
+        lng.value = longitude;
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5gvN50xPVuO3Fp6sABCumYv7M53PeaLE&callback=initMap"
+        async defer></script>
 
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-var lat = document.getElementById("lat");
-var lng = document.getElementById("lng");
 
-function showPosition(position) {
-    var latitude = position.coords.latitude;
-    var longitude = position.coords.longitude;
-     lat.value = latitude;
-     lng.value = longitude; 
-}
-</script> 
 
 

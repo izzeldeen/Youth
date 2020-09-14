@@ -13,7 +13,6 @@ using Microsoft.AspNetCore.Mvc;
 using PublicWebsite.Helpers;
 using PublicWebsite.Models;
 using PublicWebsite.ViewModels;
-
 namespace PublicWebsite.Controllers
 {
     public class UserController : Controller

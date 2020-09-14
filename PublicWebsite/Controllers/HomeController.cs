@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 using Entities;
 using DAL.Implemntations;
 using System;
+using System.Threading.Tasks;
 
 namespace PublicWebsite.Controllers
 {
@@ -28,9 +29,34 @@ namespace PublicWebsite.Controllers
             _productRepository = productsRepository;
         }
 
-        public IActionResult Index()
-        { 
+        public async Task<IActionResult> Index()
+        {
+            if (Request.Cookies["Language"] == null)
+            {
+                var locale = Request.HttpContext.Features.Get<IRequestCultureFeature>();
+                var BrowserCulture = locale.RequestCulture.UICulture.ToString();
+                Response.Cookies.Append("Language", BrowserCulture);
+            }
             var countries = _countriesRepository.GetCountries();
+            var  products = await   _productRepository.GetFeaturedProducts();
+            List<ProductViewModel> productsVM = new List<ProductViewModel>();
+            if(Request.Cookies["Language"] == "ar")
+            {
+                foreach (var item in products)
+                {
+                    ProductViewModel product = new ProductViewModel() { Id = item.Id, CategoryId = item.CategoryId, Description = item.DescreptionAr, Name = item.NameAr, Price = _productRepository.GetProductSpecification(item.Id).Price, PictuerUrl = _productRepository.GetProductPictuerById(item.Id).Image };
+                    productsVM.Add(product);
+                }
+            }
+            else
+            {
+                foreach (var item in products)
+                {
+                    ProductViewModel product = new ProductViewModel() { Id = item.Id, CategoryId = item.CategoryId, Description = item.DescreptionEn, Name = item.NameEn, Price = _productRepository.GetProductSpecification(item.Id).Price, PictuerUrl = _productRepository.GetProductPictuerById(item.Id).Image };
+                    productsVM.Add(product);
+                }
+            }
+            
             var model = new CountriesViewModel();
             var list = new List<CountryViewModel>();
             foreach (var elem in countries)
@@ -38,13 +64,9 @@ namespace PublicWebsite.Controllers
                 var country = new CountryViewModel { Arabic = elem.NameAr, English = elem.NameEn, CreatedAt = elem.CreatedAt, Id = elem.Id };
                 list.Add(country);
             }
-            model.Countries = list; 
-            if (Request.Cookies["Language"] == null)
-            {
-                var locale = Request.HttpContext.Features.Get<IRequestCultureFeature>();
-                var BrowserCulture = locale.RequestCulture.UICulture.ToString();
-                Response.Cookies.Append("Language", BrowserCulture);
-            }
+            model.Countries = list;
+            model.products = productsVM;
+         
             return View(model);
         }
 

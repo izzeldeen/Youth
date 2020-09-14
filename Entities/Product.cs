@@ -15,5 +15,7 @@ namespace Entities
         public Category Category { get; set; }
         public int CountryId { get; set; }
         public Country Country { get; set; }
+        public bool IsFeatured { get; set; }
+        public string Message { get; set; }
     }
 }

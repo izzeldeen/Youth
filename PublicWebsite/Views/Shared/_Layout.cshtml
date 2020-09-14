@@ -305,8 +305,10 @@ AddexpireDateToLanguageCookie();
      var CartValue = res[2].split('=');
      var Items = CartValue[1].split('-');
      //to remove the 0 from the counter
-     var counter =Items.length-1;
-    return counter;
+     var counter = Items.length - 1;
+     var unique = Items.filter(onlyUnique);
+     console.log(unique);
+     return unique.length-1;
  }
 
  function CartCounterajax() {
@@ -348,7 +350,15 @@ function labelCounter(productId)
                 } 
             }
              document.cookie = "Cart=" + listItems + ";" + "path=/";
- }
+        }
+
+        function onlyUnique(value, index, self) {
+            return self.indexOf(value) === index;
+        }
+
+        // usage example:
+        var a = ['a', 1, 'a', 2, '1'];
+        var unique = a.filter(onlyUnique);
 
 </script>
 @RenderSection("Scripts", required: false)

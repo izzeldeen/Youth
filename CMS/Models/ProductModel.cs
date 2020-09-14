@@ -18,6 +18,8 @@ namespace CMS.Models
         public int MeasurmentId { get; set; }
         public int CategoryId { get; set; }
         public int CountryId { get; set; }
+        public bool IsFeatured { get; set; }
+        public string Message { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public List<Measurment> Measurments { get; set; }

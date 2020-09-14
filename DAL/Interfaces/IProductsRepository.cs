@@ -4,12 +4,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DAL.Interfaces
 {
     public interface IProductsRepository
     {
         IEnumerable<Product> GetProducts();
+        
         IEnumerable<Measurment> GetMeasurments();
         Product Insert(ProductDto model);
         void InsertProductPicture(ProductPictureDto model);
@@ -22,6 +24,8 @@ namespace DAL.Interfaces
         public ProductPicture GetProductPictuerById(int ProductId);
         public ProductSpecification GetProductSpecification(int ProductId);
         public List<Product> GetProductByIDS(List<int> IDs);
+        Task<List<Product>> GetFeaturedProducts();
+
 
     }
 }
