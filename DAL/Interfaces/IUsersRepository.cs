@@ -10,7 +10,7 @@ namespace DAL.Interfaces
     {
         User Login(LoginDto model);
         User Register(RegisterDto model);
-        User EditProfile(EditProfileDto model);
+        User EditProfile(EditProfileDto profileDto);
         User GetByPhonenumber(string phonenumber);
         User GetUserById(int Id);
         IEnumerable<User> GetUsers();

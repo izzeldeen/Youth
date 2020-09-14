@@ -17,7 +17,6 @@ namespace PublicWebsite.Controllers
 {
     public class AuthController : Controller
     {
-
             private readonly IUsersRepository _usersRepository;
             private readonly ModelValidations _modelValidations;
             private readonly ImageUploader _imageUploader;
@@ -35,7 +34,6 @@ namespace PublicWebsite.Controllers
             {
                 return PartialView();
             }
-
             private async void CreateAuthCookie(CookieDto cookieModel)
             {
                 var claims = new List<Claim>
@@ -100,17 +98,12 @@ namespace PublicWebsite.Controllers
                     return View();
 
                 var imageUrl = _imageUploader.Upload(avatar, Path, user.Id);
-
                 user.Avatar = imageUrl;
-
                 _usersRepository.ChangeAvatar(user);
-
                 string fullname = user.Firstname + " " + user.Lastname;
-
                 var cookie = new CookieDto { UserId = user.Id, Avatar = user.Avatar, Phonenumber = user.Phonenumber, RoleId = user.RoleId, Fullname = fullname };
-
                 CreateAuthCookie(cookie);
-            return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Home");
             }
 
             public async Task<IActionResult> Logout()
@@ -125,24 +118,5 @@ namespace PublicWebsite.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
-         public IActionResult Editprofile()
-        {
-           int userId = int.Parse(((ClaimsIdentity)User.Identity).FindFirst("UserId").Value);
-           var user =   _usersRepository.GetUserById(userId);
-           EditProfileDto profile = new EditProfileDto(){  Id = userId,  Phonenumber = user.Phonenumber ,Firstname = user.Firstname , Lastname = user.Lastname , Avatar = user.Avatar};
-           return View(profile);
-        }
-
-        [HttpPost]
-        public IActionResult Editprofile(EditProfileDto profile){
-            if(!ModelState.IsValid) return View(profile);
-            _usersRepository.EditProfile(profile);
-            return RedirectToAction();
-        }
-    }
-
-
-
-
-    
+    } 
 }

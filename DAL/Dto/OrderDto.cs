@@ -13,6 +13,6 @@ namespace DAL.Dto
         public string DeliveryInfo { get; set; }
         public float DeliveryLatitude { get; set; }
         public float DeliveryLongitude { get; set; }
-        public List<OrderItem> OrderItems { get; set; }
+        public IEnumerable<OrderItem> OrderItems { get; set; }
     }
 }

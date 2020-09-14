@@ -445,8 +445,8 @@ E:\Youth\AlamanehYoghurt\PublicWebsite\obj\Debug\netcoreapp3.0\staticwebassets\P
 E:\Youth\AlamanehYoghurt\PublicWebsite\obj\Debug\netcoreapp3.0\PublicWebsite.dll
 E:\Youth\AlamanehYoghurt\PublicWebsite\obj\Debug\netcoreapp3.0\PublicWebsite.pdb
 E:\Youth\AlamanehYoghurt\PublicWebsite\obj\Debug\netcoreapp3.0\PublicWebsite.genruntimeconfig.cache
-E:\Youth\AlamanehYoghurt\PublicWebsite\obj\Debug\netcoreapp3.0\ar\PublicWebsite.resources.cs
-E:\Youth\AlamanehYoghurt\PublicWebsite\obj\Debug\netcoreapp3.0\en-us\PublicWebsite.resources.cs
-E:\Youth\AlamanehYoghurt\PublicWebsite\obj\Debug\netcoreapp3.0\en\PublicWebsite.resources.cs
 E:\Youth\AlamanehYoghurt\PublicWebsite\obj\Debug\netcoreapp3.0\Razor\Views\Order\Order.cshtml.g.cs
 E:\Youth\AlamanehYoghurt\PublicWebsite\obj\Debug\netcoreapp3.0\Razor\Views\Order\OrderConfirmed.cshtml.g.cs
+E:\Youth\AlamanehYoghurt\PublicWebsite\obj\Debug\netcoreapp3.0\Razor\Views\User\Index.cshtml.g.cs
+E:\Youth\AlamanehYoghurt\PublicWebsite\obj\Debug\netcoreapp3.0\Razor\Views\User\UserOrders.cshtml.g.cs
+E:\Youth\AlamanehYoghurt\PublicWebsite\obj\Debug\netcoreapp3.0\Razor\Views\User\Details.cshtml.g.cs

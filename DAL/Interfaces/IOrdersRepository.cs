@@ -16,5 +16,6 @@ namespace DAL.Interfaces
         Order Insert(OrderDto model);
         void Delete(int orderId);
         void Update(int orderId, int statusId);
+        List<Status> GetStatus();
     }
 }

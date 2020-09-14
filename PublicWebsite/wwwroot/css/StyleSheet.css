@@ -25,3 +25,15 @@ li:hover {
     width: 50%;
     margin-left:20px;
   }
+
+.personal-img{
+    height: 33%;
+    width: 33%;
+    border-radius: 50%;
+    margin-top: -36%;
+    margin-left: 28%;
+}
+
+.Update-personal-button {
+    float: right;
+}

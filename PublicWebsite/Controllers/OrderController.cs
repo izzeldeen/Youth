@@ -12,15 +12,15 @@ namespace PublicWebsite.Controllers
 {
     public class OrderController : Controller
     {
-          private readonly IProductsRepository _productRepository;
-            private readonly IUsersRepository _usersRepository;
-            private readonly IOrdersRepository _orederRepository;
-          public OrderController(IProductsRepository productsRepository , IUsersRepository usersRepository , IOrdersRepository ordersRepository)
-          {
+        private readonly IProductsRepository _productRepository;
+        private readonly IUsersRepository _usersRepository;
+        private readonly IOrdersRepository _orederRepository;
+        public OrderController(IProductsRepository productsRepository , IUsersRepository usersRepository , IOrdersRepository ordersRepository)
+        {
               _productRepository = productsRepository;
               _usersRepository = usersRepository;
               _orederRepository = ordersRepository;
-          }
+        }
         public IActionResult Index()
         {
             return View();   
@@ -28,7 +28,6 @@ namespace PublicWebsite.Controllers
         [HttpGet]
         public IActionResult Cart(int? Id)
         {
-
             var CartItems = Request.Cookies["Cart"];
             ShoppingCart shoppingCart = new ShoppingCart();
             if (CartItems == null) return View(shoppingCart);
@@ -60,20 +59,16 @@ namespace PublicWebsite.Controllers
                                ShoppingCartItem shoppingCartItem = new  ShoppingCartItem() {ProductSpecification = product, Quntity =1 , PictuerUrl = _productRepository.GetProductPictuerById(product.ProductId).Image , ProductId = product.ProductId , Name = product.Product.NameEn , Description = product.Product.DescreptionEn  };
                                shoppingCartItems.Add(shoppingCartItem);
                            }
-                        
                       }  
                  }
             }
             }
             shoppingCart.ShoppingCartItems = shoppingCartItems;
             shoppingCart.Price = TotalPrice;
-
             if(Id == null) { return View(shoppingCart); }
-            
             return View(shoppingCart);
-
         }
-         [Authorize]
+        [Authorize]
         [HttpGet]
         public IActionResult Order(decimal TotalPrice)
         {
@@ -92,7 +87,6 @@ namespace PublicWebsite.Controllers
             //Status Id Pending
             order.StatusId = 1;       
             foreach(var item in productIds.Skip(1)) {
-                
                   if(ListOrderItem.FirstOrDefault(x=>x.ProductId == item) != null)
                   {
                          ListOrderItem.FirstOrDefault(x=>x.ProductId == item).Quantity += 1;
@@ -109,7 +103,5 @@ namespace PublicWebsite.Controllers
             var NewOrder =  _orederRepository.Insert(order);
             return View("OrderConfirmed");
         }
-
-      
     }
 }

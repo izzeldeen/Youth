@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DAL.Implemntations
 {
@@ -43,7 +44,7 @@ namespace DAL.Implemntations
 
         public Status GetStatusById(int statusId)
         {
-            return context.Status.FirstOrDefault(x => x.Id == statusId);
+            return  context.Status.FirstOrDefault(x => x.Id == statusId);
         }
 
         public IEnumerable<Order> GetUserOrders(int userId)
@@ -74,5 +75,10 @@ namespace DAL.Implemntations
             order.UpdatedAt = DateTime.Now;
             _repository.Update(order);
         }
+
+        public List<Status> GetStatus() => context.Status.ToList();
+        
+
+       
     }
 }

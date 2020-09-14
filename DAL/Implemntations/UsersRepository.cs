@@ -28,7 +28,9 @@ namespace DAL.Implemntations
 
         public User EditProfile(EditProfileDto model)
         {
-            throw new NotImplementedException();
+            var user = new User() { Id=model.Id ,Firstname = model.Firstname,Lastname = model.Lastname,Phonenumber = model.Phonenumber, Avatar = model.Avatar };
+            _repository.Update(user);
+            return user;
         }
 
         public User GetByPhonenumber(string phonenumber)
@@ -41,13 +43,10 @@ namespace DAL.Implemntations
             var user = GetByPhonenumber(model.Phonenumber);
             if (user == null)
                 return null;
-
             if (!VerifyPasswordHash(model.Password, user.PasswordHash, user.PasswordSalt))
                 return null;
-
-            user.IsActive = true;
+             user.IsActive = true;
             _repository.Update(user);
-
             return user;
         }
 
@@ -63,14 +62,10 @@ namespace DAL.Implemntations
             var userExisit = GetByPhonenumber(model.Phonenumber);
             if (userExisit != null)
                 return null;
-
             byte[] passwordHash, passwordSalt;
-
             CreatePasswordHash(model.Password, out passwordHash, out passwordSalt);
-
             var user = new User { Phonenumber = model.Phonenumber, Firstname = model.Firstname, Lastname = model.Lastname, CreatedAt = DateTime.Now, PasswordHash = passwordHash, PasswordSalt = passwordSalt, RoleId = model.RoleId, IsActive = true };
             _repository.Insert(user);
-
             return user;
         }
 

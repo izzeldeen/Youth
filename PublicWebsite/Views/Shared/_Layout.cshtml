@@ -95,9 +95,9 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@name</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown04">
-                                <a class="dropdown-item" href="#"><i class="fas fa-list"></i> My Orders</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-user"></i>Personal Information</a>
-                                <a class="dropdown-item" asp-controller="Auth" asp-action="Logout"><i class="fas fa-sign-out-alt"></i> Log out</a>
+                                <a class="dropdown-item" asp-controller="User" asp-action="UserOrders"><i class="fas fa-list mr-1"></i> My Orders</a>
+                                <a class="dropdown-item" asp-controller="User" asp-action="Index"><i class="fas fa-user mr-1"></i>Personal Information</a>
+                                <a class="dropdown-item" asp-controller="Auth" asp-action="Logout"><i class="fas fa-sign-out-alt mr-1"></i> Log out</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -209,9 +209,6 @@
 var cartItems = [];
 CartCounterajax();
 AddexpireDateToLanguageCookie();
-    // function CreateCart() {
-       // setcookie("Cart",0, 1000000);
-       //} 
    function AddexpireDateToLanguageCookie(){
         var date = new Date();
         date.setTime(date.getTime()+(30*24*60*60*1000));
@@ -289,8 +286,6 @@ AddexpireDateToLanguageCookie();
                   
                 } 
             }
-            console.log("listItems");
-            console.log(listItems);
             document.cookie = "Cart=" + listItems + ";" + "path=/";
              loadDoc();
         }
@@ -307,13 +302,10 @@ AddexpireDateToLanguageCookie();
      var str = document.cookie;
      var res = str.split(";");
      var cartCookie = res[2];
-     console.log(res[2]);
      var CartValue = res[2].split('=');
-     console.log(CartValue);
-    var Items = CartValue[1].split('-');
-    var counter =Items.length-1;
-    console.log(counter);
-
+     var Items = CartValue[1].split('-');
+     //to remove the 0 from the counter
+     var counter =Items.length-1;
     return counter;
  }
 
@@ -341,7 +333,6 @@ function labelCounter(productId)
         AddToCart(productId);
     }
 }
-
  function RemoveItemWithOutPostBack(value) {
             listItems = [0];
             var str = document.cookie;
@@ -354,13 +345,12 @@ function labelCounter(productId)
             {
                 if (value !=   Items[x]) {
                     if(Items[x] != 0){ listItems += "-"  + Items[x]; }
-                  
                 } 
             }
              document.cookie = "Cart=" + listItems + ";" + "path=/";
  }
 
 </script>
-  @RenderSection("Scripts", required: false)
+@RenderSection("Scripts", required: false)
 </body>
 </html>
