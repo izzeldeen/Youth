@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9YMLF/uSKHrlKg/jW0HRfT4I87sy9ufTfvhElGpCKEJdMA8r08+DR2b/iDbycSJ05J26OqS0MpzUfdPi1AxydQ==",
+  "dgSpecHash": "Og483JL/f3gXLN1K4/BTpIN5wX/Lc9yZigXN2Smvhtmm4q5IuL/xhaADoMi+yp77VzKblI6gLW7EsKDzRaFkJA==",
   "success": true,
-  "projectFilePath": "E:\\Youth\\V4\\Youth\\context\\Context.csproj",
+  "projectFilePath": "E:\\Youth\\V4\\Youth\\Context\\Context.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\izzel\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",
     "C:\\Users\\izzel\\.nuget\\packages\\microsoft.data.sqlclient\\1.0.19249.1\\microsoft.data.sqlclient.1.0.19249.1.nupkg.sha512",

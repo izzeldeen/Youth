@@ -38,3 +38,17 @@ D:\Freelance\15-09-2020\Youth\DAL\obj\Debug\netcoreapp3.0\DAL.AssemblyInfo.cs
 D:\Freelance\15-09-2020\Youth\DAL\obj\Debug\netcoreapp3.0\DAL.csproj.CopyComplete
 D:\Freelance\15-09-2020\Youth\DAL\obj\Debug\netcoreapp3.0\DAL.dll
 D:\Freelance\15-09-2020\Youth\DAL\obj\Debug\netcoreapp3.0\DAL.pdb
+E:\Youth\V4\Youth\DAL\bin\Debug\netcoreapp3.0\DAL.deps.json
+E:\Youth\V4\Youth\DAL\bin\Debug\netcoreapp3.0\DAL.dll
+E:\Youth\V4\Youth\DAL\bin\Debug\netcoreapp3.0\DAL.pdb
+E:\Youth\V4\Youth\DAL\bin\Debug\netcoreapp3.0\Context.dll
+E:\Youth\V4\Youth\DAL\bin\Debug\netcoreapp3.0\Entities.dll
+E:\Youth\V4\Youth\DAL\bin\Debug\netcoreapp3.0\Context.pdb
+E:\Youth\V4\Youth\DAL\bin\Debug\netcoreapp3.0\Entities.pdb
+E:\Youth\V4\Youth\DAL\obj\Debug\netcoreapp3.0\DAL.csprojAssemblyReference.cache
+E:\Youth\V4\Youth\DAL\obj\Debug\netcoreapp3.0\DAL.AssemblyInfoInputs.cache
+E:\Youth\V4\Youth\DAL\obj\Debug\netcoreapp3.0\DAL.AssemblyInfo.cs
+E:\Youth\V4\Youth\DAL\obj\Debug\netcoreapp3.0\DAL.csproj.CoreCompileInputs.cache
+E:\Youth\V4\Youth\DAL\obj\Debug\netcoreapp3.0\DAL.csproj.CopyComplete
+E:\Youth\V4\Youth\DAL\obj\Debug\netcoreapp3.0\DAL.dll
+E:\Youth\V4\Youth\DAL\obj\Debug\netcoreapp3.0\DAL.pdb

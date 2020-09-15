@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Context.Migrations
 {
-    public partial class initUpdate : Migration
+    public partial class DeliveryClock : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -216,7 +216,9 @@ namespace Context.Migrations
                     StatusId = table.Column<int>(nullable: false),
                     DeliveryInfo = table.Column<string>(nullable: true),
                     DeliveryLatitude = table.Column<float>(nullable: false),
-                    DeliveryLongitude = table.Column<float>(nullable: false)
+                    DeliveryLongitude = table.Column<float>(nullable: false),
+                    DeliveryDate = table.Column<DateTime>(nullable: false),
+                    DeliveryClock = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -269,19 +271,19 @@ namespace Context.Migrations
             migrationBuilder.InsertData(
                 table: "Countries",
                 columns: new[] { "Id", "CreatedAt", "NameAr", "NameEn", "UpdatedAt" },
-                values: new object[] { 1, new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(1231), "الاردن", "Jordan", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 1, new DateTime(2020, 9, 15, 20, 3, 19, 410, DateTimeKind.Local).AddTicks(1169), "الاردن", "Jordan", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Measurments",
                 columns: new[] { "Id", "CreatedAt", "UnitAr", "UnitEn", "UpdatedAt" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(2082), "كيلوجرام", "Kilogram", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 2, new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(2230), "جرام", "gram", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 3, new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(2257), "كبير", "Large", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 4, new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(2276), "متوسط", "Medium", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 5, new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(2293), "صغير", "Small", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 6, new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(2313), "لتر", "Liter", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
+                    { 1, new DateTime(2020, 9, 15, 20, 3, 19, 410, DateTimeKind.Local).AddTicks(2931), "كيلوجرام", "Kilogram", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 2, new DateTime(2020, 9, 15, 20, 3, 19, 410, DateTimeKind.Local).AddTicks(3140), "جرام", "gram", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 3, new DateTime(2020, 9, 15, 20, 3, 19, 410, DateTimeKind.Local).AddTicks(3174), "كبير", "Large", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 4, new DateTime(2020, 9, 15, 20, 3, 19, 410, DateTimeKind.Local).AddTicks(3198), "متوسط", "Medium", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 5, new DateTime(2020, 9, 15, 20, 3, 19, 410, DateTimeKind.Local).AddTicks(3221), "صغير", "Small", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 6, new DateTime(2020, 9, 15, 20, 3, 19, 410, DateTimeKind.Local).AddTicks(3247), "لتر", "Liter", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
                 });
 
             migrationBuilder.InsertData(
@@ -289,8 +291,8 @@ namespace Context.Migrations
                 columns: new[] { "Id", "CreatedAt", "Name", "UpdatedAt" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2020, 9, 15, 10, 27, 9, 390, DateTimeKind.Local).AddTicks(1579), "Admin", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 2, new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(229), "User", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
+                    { 1, new DateTime(2020, 9, 15, 20, 3, 19, 405, DateTimeKind.Local).AddTicks(6969), "Admin", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 2, new DateTime(2020, 9, 15, 20, 3, 19, 409, DateTimeKind.Local).AddTicks(9047), "User", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
                 });
 
             migrationBuilder.InsertData(
@@ -298,10 +300,10 @@ namespace Context.Migrations
                 columns: new[] { "Id", "CreatedAt", "NameAr", "NameEn", "UpdatedAt" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(3006), "على الانتظار", "Pending", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 2, new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(3160), "تم القبول", "Accepted", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 3, new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(3184), "مرفوض", "Rejected", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 4, new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(3202), "ملغي", "Canceled", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
+                    { 1, new DateTime(2020, 9, 15, 20, 3, 19, 410, DateTimeKind.Local).AddTicks(4780), "على الانتظار", "Pending", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 2, new DateTime(2020, 9, 15, 20, 3, 19, 410, DateTimeKind.Local).AddTicks(5008), "تم القبول", "Accepted", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 3, new DateTime(2020, 9, 15, 20, 3, 19, 410, DateTimeKind.Local).AddTicks(5041), "مرفوض", "Rejected", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 4, new DateTime(2020, 9, 15, 20, 3, 19, 410, DateTimeKind.Local).AddTicks(5063), "ملغي", "Canceled", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
                 });
 
             migrationBuilder.CreateIndex(

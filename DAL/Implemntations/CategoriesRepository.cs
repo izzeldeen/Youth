@@ -4,6 +4,7 @@ using DAL.Interfaces;
 using Entities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace DAL.Implemntations
@@ -47,5 +48,8 @@ namespace DAL.Implemntations
         {
             _repository.Update(model);
         }
+
+        public IEnumerable<Category> GetLastFourCategories() => context.Categories.OrderByDescending(x => x.UpdatedAt).Take(4);
+
     }
 }

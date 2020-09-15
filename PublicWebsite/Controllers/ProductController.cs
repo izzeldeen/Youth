@@ -57,16 +57,15 @@ namespace PublicWebsite.Controllers
         public IActionResult Details(int Id)
         {
             var product = _productRepository.GetProductById(Id);
-            var ProductPictuer = _productRepository.GetProductPictuerById(Id);
             var ProductSpecification = _productRepository.GetProductSpecification(Id);
             ProductViewModel productVM = new ProductViewModel();
             if (Request.Cookies["Language"] == "en")
             {
-                productVM.Id = product.Id; productVM.CategoryId = product.CategoryId; productVM.Name = product.NameEn;  productVM.Contry = product.CountryId; productVM.Description = product.DescreptionEn; productVM.PictuerUrl = ProductPictuer.Image; productVM.Price = ProductSpecification.Price;
+                productVM.Id = product.Id; productVM.CategoryId = product.CategoryId; productVM.Name = product.NameEn;  productVM.Contry = product.CountryId; productVM.Description = product.DescreptionEn; productVM.ListPictuerUrl = _productRepository.GetProductPictuerIsNotMain(Id); productVM.Price = ProductSpecification.Price;
             }
             else
             {
-                productVM.Id = product.Id; productVM.CategoryId = product.CategoryId; productVM.Name = product.NameAr; productVM.Contry = product.CountryId; productVM.Description = product.DescreptionAr; productVM.PictuerUrl = ProductPictuer.Image; productVM.Price = ProductSpecification.Price;
+                productVM.Id = product.Id; productVM.CategoryId = product.CategoryId; productVM.Name = product.NameAr; productVM.Contry = product.CountryId; productVM.Description = product.DescreptionAr; productVM.ListPictuerUrl = _productRepository.GetProductPictuerIsNotMain(Id); productVM.Price = ProductSpecification.Price;
             }
             return View(productVM);
         }

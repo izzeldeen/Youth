@@ -25,6 +25,7 @@ namespace DAL.Interfaces
         public ProductSpecification GetProductSpecification(int ProductId);
         public List<Product> GetProductByIDS(List<int> IDs);
         Task<List<Product>> GetFeaturedProducts();
+        public List<ProductPicture> GetProductPictuerIsNotMain(int ProductId);
 
 
     }

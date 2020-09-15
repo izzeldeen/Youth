@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PtLYAEoBgJCDA9X6StA7XizZE7cNT9+bKXNAj2cqVujHynEkArT9vtQJ9DLUcQEVwX8hlUGmNxToFyiXm1FLNw==",
+  "dgSpecHash": "7LDgay+jwCCNMvYC1tcST1ciSyn6Txf6Dk214odXk/iSTU1d+gcCDEjCsTvAIeYZGzTGwfRd8k9j8Fa7WXJUbQ==",
   "success": true,
-  "projectFilePath": "E:\\Youth\\AlamanehYoghurt\\CMS\\CMS.csproj",
+  "projectFilePath": "E:\\Youth\\V4\\Youth\\CMS\\CMS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\izzel\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\izzel\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\3.0.0\\microsoft.aspnetcore.mvc.razor.extensions.3.0.0.nupkg.sha512",

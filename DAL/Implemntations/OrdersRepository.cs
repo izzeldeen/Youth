@@ -54,7 +54,7 @@ namespace DAL.Implemntations
 
         public Order Insert(OrderDto model)
         {
-            var order = new Order { CreatedAt = DateTime.Now, StatusId = model.StatusId, UserId = model.UserId, TotalPrice = model.TotalPrice, DeliveryInfo = model.DeliveryInfo, DeliveryLatitude = model.DeliveryLatitude, DeliveryLongitude = model.DeliveryLongitude, DeliveryDate = model.DeliveryDate, DeliveryTime = model.DeliveryTime};
+            var order = new Order { CreatedAt = DateTime.Now, StatusId = model.StatusId, UserId = model.UserId, TotalPrice = model.TotalPrice, DeliveryInfo = model.DeliveryInfo, DeliveryLatitude = model.DeliveryLatitude, DeliveryLongitude = model.DeliveryLongitude, DeliveryDate = model.DeliveryDate, DeliveryClock = model.DeliveryTime};
             _repository.Insert(order);
 
             foreach(var elem in model.OrderItems)

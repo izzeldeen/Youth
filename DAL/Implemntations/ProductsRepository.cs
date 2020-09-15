@@ -94,6 +94,10 @@ namespace DAL.Implemntations
         {
             return context.ProductPictures.FirstOrDefault(x => x.ProductId == ProductId);
         }
+        public List<ProductPicture> GetProductPictuerIsNotMain(int ProductId)
+        {
+            return context.ProductPictures.Where(x => x.ProductId == ProductId && x.IsMain == false).ToList();
+        }
 
         public ProductSpecification GetProductSpecification(int ProductId)
         {
