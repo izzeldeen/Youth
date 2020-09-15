@@ -39,6 +39,7 @@ namespace PublicWebsite.Controllers
             }
             var countries = _countriesRepository.GetCountries();
             var  products = await   _productRepository.GetFeaturedProducts();
+            List<CategoryViewModel> CategorysVM = new List<CategoryViewModel>();
             List<ProductViewModel> productsVM = new List<ProductViewModel>();
             if(Request.Cookies["Language"] == "ar")
             {
@@ -47,6 +48,11 @@ namespace PublicWebsite.Controllers
                     ProductViewModel product = new ProductViewModel() { Id = item.Id, CategoryId = item.CategoryId, Description = item.DescreptionAr, Name = item.NameAr, Price = _productRepository.GetProductSpecification(item.Id).Price, PictuerUrl = _productRepository.GetProductPictuerById(item.Id).Image };
                     productsVM.Add(product);
                 }
+                 foreach(var item in categories)
+                {
+                    CategoryViewModel CategoryVM = new CategoryViewModel() { Banner = item.Banner, Name = item.NameAr };
+                    CategorysVM.Add(CategoryVM);
+                }
             }
             else
             {
@@ -54,6 +60,11 @@ namespace PublicWebsite.Controllers
                 {
                     ProductViewModel product = new ProductViewModel() { Id = item.Id, CategoryId = item.CategoryId, Description = item.DescreptionEn, Name = item.NameEn, Price = _productRepository.GetProductSpecification(item.Id).Price, PictuerUrl = _productRepository.GetProductPictuerById(item.Id).Image };
                     productsVM.Add(product);
+                }
+                foreach (var item in categories)
+                {
+                    CategoryViewModel CategoryVM = new CategoryViewModel() { Banner = item.Banner, Name = item.NameEn };
+                    CategorysVM.Add(CategoryVM);
                 }
             }
             
