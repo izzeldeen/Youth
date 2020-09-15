@@ -13,6 +13,7 @@ namespace DAL.Interfaces
         void Delete(int Id);
         void Update(Category model);
         Category GetCategoryById(int Id);
+        IEnumerable<Category> GetLastFourCategories();
 
     }
 }

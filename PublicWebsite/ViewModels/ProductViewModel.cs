@@ -17,6 +17,9 @@ namespace PublicWebsite.ViewModels
 
         public string PictuerUrl { get; set; }
 
+
+        public List<ProductPicture>  ListPictuerUrl { get; set; }
+
         public string Description { get; set; }
 
         public string Name { get; set; }

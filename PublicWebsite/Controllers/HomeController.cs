@@ -2,15 +2,9 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using PublicWebsite.Models;
 using DAL.Interfaces;
 using PublicWebsite.ViewModels;
-using System.Security.Claims;
-using Microsoft.AspNetCore.Authorization;
-using Entities;
-using DAL.Implemntations;
-using System;
 using System.Threading.Tasks;
 
 namespace PublicWebsite.Controllers
@@ -21,12 +15,14 @@ namespace PublicWebsite.Controllers
         private readonly IUsersRepository _usersRepository;
         private readonly ICountriesRepository _countriesRepository;
         private readonly IProductsRepository _productRepository;
-        public HomeController( IUsersRepository usersRepository, ICountriesRepository countriesRepository ,IProductsRepository productsRepository  )
+        private readonly ICategoriesRepository _categriesRepository;
+        public HomeController( IUsersRepository usersRepository, ICountriesRepository countriesRepository ,IProductsRepository productsRepository , ICategoriesRepository categriesRepository  )
         {
            
             _usersRepository = usersRepository;
             _countriesRepository = countriesRepository;
             _productRepository = productsRepository;
+            _categriesRepository = categriesRepository;
         }
 
         public async Task<IActionResult> Index()
@@ -39,6 +35,7 @@ namespace PublicWebsite.Controllers
             }
             var countries = _countriesRepository.GetCountries();
             var  products = await   _productRepository.GetFeaturedProducts();
+            var categories = _categriesRepository.GetLastFourCategories();
             List<CategoryViewModel> CategorysVM = new List<CategoryViewModel>();
             List<ProductViewModel> productsVM = new List<ProductViewModel>();
             if(Request.Cookies["Language"] == "ar")
@@ -77,7 +74,9 @@ namespace PublicWebsite.Controllers
             }
             model.Countries = list;
             model.products = productsVM;
-         
+            model.Categries = CategorysVM;
+
+
             return View(model);
         }
 

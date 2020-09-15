@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Youth\\V4\\Youth\\context\\Context.csproj": {}
+    "E:\\Youth\\V4\\Youth\\Context\\Context.csproj": {}
   },
   "projects": {
-    "E:\\Youth\\V4\\Youth\\context\\Context.csproj": {
+    "E:\\Youth\\V4\\Youth\\Context\\Context.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Youth\\V4\\Youth\\context\\Context.csproj",
+        "projectUniqueName": "E:\\Youth\\V4\\Youth\\Context\\Context.csproj",
         "projectName": "Context",
-        "projectPath": "E:\\Youth\\V4\\Youth\\context\\Context.csproj",
+        "projectPath": "E:\\Youth\\V4\\Youth\\Context\\Context.csproj",
         "packagesPath": "C:\\Users\\izzel\\.nuget\\packages\\",
-        "outputPath": "E:\\Youth\\V4\\Youth\\context\\obj\\",
+        "outputPath": "E:\\Youth\\V4\\Youth\\Context\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\izzel\\AppData\\Roaming\\NuGet\\NuGet.Config",

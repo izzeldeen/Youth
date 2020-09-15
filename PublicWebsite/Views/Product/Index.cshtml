@@ -15,9 +15,7 @@
         
         <div class="container">
             <div class="row">
-                <div class="col-3">
-                    <div class="row justify-content-center">
-                        <div class="col-md-10 mb-5 text-center">
+                <div class="col-3 text-center">
                             <ul _ngcontent-eeg-c71="" class="list-group my-3 ng-star-inserted">
                                 <li _ngcontent-eeg-c71="" class="list-group-item  ng-star-inserted list-hover" value="0"><a asp-action="Index" asp-controller="Product" asp-route-CategoryId="0"> All </a></li>
 
@@ -27,47 +25,51 @@
                                 }
 
                             </ul>
-                        </div>
-                    </div>
+                       
+                    
                 </div>
-                <div class="col-9">
+                <div class="col-8">
+                    <div class="container">
+                        <div class="row">
+                            @foreach (var item in Model.ProductViewModel)
+                            {
 
+                                <div class="col-md-6 col-lg-4 ftco-animate fadeInUp ftco-animated">
+                                    <div class="product">
+                                        <a href="#" class="img-prod">
+                                            <img class="img-fluid" src="../Documents/Products/@item.PictuerUrl" alt="Colorlib Template">
+                                            <span class="status">30%</span>
+                                            <div class="overlay"></div>
+                                        </a>
+                                        <div class="text py-3 pb-4 px-3 text-center">
+                                            <h3><a href="#">@item.Name</a></h3>
+                                            <div class="d-flex">
+                                                <div class="pricing">
+                                                    <p class="price"><span class="mr-2 price-dc"></span><span class="price-sale">@item.Price $</span></p>
+                                                </div>
+                                            </div>
+                                            <div class="bottom-area d-flex px-3">
+                                                <div class="m-auto d-flex">
+                                                    <a asp-controller="Product" asp-action="Details" asp-route-Id="@item.Id" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                                                        <span><i class="ion-ios-menu"></i></span>
 
-                    @foreach (var item in Model.ProductViewModel)
-                    {
-                        <div class="col-md-6 col-lg-4 ftco-animate fadeInUp ftco-animated">
-                            <div class="product">
-                                <a href="#" class="img-prod">
-                                    <img class="img-fluid" src="../Documents/Products/@item.PictuerUrl" alt="Colorlib Template">
-                                    <span class="status">30%</span>
-                                    <div class="overlay"></div>
-                                </a>
-                                <div class="text py-3 pb-4 px-3 text-center">
-                                    <h3><a href="#">@item.Name</a></h3>
-                                    <div class="d-flex">
-                                        <div class="pricing">
-                                            <p class="price"><span class="mr-2 price-dc"></span><span class="price-sale">@item.Price $</span></p>
-                                        </div>
-                                    </div>
-                                    <div class="bottom-area d-flex px-3">
-                                        <div class="m-auto d-flex">
-                                            <a asp-controller="Product" asp-action="Details" asp-route-Id="@item.Id"  class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                                                <span><i class="ion-ios-menu"></i></span>
-
-                                            </a>
-                                            <a onclick="AddToCart(@item.Id)" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                                                <span><i class="ion-ios-cart"></i></span>
-                                            </a>
-                                            <a href="#" class="heart d-flex justify-content-center align-items-center">
-                                                <span><i class="ion-ios-heart"></i></span>
-                                            </a>
+                                                    </a>
+                                                    <a onclick="AddToCart(@item.Id)" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                                                        <span><i class="ion-ios-cart"></i></span>
+                                                    </a>
+                                                    <a href="#" class="heart d-flex justify-content-center align-items-center">
+                                                        <span><i class="ion-ios-heart"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    }
 
+
+                            }
+                        </div>
+                    </div>
                 </div>
             </div>
             <div  page-model="@Model.PagingInfo" asp-action="Index" page-class="btn border"
