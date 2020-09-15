@@ -35,9 +35,9 @@ namespace Context
             modelBuilder.Entity<Status>().HasData(new Status { Id = 2, NameAr = "تم القبول", NameEn = "Accepted", CreatedAt = DateTime.Now });
             modelBuilder.Entity<Status>().HasData(new Status { Id = 3, NameAr = "مرفوض", NameEn = "Rejected", CreatedAt = DateTime.Now });
             modelBuilder.Entity<Status>().HasData(new Status { Id = 4, NameAr = "ملغي", NameEn = "Canceled", CreatedAt = DateTime.Now });
-            modelBuilder.Entity<Order>().HasData(new Order { Id = 1, StatusId = 1, CreatedAt = DateTime.Now, DeliveryInfo = "Dahiet AlRashhed", DeliveryLatitude = 32, DeliveryLongitude = 35, TotalPrice = 15, UserId = 2 });
+            modelBuilder.Entity<Order>().HasData(new Order { Id = 1, StatusId = 1, CreatedAt = DateTime.Now, DeliveryInfo = "Dahiet AlRashhed", DeliveryLatitude = 32, DeliveryLongitude = 35, TotalPrice = 15, UserId = 1 });
             modelBuilder.Entity<OrderItem>().HasData(new OrderItem { Id = 1, CreatedAt = DateTime.Now, ProductId = 4, OrderId = 1, ItemPrice = 2, Quantity = 4, TotalPrice = 8});
-            modelBuilder.Entity<Order>().HasData(new Order { Id = 2, StatusId = 1, CreatedAt = DateTime.Now, DeliveryInfo = "Dahiet AlRashhed", DeliveryLatitude = 32, DeliveryLongitude = 35, TotalPrice = 15, UserId = 2 });
+            modelBuilder.Entity<Order>().HasData(new Order { Id = 2, StatusId = 1, CreatedAt = DateTime.Now, DeliveryInfo = "Dahiet AlRashhed", DeliveryLatitude = 32, DeliveryLongitude = 35, TotalPrice = 15, UserId = 1 });
             modelBuilder.Entity<OrderItem>().HasData(new OrderItem { Id = 2, CreatedAt = DateTime.Now, ProductId = 5, OrderId = 2, ItemPrice = 2, Quantity = 4, TotalPrice = 8 });
         }
 
