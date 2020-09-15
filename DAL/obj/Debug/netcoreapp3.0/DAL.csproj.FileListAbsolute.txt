@@ -25,3 +25,16 @@ E:\Youth\AlamanehYoghurt\DAL\obj\Debug\netcoreapp3.0\DAL.csproj.CoreCompileInput
 E:\Youth\AlamanehYoghurt\DAL\obj\Debug\netcoreapp3.0\DAL.csproj.CopyComplete
 E:\Youth\AlamanehYoghurt\DAL\obj\Debug\netcoreapp3.0\DAL.dll
 E:\Youth\AlamanehYoghurt\DAL\obj\Debug\netcoreapp3.0\DAL.pdb
+D:\Freelance\15-09-2020\Youth\DAL\bin\Debug\netcoreapp3.0\DAL.deps.json
+D:\Freelance\15-09-2020\Youth\DAL\bin\Debug\netcoreapp3.0\DAL.dll
+D:\Freelance\15-09-2020\Youth\DAL\bin\Debug\netcoreapp3.0\DAL.pdb
+D:\Freelance\15-09-2020\Youth\DAL\bin\Debug\netcoreapp3.0\Context.dll
+D:\Freelance\15-09-2020\Youth\DAL\bin\Debug\netcoreapp3.0\Entities.dll
+D:\Freelance\15-09-2020\Youth\DAL\bin\Debug\netcoreapp3.0\Context.pdb
+D:\Freelance\15-09-2020\Youth\DAL\bin\Debug\netcoreapp3.0\Entities.pdb
+D:\Freelance\15-09-2020\Youth\DAL\obj\Debug\netcoreapp3.0\DAL.csprojAssemblyReference.cache
+D:\Freelance\15-09-2020\Youth\DAL\obj\Debug\netcoreapp3.0\DAL.AssemblyInfoInputs.cache
+D:\Freelance\15-09-2020\Youth\DAL\obj\Debug\netcoreapp3.0\DAL.AssemblyInfo.cs
+D:\Freelance\15-09-2020\Youth\DAL\obj\Debug\netcoreapp3.0\DAL.csproj.CopyComplete
+D:\Freelance\15-09-2020\Youth\DAL\obj\Debug\netcoreapp3.0\DAL.dll
+D:\Freelance\15-09-2020\Youth\DAL\obj\Debug\netcoreapp3.0\DAL.pdb

@@ -35,18 +35,18 @@ namespace Context
             modelBuilder.Entity<Status>().HasData(new Status { Id = 2, NameAr = "تم القبول", NameEn = "Accepted", CreatedAt = DateTime.Now });
             modelBuilder.Entity<Status>().HasData(new Status { Id = 3, NameAr = "مرفوض", NameEn = "Rejected", CreatedAt = DateTime.Now });
             modelBuilder.Entity<Status>().HasData(new Status { Id = 4, NameAr = "ملغي", NameEn = "Canceled", CreatedAt = DateTime.Now });
-            modelBuilder.Entity<Order>().HasData(new Order { Id = 1, StatusId = 1, CreatedAt = DateTime.Now, DeliveryInfo = "Dahiet AlRashhed", DeliveryLatitude = 32, DeliveryLongitude = 35, TotalPrice = 15, UserId = 2 });
-            modelBuilder.Entity<OrderItem>().HasData(new OrderItem { Id = 1, CreatedAt = DateTime.Now, ProductId = 4, OrderId = 1, ItemPrice = 2, Quantity = 4, TotalPrice = 8});
-            modelBuilder.Entity<Order>().HasData(new Order { Id = 2, StatusId = 1, CreatedAt = DateTime.Now, DeliveryInfo = "Dahiet AlRashhed", DeliveryLatitude = 32, DeliveryLongitude = 35, TotalPrice = 15, UserId = 2 });
-            modelBuilder.Entity<OrderItem>().HasData(new OrderItem { Id = 2, CreatedAt = DateTime.Now, ProductId = 5, OrderId = 2, ItemPrice = 2, Quantity = 4, TotalPrice = 8 });
+            // modelBuilder.Entity<Order>().HasData(new Order { Id = 1, StatusId = 1, CreatedAt = DateTime.Now, DeliveryInfo = "Dahiet AlRashhed", DeliveryLatitude = 32, DeliveryLongitude = 35, TotalPrice = 15, UserId = 2 });
+            // modelBuilder.Entity<OrderItem>().HasData(new OrderItem { Id = 1, CreatedAt = DateTime.Now, ProductId = 4, OrderId = 1, ItemPrice = 2, Quantity = 4, TotalPrice = 8});
+            // modelBuilder.Entity<Order>().HasData(new Order { Id = 2, StatusId = 1, CreatedAt = DateTime.Now, DeliveryInfo = "Dahiet AlRashhed", DeliveryLatitude = 32, DeliveryLongitude = 35, TotalPrice = 15, UserId = 2 });
+            // modelBuilder.Entity<OrderItem>().HasData(new OrderItem { Id = 2, CreatedAt = DateTime.Now, ProductId = 5, OrderId = 2, ItemPrice = 2, Quantity = 4, TotalPrice = 8 });
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            // optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=YoghurtDbV2;User ID=sa;Password=P@ssw0rd;MultipleActiveResultSets=true;");
+             optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=YoghurtDbV3;User ID=sa;Password=P@ssw0rd;MultipleActiveResultSets=true;");
             // optionsBuilder.UseSqlServer(@"Data Source=198.38.83.200;Initial Catalog=hafelaty_db;User ID=hafelaty_sa;Password=P@ssw0rd;");
             //Add By izz
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-79MDV3E;Initial Catalog=YoghurtDbV2;Trusted_Connection=True;");
+            //optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-79MDV3E;Initial Catalog=YoghurtDbV2;Trusted_Connection=True;");
             //Trusted_Connection=True;MultipleActiveResultSets=true
 
         }
