@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SywEJCegXE4MVNjBzQgw6X/VXwIvhb4DXFQOzrgbqicDK43VV5W7jNK25VqdV/aJeKLmkONiu/qAP1j/FFhJtA==",
+  "dgSpecHash": "XwtXCLdiREUe+6OJAClHhMl6lCb+rd8hXOGP0b1+iTFg33GYfimaVnwqESQSAoa99GJTqf2ArY83ooIlCviYJg==",
   "success": true,
-  "projectFilePath": "E:\\Youth\\AlamanehYoghurt\\Entities\\Entities.csproj",
+  "projectFilePath": "E:\\Youth\\V3\\Youth\\Entities\\Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\izzel\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512"
   ],

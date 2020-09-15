@@ -12,6 +12,8 @@ using Entities;
 using DAL.Implemntations;
 using System;
 using System.Threading.Tasks;
+using DAL.Dto;
+using RestSharp;
 
 namespace PublicWebsite.Controllers
 {
@@ -21,31 +23,40 @@ namespace PublicWebsite.Controllers
         private readonly IUsersRepository _usersRepository;
         private readonly ICountriesRepository _countriesRepository;
         private readonly IProductsRepository _productRepository;
-        public HomeController( IUsersRepository usersRepository, ICountriesRepository countriesRepository ,IProductsRepository productsRepository  )
+        private readonly ICategoriesRepository _categoryrepository;
+        public HomeController(IUsersRepository usersRepository, ICountriesRepository countriesRepository, IProductsRepository productsRepository, ICategoriesRepository categoriesRepository)
         {
-           
+
             _usersRepository = usersRepository;
             _countriesRepository = countriesRepository;
             _productRepository = productsRepository;
+            _categoryrepository = categoriesRepository;
         }
-
         public async Task<IActionResult> Index()
         {
+            var locale = Request.HttpContext.Features.Get<IRequestCultureFeature>();
+            var BrowserCulture = locale.RequestCulture.UICulture.ToString();
             if (Request.Cookies["Language"] == null)
             {
-                var locale = Request.HttpContext.Features.Get<IRequestCultureFeature>();
-                var BrowserCulture = locale.RequestCulture.UICulture.ToString();
                 Response.Cookies.Append("Language", BrowserCulture);
             }
             var countries = _countriesRepository.GetCountries();
             var  products = await   _productRepository.GetFeaturedProducts();
-            List<ProductViewModel> productsVM = new List<ProductViewModel>();
+            var categories = _categoryrepository.GetLastFourCategories();
+            List<CategoryViewModel> CategorysVM = new List<CategoryViewModel>();
+            List <ProductViewModel> productsVM = new List<ProductViewModel>();
             if(Request.Cookies["Language"] == "ar")
             {
                 foreach (var item in products)
                 {
                     ProductViewModel product = new ProductViewModel() { Id = item.Id, CategoryId = item.CategoryId, Description = item.DescreptionAr, Name = item.NameAr, Price = _productRepository.GetProductSpecification(item.Id).Price, PictuerUrl = _productRepository.GetProductPictuerById(item.Id).Image };
                     productsVM.Add(product);
+                }
+
+                foreach(var item in categories)
+                {
+                    CategoryViewModel CategoryVM = new CategoryViewModel() { Banner = item.Banner, Name = item.NameAr };
+                    CategorysVM.Add(CategoryVM);
                 }
             }
             else
@@ -55,18 +66,24 @@ namespace PublicWebsite.Controllers
                     ProductViewModel product = new ProductViewModel() { Id = item.Id, CategoryId = item.CategoryId, Description = item.DescreptionEn, Name = item.NameEn, Price = _productRepository.GetProductSpecification(item.Id).Price, PictuerUrl = _productRepository.GetProductPictuerById(item.Id).Image };
                     productsVM.Add(product);
                 }
+
+                foreach (var item in categories)
+                {
+                    CategoryViewModel CategoryVM = new CategoryViewModel() { Banner = item.Banner, Name = item.NameEn };
+                    CategorysVM.Add(CategoryVM);
+                }
             }
             
             var model = new CountriesViewModel();
-            var list = new List<CountryViewModel>();
+            var Countries = new List<CountryViewModel>();
             foreach (var elem in countries)
             {
                 var country = new CountryViewModel { Arabic = elem.NameAr, English = elem.NameEn, CreatedAt = elem.CreatedAt, Id = elem.Id };
-                list.Add(country);
+                Countries.Add(country);
             }
-            model.Countries = list;
+            model.Countries = Countries;
             model.products = productsVM;
-         
+            model.Categories = CategorysVM;
             return View(model);
         }
 
