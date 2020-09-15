@@ -25,6 +25,12 @@ namespace PublicWebsite.Controllers
         {
             return View();   
         }
+
+        public IActionResult Details()
+        {
+            return View();   
+        }
+
         [HttpGet]
         public IActionResult Cart(int? Id)
         {
