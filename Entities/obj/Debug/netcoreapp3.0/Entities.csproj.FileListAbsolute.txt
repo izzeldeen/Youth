@@ -18,8 +18,8 @@ E:\Youth\AlamanehYoghurt\Entities\obj\Debug\netcoreapp3.0\Entities.csprojAssembl
 D:\Freelance\15-09-2020\Youth\Entities\bin\Debug\netcoreapp3.0\Entities.deps.json
 D:\Freelance\15-09-2020\Youth\Entities\bin\Debug\netcoreapp3.0\Entities.dll
 D:\Freelance\15-09-2020\Youth\Entities\bin\Debug\netcoreapp3.0\Entities.pdb
-D:\Freelance\15-09-2020\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.csprojAssemblyReference.cache
 D:\Freelance\15-09-2020\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.AssemblyInfoInputs.cache
 D:\Freelance\15-09-2020\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.AssemblyInfo.cs
 D:\Freelance\15-09-2020\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.dll
 D:\Freelance\15-09-2020\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.pdb
+D:\Freelance\15-09-2020\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.csprojAssemblyReference.cache

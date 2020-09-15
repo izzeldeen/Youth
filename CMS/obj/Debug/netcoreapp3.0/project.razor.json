@@ -1,5 +1,5 @@
 {
-  "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\CMS.csproj",
+  "FilePath": "d:\\Freelance\\15-09-2020\\Youth\\CMS\\CMS.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -10175,113 +10175,113 @@
   "RootNamespace": "CMS",
   "Documents": [
     {
-      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Countries\\Edit.cshtml",
-      "TargetPath": "Views\\Countries\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Categories\\Edit.cshtml",
-      "TargetPath": "Views\\Categories\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Users\\Index.cshtml",
-      "TargetPath": "Views\\Users\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Countries\\Add.cshtml",
-      "TargetPath": "Views\\Countries\\Add.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Users\\Add.cshtml",
-      "TargetPath": "Views\\Users\\Add.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Orders\\Index.cshtml",
-      "TargetPath": "Views\\Orders\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Categories\\Add.cshtml",
-      "TargetPath": "Views\\Categories\\Add.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Products\\Edit.cshtml",
-      "TargetPath": "Views\\Products\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Products\\Add.cshtml",
-      "TargetPath": "Views\\Products\\Add.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Countries\\Index.cshtml",
-      "TargetPath": "Views\\Countries\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Orders\\Details.cshtml",
-      "TargetPath": "Views\\Orders\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Categories\\Index.cshtml",
-      "TargetPath": "Views\\Categories\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Products\\Index.cshtml",
-      "TargetPath": "Views\\Products\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Auth\\Index.cshtml",
+      "FilePath": "d:\\Freelance\\15-09-2020\\Youth\\CMS\\Views\\Auth\\Index.cshtml",
       "TargetPath": "Views\\Auth\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Orders\\Location.cshtml",
-      "TargetPath": "Views\\Orders\\Location.cshtml",
+      "FilePath": "d:\\Freelance\\15-09-2020\\Youth\\CMS\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Shared\\_Layout.cshtml",
+      "FilePath": "d:\\Freelance\\15-09-2020\\Youth\\CMS\\Views\\Products\\Add.cshtml",
+      "TargetPath": "Views\\Products\\Add.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Freelance\\15-09-2020\\Youth\\CMS\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "e:\\Youth\\AlamanehYoghurt\\CMS\\Views\\Shared\\Error.cshtml",
+      "FilePath": "d:\\Freelance\\15-09-2020\\Youth\\CMS\\Views\\Users\\Index.cshtml",
+      "TargetPath": "Views\\Users\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Freelance\\15-09-2020\\Youth\\CMS\\Views\\Countries\\Index.cshtml",
+      "TargetPath": "Views\\Countries\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Freelance\\15-09-2020\\Youth\\CMS\\Views\\Products\\Edit.cshtml",
+      "TargetPath": "Views\\Products\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Freelance\\15-09-2020\\Youth\\CMS\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Freelance\\15-09-2020\\Youth\\CMS\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Freelance\\15-09-2020\\Youth\\CMS\\Views\\Categories\\Edit.cshtml",
+      "TargetPath": "Views\\Categories\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Freelance\\15-09-2020\\Youth\\CMS\\Views\\Countries\\Add.cshtml",
+      "TargetPath": "Views\\Countries\\Add.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Freelance\\15-09-2020\\Youth\\CMS\\Views\\Users\\Add.cshtml",
+      "TargetPath": "Views\\Users\\Add.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Freelance\\15-09-2020\\Youth\\CMS\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Freelance\\15-09-2020\\Youth\\CMS\\Views\\Orders\\Index.cshtml",
+      "TargetPath": "Views\\Orders\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Freelance\\15-09-2020\\Youth\\CMS\\Views\\Orders\\Details.cshtml",
+      "TargetPath": "Views\\Orders\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Freelance\\15-09-2020\\Youth\\CMS\\Views\\Countries\\Edit.cshtml",
+      "TargetPath": "Views\\Countries\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Freelance\\15-09-2020\\Youth\\CMS\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Freelance\\15-09-2020\\Youth\\CMS\\Views\\Orders\\Location.cshtml",
+      "TargetPath": "Views\\Orders\\Location.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Freelance\\15-09-2020\\Youth\\CMS\\Views\\Categories\\Index.cshtml",
+      "TargetPath": "Views\\Categories\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Freelance\\15-09-2020\\Youth\\CMS\\Views\\Categories\\Add.cshtml",
+      "TargetPath": "Views\\Categories\\Add.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Freelance\\15-09-2020\\Youth\\CMS\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Freelance\\15-09-2020\\Youth\\CMS\\Views\\Products\\Index.cshtml",
+      "TargetPath": "Views\\Products\\Index.cshtml",
       "FileKind": "mvc"
     }
   ],

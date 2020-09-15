@@ -13,7 +13,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Vegefoods - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Alamaneh Yoghurts</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
@@ -35,7 +35,7 @@
     <link href="../../fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 </head>
 <body class="goto-here">
-    <div class="py-1 bg-primary">
+    @* <div class="py-1 bg-primary">
         <div class="container">
             <div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
                 <div class="col-lg-12 d-block">
@@ -55,10 +55,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> *@
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Vegefoods</a>
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index"><img src="/images/logo E.png" style="height:100px; width:160px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
             </button>
@@ -66,26 +66,14 @@
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a asp-controller="Home" asp-action="Index" class="nav-link">Home</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" asp-controller="Product" asp-action="Index" id="dropdown04">Shop</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown04">
-                            <a class="dropdown-item" asp-controller="Product" asp-action="Index">Shop</a>
-                            <a class="dropdown-item" asp-controller="Home" asp-action="WishList">Wishlist</a>
-                            <a class="dropdown-item" asp-controller="Home" asp-action="Product">Single Product</a>
-                            <a class="dropdown-item" asp-controller="Home" asp-action="Cart">Cart</a>
-                            <a class="dropdown-item" asp-controller="Home" asp-action="CheckOut">Checkout</a>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a asp-controller="Home" asp-action="About" class="nav-link">About</a></li>
-                    <li class="nav-item"><a asp-controller="Home" asp-action="Blog" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Product" asp-action="Index">Shop</a></li>
+                    @* <li class="nav-item"><a asp-controller="Home" asp-action="About" class="nav-link">About</a></li>
+                    <li class="nav-item"><a asp-controller="Home" asp-action="Blog" class="nav-link">Blog</a></li> *@
                     <li class="nav-item"><a asp-controller="Home" asp-action="Contact" class="nav-link">Contact</a></li>
-                    <li class="nav-item cta cta-colored"><a asp-controller="Order" asp-action="Cart" class="nav-link"><span id="icon-shopping_cart" class="icon-shopping_cart"></span></a></li>
-
-
                     @if (((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.Name) == null)
                     {
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Auth" asp-action="Register">Sign In</a>
+                            <a class="nav-link" asp-controller="Auth" asp-action="Register">Sign In / Register</a>
                         </li>
                     }
                     else
@@ -104,6 +92,7 @@
                             <img style="height:41px; width:50px; border-radius:50%; margin-top:10px;" class="img-profile rounded-circle" src="../../@avatar">
                         </li>
                     }
+                    <li class="nav-item cta cta-colored"><a asp-controller="Order" asp-action="Cart" class="nav-link"><span id="icon-shopping_cart" class="icon-shopping_cart"></span></a></li>
                 </ul>
             </div>
         </div>
@@ -122,8 +111,8 @@
             <div class="row mb-5">
                 <div class="col-md">
                     <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">Vegefoods</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                        <h2 class="ftco-heading-2">Alamaneh Yoghurts</h2>
+                        @* <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p> *@
                         <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                             <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                             <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -135,14 +124,14 @@
                     <div class="ftco-footer-widget mb-4 ml-md-5">
                         <h2 class="ftco-heading-2">Menu</h2>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">Shop</a></li>
-                            <li><a href="#" class="py-2 d-block">About</a></li>
-                            <li><a href="#" class="py-2 d-block">Journal</a></li>
-                            <li><a href="#" class="py-2 d-block">Contact Us</a></li>
+                            <li><a asp-controller="Product" asp-action="Index" class="py-2 d-block">Shop</a></li>
+                            @* <li><a href="#" class="py-2 d-block">About</a></li>
+                            <li><a href="#" class="py-2 d-block">Journal</a></li> *@
+                            <li><a asp-controller="Home" asp-action="Contact" class="py-2 d-block">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4">
+                @* <div class="col-md-4">
                     <div class="ftco-footer-widget mb-4">
                         <h2 class="ftco-heading-2">Help</h2>
                         <div class="d-flex">
@@ -158,7 +147,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> *@
                 <div class="col-md">
                     <div class="ftco-footer-widget mb-4">
                         <h2 class="ftco-heading-2">Have a Questions?</h2>

@@ -73,7 +73,7 @@ namespace Context.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(1231),
+                            CreatedAt = new DateTime(2020, 9, 15, 16, 24, 23, 496, DateTimeKind.Local).AddTicks(3439),
                             NameAr = "الاردن",
                             NameEn = "Jordan",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -107,7 +107,7 @@ namespace Context.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(2082),
+                            CreatedAt = new DateTime(2020, 9, 15, 16, 24, 23, 496, DateTimeKind.Local).AddTicks(4417),
                             UnitAr = "كيلوجرام",
                             UnitEn = "Kilogram",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -115,7 +115,7 @@ namespace Context.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(2230),
+                            CreatedAt = new DateTime(2020, 9, 15, 16, 24, 23, 496, DateTimeKind.Local).AddTicks(4574),
                             UnitAr = "جرام",
                             UnitEn = "gram",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -123,7 +123,7 @@ namespace Context.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(2257),
+                            CreatedAt = new DateTime(2020, 9, 15, 16, 24, 23, 496, DateTimeKind.Local).AddTicks(4601),
                             UnitAr = "كبير",
                             UnitEn = "Large",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -131,7 +131,7 @@ namespace Context.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(2276),
+                            CreatedAt = new DateTime(2020, 9, 15, 16, 24, 23, 496, DateTimeKind.Local).AddTicks(4620),
                             UnitAr = "متوسط",
                             UnitEn = "Medium",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -139,7 +139,7 @@ namespace Context.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(2293),
+                            CreatedAt = new DateTime(2020, 9, 15, 16, 24, 23, 496, DateTimeKind.Local).AddTicks(4639),
                             UnitAr = "صغير",
                             UnitEn = "Small",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -147,7 +147,7 @@ namespace Context.Migrations
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(2313),
+                            CreatedAt = new DateTime(2020, 9, 15, 16, 24, 23, 496, DateTimeKind.Local).AddTicks(4659),
                             UnitAr = "لتر",
                             UnitEn = "Liter",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -364,14 +364,14 @@ namespace Context.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2020, 9, 15, 10, 27, 9, 390, DateTimeKind.Local).AddTicks(1579),
+                            CreatedAt = new DateTime(2020, 9, 15, 16, 24, 23, 492, DateTimeKind.Local).AddTicks(4547),
                             Name = "Admin",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(229),
+                            CreatedAt = new DateTime(2020, 9, 15, 16, 24, 23, 496, DateTimeKind.Local).AddTicks(2404),
                             Name = "User",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
@@ -404,7 +404,7 @@ namespace Context.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(3006),
+                            CreatedAt = new DateTime(2020, 9, 15, 16, 24, 23, 496, DateTimeKind.Local).AddTicks(5368),
                             NameAr = "على الانتظار",
                             NameEn = "Pending",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -412,7 +412,7 @@ namespace Context.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(3160),
+                            CreatedAt = new DateTime(2020, 9, 15, 16, 24, 23, 496, DateTimeKind.Local).AddTicks(5516),
                             NameAr = "تم القبول",
                             NameEn = "Accepted",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -420,7 +420,7 @@ namespace Context.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(3184),
+                            CreatedAt = new DateTime(2020, 9, 15, 16, 24, 23, 496, DateTimeKind.Local).AddTicks(5541),
                             NameAr = "مرفوض",
                             NameEn = "Rejected",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -428,7 +428,7 @@ namespace Context.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2020, 9, 15, 10, 27, 9, 394, DateTimeKind.Local).AddTicks(3202),
+                            CreatedAt = new DateTime(2020, 9, 15, 16, 24, 23, 496, DateTimeKind.Local).AddTicks(5559),
                             NameAr = "ملغي",
                             NameEn = "Canceled",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
