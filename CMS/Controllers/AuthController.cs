@@ -62,8 +62,8 @@ namespace CMS.Controllers
 
         public IActionResult Login(LoginModel model)
         {
-            string name = ((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.Name).Value;
-            string avatar = ((ClaimsIdentity)User.Identity).FindFirst("Image").Value;
+            //string name = ((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.Name).Value;
+            //string avatar = ((ClaimsIdentity)User.Identity).FindFirst("Image").Value;
             if (_modelValidations.IsObjectNull(model))
                 return RedirectToAction("Index", "Auth");
 

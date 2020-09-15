@@ -7,6 +7,7 @@ using DAL.Interfaces;
 using Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using PublicWebsite.Models;
 
 namespace PublicWebsite.Controllers
 {
@@ -83,8 +84,9 @@ namespace PublicWebsite.Controllers
         }
         [Authorize]
         [HttpPost]
-        public IActionResult Order(OrderDto order)
+        public IActionResult Order(OrderModel model)
         {
+            var order = new OrderDto();
             List<OrderItem> ListOrderItem = new List<OrderItem>();
              var CartItems = Request.Cookies["Cart"];
              var productIds = CartItems.Split("-").Select(x=> int.Parse(x)).ToList();
@@ -106,6 +108,9 @@ namespace PublicWebsite.Controllers
                   }         
               }
             order.OrderItems = ListOrderItem;
+            order.DeliveryDate = model.DeliveryDate;
+            order.DeliveryTime = model.DeliveryTime;
+            order.DeliveryInfo = model.DeliveryInfo;
             var NewOrder =  _orederRepository.Insert(order);
             return View("OrderConfirmed");
         }

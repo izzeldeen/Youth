@@ -1,3 +1,4 @@
+@model PublicWebsite.Models.OrderModel
 
 <div class="container">
     <div class="row">
@@ -10,19 +11,30 @@
             <div class="col-md-12 order-md-last d-flex mx-auto">
 
                 <form class="bg-white p-5 contact-form" method="post">
-                    <h5 class="text-center">Place Order</h5>
+                    @* <h5 class="text-center">Place Order</h5> *@
                     <div class="form-group">
+                        <label>Delivery Info</label>
                         <input type="text" class="form-control" placeholder="Delivery Info" name="DeliveryInfo">
+                    </div>
+                    <div>
+                        <div class="form-group">
+                        <label>Time To Deliver</label>
+                        <input type="time" class="form-control" name="DeliveryTime">
+                    </div>
+                    <div>
+                        <div class="form-group">
+                        <label>Date To Deliver</label>
+                        <input type="date" class="form-control" name="DeliveryDate">
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" id="lat" placeholder="Latuide" name="DeliveryLatitude" readonly>
+                        <input type="hidden" class="form-control" id="lat" placeholder="Latuide" name="DeliveryLatitude" readonly>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="lng" placeholder="Longtuide" name="DeliveryLongitude" readonly>
+                        <input type="hidden" class="form-control" id="lng" placeholder="Longtuide" name="DeliveryLongitude" readonly>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="lng" value="@ViewBag.TotalPrice" placeholder="Total Price" name="TotalPrice" readonly>
+                        <input type="hidden" class="form-control" id="lng" value="@ViewBag.TotalPrice" placeholder="Total Price" name="TotalPrice" readonly>
                     </div>
 
                     <div class="form-group">
@@ -48,16 +60,31 @@
 <script>
 
     function initMap() {
-        var map = new google.maps.Map(document.getElementById("myMap"), {
-            center: { lat: 32.0045056, lng: 35.8776832 },
+
+
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+                    var map = new google.maps.Map(document.getElementById("myMap"), {
+            center: pos,
             zoom: 15
         });
-        var myLatLng = { lat: 32.0045056, lng: 35.8776832 };
+        var myLatLng = pos;
         var marker = new google.maps.Marker({
             position: myLatLng,
             map: map,
-            title: 'Hello World!'
+            title: 'Your Location'
         });
+          });
+
+
+
+        }
+
+
         //marker.setMap();
 
     }

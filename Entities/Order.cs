@@ -14,5 +14,7 @@ namespace Entities
         public string DeliveryInfo { get; set; }
         public float DeliveryLatitude { get; set; }
         public float DeliveryLongitude { get; set; }
+        public DateTime DeliveryTime { get; set;}
+        public DateTime DeliveryDate { get; set;}
     }
 }
