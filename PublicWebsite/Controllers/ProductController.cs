@@ -61,11 +61,11 @@ namespace PublicWebsite.Controllers
             ProductViewModel productVM = new ProductViewModel();
             if (Request.Cookies["Language"] == "en")
             {
-                productVM.Id = product.Id; productVM.CategoryId = product.CategoryId; productVM.Name = product.NameEn;  productVM.Contry = product.CountryId; productVM.Description = product.DescreptionEn; productVM.ListPictuerUrl = _productRepository.GetProductPictuerIsNotMain(Id); productVM.Price = ProductSpecification.Price;
+                productVM.Id = product.Id; productVM.CategoryId = product.CategoryId; productVM.Name = product.NameEn;  productVM.Contry = product.CountryId; productVM.Description = product.DescreptionEn; productVM.ListPictuerUrl = _productRepository.GetProductPictuerIsNotMain(Id); productVM.Price = ProductSpecification.Price; productVM.Message = product.Message;
             }
             else
             {
-                productVM.Id = product.Id; productVM.CategoryId = product.CategoryId; productVM.Name = product.NameAr; productVM.Contry = product.CountryId; productVM.Description = product.DescreptionAr; productVM.ListPictuerUrl = _productRepository.GetProductPictuerIsNotMain(Id); productVM.Price = ProductSpecification.Price;
+                productVM.Id = product.Id; productVM.CategoryId = product.CategoryId; productVM.Name = product.NameAr; productVM.Contry = product.CountryId; productVM.Description = product.DescreptionAr; productVM.ListPictuerUrl = _productRepository.GetProductPictuerIsNotMain(Id); productVM.Price = ProductSpecification.Price; productVM.Message = product.Message;
             }
             return View(productVM);
         }

@@ -112,6 +112,7 @@ namespace PublicWebsite.Controllers
             order.DeliveryTime = model.DeliveryTime;
             order.DeliveryInfo = model.DeliveryInfo;
             var NewOrder =  _orederRepository.Insert(order);
+            if(NewOrder != null) { Response.Cookies.Append("Cart", "0"); }
             return View("OrderConfirmed");
         }
     }

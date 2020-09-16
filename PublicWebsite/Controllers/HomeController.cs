@@ -6,6 +6,9 @@ using PublicWebsite.Models;
 using DAL.Interfaces;
 using PublicWebsite.ViewModels;
 using System.Threading.Tasks;
+using RestSharp;
+using System;
+using Microsoft.AspNetCore.Http;
 
 namespace PublicWebsite.Controllers
 {
@@ -18,7 +21,6 @@ namespace PublicWebsite.Controllers
         private readonly ICategoriesRepository _categriesRepository;
         public HomeController( IUsersRepository usersRepository, ICountriesRepository countriesRepository ,IProductsRepository productsRepository , ICategoriesRepository categriesRepository  )
         {
-           
             _usersRepository = usersRepository;
             _countriesRepository = countriesRepository;
             _productRepository = productsRepository;
@@ -31,8 +33,12 @@ namespace PublicWebsite.Controllers
             {
                 var locale = Request.HttpContext.Features.Get<IRequestCultureFeature>();
                 var BrowserCulture = locale.RequestCulture.UICulture.ToString();
-                Response.Cookies.Append("Language", BrowserCulture);
+                  CookieOptions option = new CookieOptions();
+                option.Expires = DateTime.Now.AddDays(30); 
+                Response.Cookies.Append("Language", BrowserCulture , option);
             }
+
+        
             var countries = _countriesRepository.GetCountries();
             var  products = await   _productRepository.GetFeaturedProducts();
             var categories = _categriesRepository.GetLastFourCategories();
@@ -64,7 +70,6 @@ namespace PublicWebsite.Controllers
                     CategorysVM.Add(CategoryVM);
                 }
             }
-            
             var model = new CountriesViewModel();
             var list = new List<CountryViewModel>();
             foreach (var elem in countries)
@@ -75,8 +80,6 @@ namespace PublicWebsite.Controllers
             model.Countries = list;
             model.products = productsVM;
             model.Categries = CategorysVM;
-
-
             return View(model);
         }
 

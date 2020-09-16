@@ -45,6 +45,11 @@ namespace PublicWebsite
             services.AddScoped<DataContext>();
             services.AddScoped<ModelValidations>();
             services.AddScoped<ImageUploader>();
+        services.ConfigureApplicationCookie(options =>
+        {
+            options.Cookie.Name = "Language";
+            options.Cookie.Expiration = TimeSpan.FromDays(30);
+        });
             // Add by izz
             services.AddLocalization(opt => { opt.ResourcesPath = "Resourses"; });  
             services.AddMvc().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix).AddDataAnnotationsLocalization();
@@ -88,6 +93,7 @@ namespace PublicWebsite
                 .AddSupportedUICultures(supportedCultres);
             app.UseRequestLocalization(localizationOptions);
             ///
+           
             app.UseAuthentication();
 
             app.UseAuthorization();

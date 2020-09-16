@@ -61,30 +61,19 @@
                             
                                 <h3>@Model.Name</h3>
 
-                                <p class="price"><span>JOD @Model.Price</span></p>
+                                <p class="price"><span>  JOD @Model.Price</span></p>
+                                <br>
                                 <p>
-                                    @Model.Description
+                                 @Model.Description 
                                 </p>
                                 <div class="row mt-4">
-                                    @*<div class="col-md-6">
-                                        <div class="form-group d-flex">
-                                            <div class="select-wrap">
-                                                <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                                <select name="" id="" class="form-control">
-                                                    <option value="">Small</option>
-                                                    <option value="">Medium</option>
-                                                    <option value="">Large</option>
-                                                    <option value="">Extra Large</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>*@
+                               <p>@Model.Message </p>
                                     <div class="input-group itemCartHolder">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">Quantity</span>
                                         </div>
                                         @*<input type="number" class="form-control productQuantity" value="1" min="1" max="100" title="Quantity">*@
-                                        <input type="text" name="quantity" class="quantity form-control input-number" id="input-number-@Model.Id" placeholder="Quntity"   name="Quntity" min="1" max="100">
+                                        <input type="number" class="quantity form-control input-number" id="input-number-@Model.Id" placeholder="Quntity"   name="Quntity" min="1" max="100">
                                         <div class="input-group-append">
                                             <button data-id="1939" type="button" onclick="labelCounter(@Model.Id)" class="noZButton btnAddToCart btn btn-primary" title="Add to Cart">
                                                 <i class="fas fa-shopping-cart mr-1"></i>

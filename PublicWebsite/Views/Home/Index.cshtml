@@ -5,9 +5,9 @@
 <section id="home-section" class="hero">
 
     @*add by izz*@
-    <!-- <h1>@localizer["HellowWorld"]</h1> -->
+    <h1>@localizer["HellowWorld"]</h1> 
 
-
+   
 
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
@@ -196,7 +196,7 @@
                                     <a asp-controller="Product" asp-action="Details" asp-route-Id="@item.Id"  class="add-to-cart d-flex justify-content-center align-items-center text-center">
                                         <span><i class="ion-ios-menu"></i></span>
                                     </a>
-                                    <a onclick="AddToCart(2)" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                                    <a onclick="AddToCart(@item.Id)" class="buy-now d-flex justify-content-center align-items-center mx-1">
                                         <span><i class="ion-ios-cart"></i></span>
                                     </a>
                                     <a href="#" class="heart d-flex justify-content-center align-items-center ">
@@ -400,6 +400,9 @@
         console.log(document.cookie);
     };
 </script>
+
+
+
 
 
 
