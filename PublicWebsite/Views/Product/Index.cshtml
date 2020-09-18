@@ -14,14 +14,33 @@
         </div>
         
         <div class="container">
+
+   
             <div class="row">
                 <div class="col-3 text-center">
                             <ul _ngcontent-eeg-c71="" class="list-group my-3 ng-star-inserted">
+                               <p class="mb-2" style="color:#fadb61;"> 
+                                   Sort by Categories
+                               </p>
                                 <li _ngcontent-eeg-c71="" class="list-group-item  ng-star-inserted list-hover" value="0"><a asp-action="Index" asp-controller="Product" asp-route-CategoryId="0"> All </a></li>
 
                                 @foreach (var item in Model.Categories)
                                 {
                                     <li _ngcontent-eeg-c71="" class="list-group-item ng-star-inserted list-hover" ><a asp-action="Index" asp-controller="Product" asp-route-CategoryId="@item.Id"> @item.NameEn  </a></li>
+                                }
+
+                            </ul>
+
+
+                             <ul _ngcontent-eeg-c71="" class="list-group my-3 ng-star-inserted">
+                               <p class="mb-2" style="color:#fadb61;"> 
+                                   Sort by Country
+                               </p>
+                                <li _ngcontent-eeg-c71="" class="list-group-item  ng-star-inserted list-hover" value="0"><a asp-action="Index" asp-controller="Product" asp-route-CountryId="0"> All </a></li>
+
+                                @foreach (var item in Model.Countries)
+                                {
+                                    <li _ngcontent-eeg-c71="" class="list-group-item ng-star-inserted list-hover" ><a onclick="UpdateCountry(@item.Id)"> @item.Name  </a></li>
                                 }
 
                             </ul>

@@ -32,3 +32,12 @@ E:\Youth\V4\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.csproj.CoreCompileIn
 E:\Youth\V4\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.dll
 E:\Youth\V4\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.pdb
 E:\Youth\V4\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.csprojAssemblyReference.cache
+C:\Backup\V4\Youth\Entities\bin\Debug\netcoreapp3.0\Entities.deps.json
+C:\Backup\V4\Youth\Entities\bin\Debug\netcoreapp3.0\Entities.dll
+C:\Backup\V4\Youth\Entities\bin\Debug\netcoreapp3.0\Entities.pdb
+C:\Backup\V4\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.csprojAssemblyReference.cache
+C:\Backup\V4\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.AssemblyInfoInputs.cache
+C:\Backup\V4\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.AssemblyInfo.cs
+C:\Backup\V4\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.csproj.CoreCompileInputs.cache
+C:\Backup\V4\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.dll
+C:\Backup\V4\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.pdb

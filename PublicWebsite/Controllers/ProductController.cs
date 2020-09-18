@@ -13,14 +13,16 @@ namespace PublicWebsite.Controllers
     public class ProductController : Controller
     {
         private readonly IProductsRepository _productRepository;
-        private readonly ICategoriesRepository _categoriesRepository;  
-        public ProductController(IProductsRepository productsRepository, ICategoriesRepository categoriesRepository)
+        private readonly ICategoriesRepository _categoriesRepository;
+        private readonly ICountriesRepository _countryRepository;  
+        public ProductController(IProductsRepository productsRepository, ICategoriesRepository categoriesRepository , ICountriesRepository countriesRepository)
         {
             _productRepository = productsRepository;
             _categoriesRepository = categoriesRepository;
+            _countryRepository = countriesRepository;
         }
 
-        public IActionResult Index(int productPage , int PageSize = 5 , int CategoryId = 0 )
+        public IActionResult Index(int productPage , int PageSize = 5 , int CategoryId = 0)
         {
             int countryId = 1;
             if (Request.Cookies["Contry"] != null) { countryId = Convert.ToInt32(Request.Cookies["Contry"]); }
@@ -29,6 +31,21 @@ namespace PublicWebsite.Controllers
             StringBuilder param = new StringBuilder();
             param.Append("/Product?productPage=:");
             var count = products.Count();
+           var Countries =  _countryRepository.GetCountries();
+           List<CountryVM> CountriesList = new List<CountryVM>();
+           foreach(var item in Countries)
+           {
+               CountryVM country = new CountryVM(); 
+                 if (Request.Cookies["Language"] == "en")
+                {
+                   country.Id = item.Id; country.Name = item.NameEn;
+                }
+                else
+                {
+                    country.Id = item.Id; country.Name = item.NameAr;
+                }
+                CountriesList.Add(country);
+           }
             ListProductVM listPorductVM = new ListProductVM();
             List<ProductViewModel> ListProducts = new List<ProductViewModel>();
             foreach (var item in products)
@@ -39,6 +56,7 @@ namespace PublicWebsite.Controllers
                 {
                     ProductViewModel product = new ProductViewModel()
                     { Id = item.Id, CategoryId = item.CategoryId, Contry = countryId, Name = item.NameEn, Description = item.DescreptionEn, PictuerUrl = ProductPictuer.Image, Price = ProductSpecification.Price }; ListProducts.Add(product);
+                   
                 }
                 else
                 {
@@ -48,6 +66,7 @@ namespace PublicWebsite.Controllers
             }
             listPorductVM.ProductViewModel = ListProducts;
             listPorductVM.Categories = category;
+            listPorductVM.Countries = CountriesList;
             listPorductVM.PagingInfo = new PagingInfo { CurrentPage = productPage, ItemsPerPage = PageSize, TotalItems = count, urlParam = param.ToString() };
             listPorductVM.ProductViewModel = listPorductVM.ProductViewModel.OrderBy(x => x.Name).Skip((productPage - 1) * PageSize)
                 .Take(PageSize).ToList(); 

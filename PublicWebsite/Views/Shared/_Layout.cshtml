@@ -70,6 +70,13 @@
                     @* <li class="nav-item"><a asp-controller="Home" asp-action="About" class="nav-link">About</a></li>
                         <li class="nav-item"><a asp-controller="Home" asp-action="Blog" class="nav-link">Blog</a></li> *@
                     <li class="nav-item"><a asp-controller="Home" asp-action="Contact" class="nav-link">@localizer["Contact"]</a></li>
+                     <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                <a class="dropdown-item" onclick="UpdateLanguage('en')" ><i class="fas fa-list mr-1"></i>English</a>
+                                <a class="dropdown-item" onclick="UpdateLanguage('ar')" ><i class="fas fa-user mr-1"></i>Arabic</a>
+                            </div>
+                        </li>
                     @if (((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.Name) == null)
                     {
                         <li class="nav-item">
@@ -236,45 +243,34 @@ AddexpireDateToLanguageCookie();
         date.setTime(date.getTime()+(30*24*60*60*1000));
         var str = document.cookie;
         var res = str.split(";");
-        console.log(res);
         var CookieName = res.split('=');
-         console.log(CookieName);
         document.cookie = "Language=" + CookieName[1] + "; expires=" + date.toGMTString() + "; path=/";
-        console.log(document.cookie); 
+        
    }
     function AddToCart(ProductId) {
         cartItems += "-"  +  ProductId;
         CartLastValue();
         CartCounterajax();
-        console.log(cartItems); 
+       
     }
      function CartLastValue(values)
      {
         
         if(getCookie('Cart') === '')
         {
-              //setCookie(name,value,exdays)
+             
               var date = new Date();
                date.setTime(date.getTime()+(30*24*60*60*1000));
               document.cookie = "Cart=0" + cartItems  + "; expires=" + date.toGMTString() + "; path=/";
-              
-              console.log(document.cookie);
              cartItems = [];
         }
         else
         {
-          var str = document.cookie;
-          var res = str.split(";");
-          console.log(res);
-          var cartCookie = res[2];
-          var CartValue = res[2].split('=');
-          console.log(CartValue);
-          var items = CartValue[1];
-          console.log(items);
-          //document.cookie = "Cart="  + items + cartItems  + ";" + "path=/";
-            var date = new Date();
-            date.setTime(date.getTime()+(30*24*60*60*1000));
-            document.cookie = "Cart=0" + items +  cartItems  + "; expires=" + date.toGMTString() + "; path=/";
+        
+         var products = getCookie('Cart');
+         var date = new Date();
+         date.setTime(date.getTime()+(30*24*60*60*1000));
+         document.cookie = "Cart=" + products +  cartItems  + "; expires=" + date.toGMTString() + "; path=/";
          cartItems = [];
         }
      }
@@ -294,24 +290,38 @@ AddexpireDateToLanguageCookie();
         return "";
     }
         function RemoveItem(value) {
+           var NewList = [];
+           var Items = getCookie('Cart');
+           var products = Items.split('-');
+           document.cookie= 'Cart=0';
+           for(x=0;x<products.length;x++)
+           {
+              if(products[x] !== value.toString())
+              {
+                 AddToCart(products[x]);
+              }
+           }
+           loadDoc();
+           CartCounterajax();
+        }
+ 
+        function RemoveItemWithOutPostBack(value) {
             listItems = [0];
             var str = document.cookie;
             var res = str.split(";");
             var cartCookie = res[2];
             var CartValue = res[2].split('=');
             var Items = CartValue[1].split('-');
-            console.log(listItems)
+            
             for (var x= 0; x < Items.length ; x++)
             {
                 if (value !=   Items[x]) {
                     if(Items[x] != 0){ listItems += "-"  + Items[x]; }
-                  
                 } 
             }
-            document.cookie = "Cart=" + listItems + ";" + "path=/";
-             loadDoc();
+             document.cookie = "Cart=" + listItems + ";" + "path=/";
         }
-    function loadDoc() {
+  function loadDoc() {
   var xhttp = new XMLHttpRequest();
   xhttp.open("GET", "/Order/Cart", true);
   xhttp.send();
@@ -321,14 +331,11 @@ AddexpireDateToLanguageCookie();
 
  function CartCounter()
  {
-     var str = document.cookie;
-     var res = str.split(";");
-     var cartCookie = res[2];
-     var CartValue = res[2].split('=');
-     var Items = CartValue[1].split('-');
-     //to remove the 0 from the counter
-     var counter = Items.length - 1;
-     var unique = Items.filter(onlyUnique);
+     var str =  getCookie('Cart');
+     console.log(str);
+     var res = str.split('-');
+     console.log(res);
+     var unique = res.filter(onlyUnique);
      console.log(unique);
      return unique.length-1;
  }
@@ -347,37 +354,62 @@ AddexpireDateToLanguageCookie();
 
 function labelCounter(productId)
 {
-    console.log("input-number-" + productId)
+   
     var quntity = document.getElementById("input-number-" + productId).value;
-    console.log(quntity);
-    RemoveItemWithOutPostBack(productId);
+   
+    RemoveItem(productId);
     for(var i =0; i< quntity; i++)
     {
-        console.log("AddItem : Id:" + productId);
         AddToCart(productId);
     }
 }
- function RemoveItemWithOutPostBack(value) {
-            listItems = [0];
-            var str = document.cookie;
-            var res = str.split(";");
-            var cartCookie = res[2];
-            var CartValue = res[2].split('=');
-            var Items = CartValue[1].split('-');
-            console.log(listItems)
-            for (var x= 0; x < Items.length ; x++)
-            {
-                if (value !=   Items[x]) {
-                    if(Items[x] != 0){ listItems += "-"  + Items[x]; }
-                } 
-            }
-             document.cookie = "Cart=" + listItems + ";" + "path=/";
-        }
 
-        function onlyUnique(value, index, self) {
+ function onlyUnique(value, index, self) {
             return self.indexOf(value) === index;
         }
 </script>
+<script>
+    
+          function UpdateLanguage(value)
+          { var date = new Date();
+             console.log(value);
+             console.log("Inside the UpdateLanguage");
+            
+                    var str = document.cookie;
+                    var res = str.split(";");
+                     console.log(res);
+                     console.log(res[1]);
+                    document.cookie = 'Language=' + value +  '; ' + res[1] + '; ' + res[2] + '; ';
+                 
+         }
+              
+             
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+
+function UpdateCountry(value)
+{
+         var date = new Date();
+         date.setTime(date.getTime()+(30*24*60*60*1000));
+         document.cookie = "Contry = " + value + "; expires=" + date.toGMTString() + "; path=/";
+          window.location.href = window.location.href;
+}
+
+    </script>
    
     @RenderSection("Scripts", required: false)
 </body>

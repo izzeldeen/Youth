@@ -11,6 +11,8 @@ namespace PublicWebsite.ViewModels
     {
         public List<ProductViewModel> ProductViewModel { get; set; }
         public IEnumerable<Category> Categories { get; set; } 
+
+        public List<CountryVM> Countries {get; set;}
         public PagingInfo PagingInfo { get; set; }
     }
 }

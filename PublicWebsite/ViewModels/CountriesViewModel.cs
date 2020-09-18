@@ -19,4 +19,11 @@ namespace PublicWebsite.ViewModels
         public string Arabic { get; set; }
         public DateTime CreatedAt { get; set; }
     }
+
+    public class CountryVM 
+    {
+        public int Id {get; set;}
+
+        public string Name {get; set;}
+    }
 }

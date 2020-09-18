@@ -37,13 +37,16 @@ namespace PublicWebsite.Controllers
         {
             var CartItems = Request.Cookies["Cart"];
             ShoppingCart shoppingCart = new ShoppingCart();
+           
             if (CartItems == null) return View(shoppingCart);
             var Items = CartItems.Split("-");
             List<ShoppingCartItem> shoppingCartItems = new List<ShoppingCartItem>();
             double TotalPrice = 0.00;
-            foreach(var item in Items.Skip(1))
+            foreach(var item in Items)
             {
-                 var product = _productRepository.GetProductSpecification(Convert.ToInt32(item));
+                if(item != "0" && item != "" )
+                {
+                var product = _productRepository.GetProductSpecification(Convert.ToInt32(item));
                  if(product != null)
                  {
                      TotalPrice += product.Price;
@@ -68,6 +71,8 @@ namespace PublicWebsite.Controllers
                            }
                       }  
                  }
+                }
+                
             }
             }
             shoppingCart.ShoppingCartItems = shoppingCartItems;
@@ -113,7 +118,7 @@ namespace PublicWebsite.Controllers
             order.DeliveryInfo = model.DeliveryInfo;
             var NewOrder =  _orederRepository.Insert(order);
             if(NewOrder != null) { Response.Cookies.Append("Cart", "0"); }
-            return View("OrderConfirmed");
+            return View("Index" , "Home");
         }
     }
 }
