@@ -33,7 +33,7 @@ namespace PublicWebsite.Controllers
         }
 
         [HttpGet]
-        public IActionResult Cart(int? Id)
+        public IActionResult Cart()
         {
             var CartItems = Request.Cookies["Cart"];
             ShoppingCart shoppingCart = new ShoppingCart();
@@ -77,7 +77,6 @@ namespace PublicWebsite.Controllers
             }
             shoppingCart.ShoppingCartItems = shoppingCartItems;
             shoppingCart.Price = TotalPrice;
-            if(Id == null) { return View(shoppingCart); }
             return View(shoppingCart);
         }
         [Authorize]
@@ -91,14 +90,10 @@ namespace PublicWebsite.Controllers
         [HttpPost]
         public IActionResult Order(OrderModel model)
         {
-            var order = new OrderDto(){DeliveryLatitude = model.DeliveryLatitude , DeliveryLongitude = model.DeliveryLongitude};
             List<OrderItem> ListOrderItem = new List<OrderItem>();
              var CartItems = Request.Cookies["Cart"];
              var productIds = CartItems.Split("-").Select(x=> int.Parse(x)).ToList();
-              order.UserId = int.Parse(((ClaimsIdentity)User.Identity).FindFirst("UserId").Value);
              var productItem = _productRepository.GetProductByIDS(productIds.Distinct().ToList());
-            //Status Id Pending
-            order.StatusId = 1;       
             foreach(var item in productIds) {
                   if(ListOrderItem.FirstOrDefault(x=>x.ProductId == item) != null)
                   {
@@ -119,11 +114,7 @@ namespace PublicWebsite.Controllers
               }
               var TotalPrice = 0;
               foreach(var item in ListOrderItem) { TotalPrice += item.TotalPrice; }
-            order.OrderItems = ListOrderItem;
-            order.DeliveryDate = model.DeliveryDate;
-            order.DeliveryTime = model.DeliveryTime;
-            order.DeliveryInfo = model.DeliveryInfo;
-            order.TotalPrice = TotalPrice;
+            var order = new OrderDto(){DeliveryLatitude = model.DeliveryLatitude , DeliveryLongitude = model.DeliveryLongitude , DeliveryTime = model.DeliveryTime , DeliveryInfo = model.DeliveryInfo , OrderItems = ListOrderItem ,TotalPrice = TotalPrice ,  UserId = int.Parse(((ClaimsIdentity)User.Identity).FindFirst("UserId").Value) ,StatusId = 1 , DeliveryDate = model.DeliveryDate};
             var NewOrder =  _orederRepository.Insert(order);
             if(NewOrder != null) { Response.Cookies.Append("Cart", "0"); }
             return RedirectToAction("Index" , "Home");

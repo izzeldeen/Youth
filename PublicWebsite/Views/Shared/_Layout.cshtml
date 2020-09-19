@@ -73,8 +73,8 @@
                      <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown04">
-                                <a class="dropdown-item" onclick="UpdateLanguage('en')" ><i class="fas fa-list mr-1"></i>English</a>
-                                <a class="dropdown-item" onclick="UpdateLanguage('ar')" ><i class="fas fa-user mr-1"></i>Arabic</a>
+                                <a class="dropdown-item" onclick="UpdateLanguage('en')" >English</a>
+                                <a class="dropdown-item" onclick="UpdateLanguage('ar')" >Arabic</a>
                             </div>
                         </li>
                     @if (((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.Name) == null)

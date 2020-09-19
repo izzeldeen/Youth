@@ -19,7 +19,7 @@
                     <div>
                         <div class="form-group">
                         <label>Time To Deliver</label>
-                        <input type="time" class="form-control" name="DeliveryClock">
+                        <input type="time" class="form-control" name="DeliveryTime">
                     </div>
                     <div>
                         <div class="form-group">
@@ -28,13 +28,13 @@
                     </div>
 
                     <div class="form-group">
-                        <input  class="form-control" id="lat" placeholder="Latuide" name="DeliveryLatitude" readonly>
+                        <input   class="form-control" id="lat" placeholder="Latuide" name="DeliveryLatitude" readonly>
                     </div>
                     <div class="form-group">
                         <input  class="form-control" id="lng" placeholder="Longtuide" name="DeliveryLongitude" readonly>
                     </div>
                     <div class="form-group">
-                        <input  class="form-control" id="lng" value="@ViewBag.TotalPrice" placeholder="Total Price" name="TotalPrice" readonly>
+                        <input  type="hidden" class="form-control" id="lng" value="@ViewBag.TotalPrice" placeholder="Total Price" name="TotalPrice" readonly>
                     </div>
 
                     <div class="form-group">
@@ -58,7 +58,7 @@
 
 
 <script>
-
+getlatAndLng();
     function initMap() {
 
 
@@ -73,43 +73,28 @@
             zoom: 15
         });
         var myLatLng = pos;
+         document.getElementById("lat").value =
+     pos.lat;
+      document.getElementById("lng").value =
+     pos.lng;
         var marker = new google.maps.Marker({
             position: myLatLng,
             map: map,
+           draggable:true,
             title: 'Your Location'
         });
+        document.getElementById('lat').value = pos.lat;
+        document.getElementById('lng').value = pos.lng;
+
           });
 
-
-
+            
         }
-
-
-        //marker.setMap();
-
+         
     }
-
 
 </script>
-<script>
-    var x = document.getElementById("demo");
-    getLocation();
-    function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else {
-            x.innerHTML = "Geolocation is not supported by this browser.";
-        }
-    }
-    var lat = document.getElementById("lat");
-    var lng = document.getElementById("lng");
-    function showPosition(position) {
-        var latitude = position.coords.latitude;
-        var longitude = position.coords.longitude;
-        lat.value = latitude;
-        lng.value = longitude;
-    }
-</script>
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5gvN50xPVuO3Fp6sABCumYv7M53PeaLE&callback=initMap"
         async defer></script>
 
