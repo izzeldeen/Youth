@@ -63,15 +63,7 @@
 
 
                     }
-                    @if(Model.OrderStatus == "Pending")
-                    { 
-                        <div class="row mt-3">
-                            <div class="col-md-12 text-center">
-                                <a asp-controller="Orders" asp-action="ChangeOrderStatus" asp-route-status="Decline" asp-route-id="@Model.Id" class="btn btn-danger">Decline</a>
-                                <a asp-controller="Orders" asp-action="ChangeOrderStatus" asp-route-status="Accept" asp-route-id="@Model.Id" class="btn btn-success">Accept</a>
-                            </div>
-                        </div>
-                    }
+                  
                 </div>
             </div>
         </div>

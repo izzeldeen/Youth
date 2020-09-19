@@ -270,7 +270,7 @@ AddexpireDateToLanguageCookie();
          var products = getCookie('Cart');  
          var date = new Date();
          date.setTime(date.getTime()+(30*24*60*60*1000));
-         document.cookie = "Cart=0" + products +  cartItems  + "; expires=" + date.toGMTString() + "; path=/";
+         document.cookie = "Cart=" + products +  cartItems  + "; expires=" + date.toGMTString() + "; path=/";
          cartItems = [];
         }
      }
@@ -295,7 +295,8 @@ AddexpireDateToLanguageCookie();
            var products = Items.split('-');
             var date = new Date();
          date.setTime(date.getTime()+(30*24*60*60*1000));
-         document.cookie = "Cart=0" + '0'  + "; expires=" + date.toGMTString() + "; path=/";
+         //document.cookie = "Cart=0" + '0'  + "; expires=" + date.toGMTString() + "; path=/";
+         document.cookie = "Cart="  + "; expires=" + date.toGMTString() + "; path=/";
            for(x=0;x<products.length;x++)
            {
               if(products[x] !== value.toString())
@@ -313,7 +314,7 @@ AddexpireDateToLanguageCookie();
            var products = Items.split('-');
             var date = new Date();
          date.setTime(date.getTime()+(30*24*60*60*1000));
-         document.cookie = "Cart=0" + '0'  + "; expires=" + date.toGMTString() + "; path=/";
+         document.cookie = "Cart=" +  "; expires=" + date.toGMTString() + "; path=/";
            for(x=0;x<products.length;x++)
            {
               if(products[x] !== value.toString())
@@ -410,7 +411,7 @@ function UpdateCountry(value)
 {
          var date = new Date();
          date.setTime(date.getTime()+(30*24*60*60*1000));
-         document.cookie = "Contry = " + value + "; expires=" + date.toGMTString() + "; path=/";
+         document.cookie = "Contry= " + value + "; expires=" + date.toGMTString() + "; path=/";
           window.location.href = window.location.href;
 }
 

@@ -101,7 +101,7 @@ namespace DAL.Implemntations
 
         public ProductSpecification GetProductSpecification(int ProductId)
         {
-            return context.ProductSpecifications.Include(x=> x.Product).FirstOrDefault(x => x.ProductId == ProductId);
+            return  context.ProductSpecifications.Include(x=> x.Product).FirstOrDefault(x => x.ProductId == ProductId);
         }
 
         public List<Product> GetProductByIDS(List<int> IDs)

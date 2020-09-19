@@ -32,7 +32,7 @@ namespace PublicWebsite.Controllers
             foreach(var item in category) { 
                 if(Request.Cookies["Language"] == "ar")
                 {
- var CategoryViewModel = new CategoryViewModel() {Id = item.Id , Name = item.NameAr};
+                var CategoryViewModel = new CategoryViewModel() {Id = item.Id , Name = item.NameAr};
                 CategoryVM.Add(CategoryViewModel);
                 }else
                 {
@@ -81,7 +81,7 @@ namespace PublicWebsite.Controllers
             listPorductVM.Countries = CountriesList;
             listPorductVM.PagingInfo = new PagingInfo { CurrentPage = productPage, ItemsPerPage = PageSize, TotalItems = count, urlParam = param.ToString() };
             listPorductVM.ProductViewModel = listPorductVM.ProductViewModel.OrderBy(x => x.Name).Skip((productPage - 1) * PageSize)
-                .Take(PageSize).ToList(); 
+             .Take(PageSize).ToList(); 
             return View(listPorductVM);
         }
         public IActionResult Details(int Id)

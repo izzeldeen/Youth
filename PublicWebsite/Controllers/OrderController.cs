@@ -102,8 +102,9 @@ namespace PublicWebsite.Controllers
             foreach(var item in productIds) {
                   if(ListOrderItem.FirstOrDefault(x=>x.ProductId == item) != null)
                   {
-                         ListOrderItem.FirstOrDefault(x=>x.ProductId == item).Quantity += 1;
-                         ListOrderItem.FirstOrDefault(x=>x.ProductId == item).TotalPrice *= 2;  
+                         var  product =  ListOrderItem.FirstOrDefault(x=>x.ProductId == item);
+                         product.Quantity += 1;
+                         product.TotalPrice = product.Quantity * product.ItemPrice;  
                   }
                   else
                   {
