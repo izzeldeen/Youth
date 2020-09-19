@@ -10,7 +10,7 @@ namespace PublicWebsite.ViewModels
     public class ListProductVM
     {
         public List<ProductViewModel> ProductViewModel { get; set; }
-        public IEnumerable<Category> Categories { get; set; } 
+        public IEnumerable<CategoryViewModel> Categories { get; set; } 
 
         public List<CountryVM> Countries {get; set;}
         public PagingInfo PagingInfo { get; set; }

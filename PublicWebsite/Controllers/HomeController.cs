@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using RestSharp;
 using System;
 using Microsoft.AspNetCore.Http;
+using System.Threading;
+using System.Globalization;
 
 namespace PublicWebsite.Controllers
 {
@@ -85,10 +87,16 @@ namespace PublicWebsite.Controllers
 
       
 
-
-        public IActionResult About()
+        [HttpGet]
+        public IActionResult ChangeLanguage()
         {
-            return View();
+            var languge  =  Request.Cookies["Language"];
+            Response.Cookies.Append(
+            CookieRequestCultureProvider.DefaultCookieName,
+           CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(languge)),
+             new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+                );
+            return RedirectToAction("Index");
         }
         // public IActionResult Blog()
         // {

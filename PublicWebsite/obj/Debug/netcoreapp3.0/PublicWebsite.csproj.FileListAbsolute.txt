@@ -1377,9 +1377,6 @@ E:\Youth\V4\Youth\PublicWebsite\obj\Debug\netcoreapp3.0\PublicWebsite.Resourses.
 E:\Youth\V4\Youth\PublicWebsite\obj\Debug\netcoreapp3.0\PublicWebsite.Resourses.Views.User.Index.en.resources
 E:\Youth\V4\Youth\PublicWebsite\obj\Debug\netcoreapp3.0\PublicWebsite.Resourses.Views.User.UserOrders.ar.resources
 E:\Youth\V4\Youth\PublicWebsite\obj\Debug\netcoreapp3.0\PublicWebsite.Resourses.Views.User.UserOrders.en.resources
-E:\Youth\V4\Youth\PublicWebsite\obj\Debug\netcoreapp3.0\ar\PublicWebsite.resources.cs
-E:\Youth\V4\Youth\PublicWebsite\obj\Debug\netcoreapp3.0\en-us\PublicWebsite.resources.cs
-E:\Youth\V4\Youth\PublicWebsite\obj\Debug\netcoreapp3.0\en\PublicWebsite.resources.cs
 C:\Backup\V4\Youth\PublicWebsite\bin\Debug\netcoreapp3.0\appsettings.Development.json
 C:\Backup\V4\Youth\PublicWebsite\bin\Debug\netcoreapp3.0\appsettings.json
 C:\Backup\V4\Youth\PublicWebsite\bin\Debug\netcoreapp3.0\Properties\launchSettings.json
@@ -1858,3 +1855,6 @@ C:\Backup\V4\Youth\PublicWebsite\obj\Debug\netcoreapp3.0\staticwebassets\PublicW
 C:\Backup\V4\Youth\PublicWebsite\obj\Debug\netcoreapp3.0\PublicWebsite.dll
 C:\Backup\V4\Youth\PublicWebsite\obj\Debug\netcoreapp3.0\PublicWebsite.pdb
 C:\Backup\V4\Youth\PublicWebsite\obj\Debug\netcoreapp3.0\PublicWebsite.genruntimeconfig.cache
+E:\Youth\V4\Youth\PublicWebsite\obj\Debug\netcoreapp3.0\ar\PublicWebsite.resources.cs
+E:\Youth\V4\Youth\PublicWebsite\obj\Debug\netcoreapp3.0\en-us\PublicWebsite.resources.cs
+E:\Youth\V4\Youth\PublicWebsite\obj\Debug\netcoreapp3.0\en\PublicWebsite.resources.cs

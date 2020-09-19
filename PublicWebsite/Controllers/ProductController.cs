@@ -27,7 +27,19 @@ namespace PublicWebsite.Controllers
             int countryId = 1;
             if (Request.Cookies["Contry"] != null) { countryId = Convert.ToInt32(Request.Cookies["Contry"]); }
             var products = _productRepository.GetProductByContry(countryId , CategoryId);
-            var category = _categoriesRepository.GetCategories(); 
+            var category = _categoriesRepository.GetCategories();
+            var CategoryVM = new List<CategoryViewModel>();
+            foreach(var item in category) { 
+                if(Request.Cookies["Language"] == "ar")
+                {
+ var CategoryViewModel = new CategoryViewModel() {Id = item.Id , Name = item.NameAr};
+                CategoryVM.Add(CategoryViewModel);
+                }else
+                {
+                    var CategoryViewModel = new CategoryViewModel() {Id = item.Id , Name = item.NameEn};
+                CategoryVM.Add(CategoryViewModel);
+                }
+            } 
             StringBuilder param = new StringBuilder();
             param.Append("/Product?productPage=:");
             var count = products.Count();
@@ -65,14 +77,13 @@ namespace PublicWebsite.Controllers
                 }
             }
             listPorductVM.ProductViewModel = ListProducts;
-            listPorductVM.Categories = category;
+            listPorductVM.Categories = CategoryVM;
             listPorductVM.Countries = CountriesList;
             listPorductVM.PagingInfo = new PagingInfo { CurrentPage = productPage, ItemsPerPage = PageSize, TotalItems = count, urlParam = param.ToString() };
             listPorductVM.ProductViewModel = listPorductVM.ProductViewModel.OrderBy(x => x.Name).Skip((productPage - 1) * PageSize)
                 .Take(PageSize).ToList(); 
             return View(listPorductVM);
         }
-
         public IActionResult Details(int Id)
         {
             var product = _productRepository.GetProductById(Id);
@@ -88,6 +99,5 @@ namespace PublicWebsite.Controllers
             }
             return View(productVM);
         }
-      
     }   
 }

@@ -91,7 +91,7 @@ namespace PublicWebsite.Controllers
         [HttpPost]
         public IActionResult Order(OrderModel model)
         {
-            var order = new OrderDto();
+            var order = new OrderDto(){DeliveryLatitude = model.DeliveryLatitude , DeliveryLongitude = model.DeliveryLongitude};
             List<OrderItem> ListOrderItem = new List<OrderItem>();
              var CartItems = Request.Cookies["Cart"];
              var productIds = CartItems.Split("-").Select(x=> int.Parse(x)).ToList();
@@ -99,7 +99,7 @@ namespace PublicWebsite.Controllers
              var productItem = _productRepository.GetProductByIDS(productIds.Distinct().ToList());
             //Status Id Pending
             order.StatusId = 1;       
-            foreach(var item in productIds.Skip(1)) {
+            foreach(var item in productIds) {
                   if(ListOrderItem.FirstOrDefault(x=>x.ProductId == item) != null)
                   {
                          ListOrderItem.FirstOrDefault(x=>x.ProductId == item).Quantity += 1;
@@ -107,18 +107,25 @@ namespace PublicWebsite.Controllers
                   }
                   else
                   {
-                      OrderItem orderItem = new OrderItem(){ ProductId=item , Product = _productRepository.GetProductById(item) , Quantity =1, ItemPrice= _productRepository.GetProductSpecification(item).Price };
+                      var product = _productRepository.GetProductById(item);
+                      if(product != null) {
+                      OrderItem orderItem = new OrderItem(){ ProductId=item , Product =  product, Quantity =1, ItemPrice= _productRepository.GetProductSpecification(item).Price };
                       orderItem.TotalPrice = orderItem.ItemPrice * orderItem.Quantity;
                       ListOrderItem.Add(orderItem);
+                      }
+                     
                   }         
               }
+              var TotalPrice = 0;
+              foreach(var item in ListOrderItem) { TotalPrice += item.TotalPrice; }
             order.OrderItems = ListOrderItem;
             order.DeliveryDate = model.DeliveryDate;
             order.DeliveryTime = model.DeliveryTime;
             order.DeliveryInfo = model.DeliveryInfo;
+            order.TotalPrice = TotalPrice;
             var NewOrder =  _orederRepository.Insert(order);
             if(NewOrder != null) { Response.Cookies.Append("Cart", "0"); }
-            return View("Index" , "Home");
+            return RedirectToAction("Index" , "Home");
         }
     }
 }
