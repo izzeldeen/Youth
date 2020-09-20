@@ -82,7 +82,10 @@ namespace CMS.Controllers
             var status = _ordersRepository.GetStatusById(order.StatusId);
 
             string username = user.Firstname + " " + user.Lastname;
-            var model = new OrderModel { CreatedAt = order.CreatedAt, Id = order.Id, OrderStatus = status.NameEn, TotalPrice = order.TotalPrice, Username = username, Phonenumber = user.Phonenumber, DeliveryInfo = order.DeliveryInfo, DeliveryLatitude = order.DeliveryLatitude, DeliveryLongitude = order.DeliveryLongitude};
+            string deliveryDate = order.DeliveryDate.ToString("MM/dd/yyyy");
+            string deliveryTime = order.DeliveryClock.ToString("HH:mm:ss");
+
+            var model = new OrderModel { CreatedAt = order.CreatedAt, Id = order.Id, OrderStatus = status.NameEn, TotalPrice = order.TotalPrice, Username = username, Phonenumber = user.Phonenumber, DeliveryInfo = order.DeliveryInfo, DeliveryLatitude = order.DeliveryLatitude, DeliveryLongitude = order.DeliveryLongitude, DeliveryDate = deliveryDate, DeliveryTime = deliveryTime};
 
             var orderItems = _ordersRepository.GetOrderItems(Id);
             var list = new List<OrderItemsModel>();

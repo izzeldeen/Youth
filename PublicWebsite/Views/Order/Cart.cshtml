@@ -29,7 +29,7 @@
                                     <tr class="text-center">
                                         <td class="product-remove"><a onclick="RemoveItem(@item.ProductId)"><span class="ion-ios-close"></span></a></td>
 
-                                        <td class="image-prod"><img src="../Documents/Products/@item.PictuerUrl" class="image-fluid"></td>
+                                        <td class="image-prod"><img src="@item.PictuerUrl" class="image-fluid"></td>
 
                                         <td class="product-name">
                                             <h3>@item.Name</h3>
@@ -45,7 +45,7 @@
                                         </td>
 
                                         @{ var TotalAmout = item.Quntity * item.ProductSpecification.Price;}
-                                        <td class="total">@TotalAmout$</td>
+                                        <td class="total">@TotalAmout JOD</td>
                                     </tr><!-- END TR-->
 
                                 }
@@ -60,18 +60,7 @@
                 <div class="col-lg-4 mt-5 cart-wrap ftco-animate fadeInUp ftco-animated">
                     <div class="cart-total mb-3">
                         <h3>Cart Totals</h3>
-                        <p class="d-flex">
-                            <span>Subtotal</span>
-                            <span>@Model.Price</span>
-                        </p>
-                        <p class="d-flex">
-                            <span>Delivery</span>
-                            <span>$0.00</span>
-                        </p>
-                        <p class="d-flex">
-                            <span>Discount</span>
-                            <span></span>
-                        </p>
+                       
                         <hr>
                         <p class="d-flex total-price">
                             <span>Total</span>

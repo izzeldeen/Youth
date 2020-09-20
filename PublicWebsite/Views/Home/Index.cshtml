@@ -58,7 +58,7 @@
     </div>
 
     @*end of add *@
-    <div class="home-slider owl-carousel">
+    <div class="home-slider owl-carousel" dir="ltr">
         <div class="slider-item" style="background-image: url(../images/bg_1.jpg);">
             <div class="overlay"></div>
             <div class="container">
@@ -149,7 +149,7 @@
             {
                 <div class="col-md-4">
                   
-                    <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(../../Documents/Products/@item.Banner);">
+                    <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(@item.Banner);">
                         <div class="text px-3 py-1">
                             <h2 class="mb-0"><a href="#">@item.Name</a></h2>
                         </div>
@@ -180,7 +180,7 @@
                 <div class="col-md-6 col-lg-3 ftco-animate">
                     <div class="product">
                         <a href="#" class="img-prod">
-                            <img class="img-fluid" src="../Documents/Products/@item.PictuerUrl" alt="Colorlib Template">
+                            <img class="img-fluid" src="@item.PictuerUrl" alt="Colorlib Template">
                             @* <span class="status">30%</span> *@
                             <div class="overlay"></div>
                         </a>

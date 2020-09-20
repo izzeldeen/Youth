@@ -117,7 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
   <data name="HellowWorld" xml:space="preserve">
     <value>Hellow world From Index En</value>
+  </data>
+  <data name="JOD" xml:space="preserve">
+    <value>JOD</value>
+  </data>
+  <data name="Our Products" xml:space="preserve">
+    <value>Our Products</value>
+  </data>
+  <data name="Sort by Categories" xml:space="preserve">
+    <value>Sort by Categories</value>
+  </data>
+  <data name="Sort by Country" xml:space="preserve">
+    <value>Sort by Country</value>
   </data>
 </root>

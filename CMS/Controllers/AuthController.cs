@@ -41,6 +41,7 @@ namespace CMS.Controllers
                     new Claim(ClaimTypes.Name, cookieModel.Fullname),
                     new Claim("Image", cookieModel.Avatar),
                     new Claim(ClaimTypes.Role, "Admin"),
+                    new Claim("RoleId", cookieModel.RoleId.ToString()),
                     new Claim("Phonenumber", cookieModel.Phonenumber),
                     new Claim("UserId", cookieModel.UserId.ToString()),
                 };
@@ -72,7 +73,7 @@ namespace CMS.Controllers
 
             var user = _usersRepository.Login(new LoginDto { Phonenumber = model.Phonenumber, Password = model.Password });
 
-            if (user == null || user.RoleId != 1 || user.IsBlocked == true)
+            if (user == null || user.RoleId == 2 || user.IsBlocked == true)
                 return RedirectToAction("Index", "Auth");
 
             string fullname = user.Firstname + " " + user.Lastname;

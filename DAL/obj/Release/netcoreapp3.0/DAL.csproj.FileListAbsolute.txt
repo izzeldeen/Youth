@@ -1,0 +1,13 @@
+D:\Freelance\ServerVersion\Youth\DAL\bin\Release\netcoreapp3.0\DAL.deps.json
+D:\Freelance\ServerVersion\Youth\DAL\bin\Release\netcoreapp3.0\DAL.dll
+D:\Freelance\ServerVersion\Youth\DAL\bin\Release\netcoreapp3.0\DAL.pdb
+D:\Freelance\ServerVersion\Youth\DAL\bin\Release\netcoreapp3.0\Context.dll
+D:\Freelance\ServerVersion\Youth\DAL\bin\Release\netcoreapp3.0\Entities.dll
+D:\Freelance\ServerVersion\Youth\DAL\bin\Release\netcoreapp3.0\Context.pdb
+D:\Freelance\ServerVersion\Youth\DAL\bin\Release\netcoreapp3.0\Entities.pdb
+D:\Freelance\ServerVersion\Youth\DAL\obj\Release\netcoreapp3.0\DAL.csprojAssemblyReference.cache
+D:\Freelance\ServerVersion\Youth\DAL\obj\Release\netcoreapp3.0\DAL.AssemblyInfoInputs.cache
+D:\Freelance\ServerVersion\Youth\DAL\obj\Release\netcoreapp3.0\DAL.AssemblyInfo.cs
+D:\Freelance\ServerVersion\Youth\DAL\obj\Release\netcoreapp3.0\DAL.csproj.CopyComplete
+D:\Freelance\ServerVersion\Youth\DAL\obj\Release\netcoreapp3.0\DAL.dll
+D:\Freelance\ServerVersion\Youth\DAL\obj\Release\netcoreapp3.0\DAL.pdb

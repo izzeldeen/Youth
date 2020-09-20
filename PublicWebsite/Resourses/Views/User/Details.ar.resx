@@ -117,7 +117,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CreatedAt" xml:space="preserve">
+    <value>تاريخ الإنشاء </value>
+  </data>
+  <data name="Delivery Info" xml:space="preserve">
+    <value>معلومات التوصيل </value>
+  </data>
   <data name="HellowWorld" xml:space="preserve">
     <value>مرحبا بك</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>المنتج </value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>الموقع</value>
+  </data>
+  <data name="OrderId" xml:space="preserve">
+    <value>رقم الطلب </value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>طلبات </value>
+  </data>
+  <data name="Phonenumber" xml:space="preserve">
+    <value>رقم الهاتف </value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>الكمية </value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>الحالة </value>
+  </data>
+  <data name="Total Price" xml:space="preserve">
+    <value>السعر الإجمالي</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>اسم المستخدم </value>
+  </data>
+  <data name="View Order Details" xml:space="preserve">
+    <value>عرض تفاصيل الطلب </value>
   </data>
 </root>

@@ -42,6 +42,12 @@
                             <p>Delivery Info : @Model.DeliveryInfo</p>
                         </div>
                         <div class="col-md-6">
+                            <p>Delivery Date : @Model.DeliveryDate</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Delivery Time : @Model.DeliveryTime</p>
+                        </div>
+                        <div class="col-md-6">
                             <p>Location : <a asp-controller="Orders" asp-action="Location" asp-route-latitude="@Model.DeliveryLatitude" asp-route-longitude="@Model.DeliveryLongitude" target="_blank">Click To View Location</a></p>
                         </div>
                     </div>

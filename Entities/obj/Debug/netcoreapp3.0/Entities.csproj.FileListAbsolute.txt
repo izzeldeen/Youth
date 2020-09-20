@@ -41,3 +41,11 @@ C:\Backup\V4\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.AssemblyInfo.cs
 C:\Backup\V4\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.csproj.CoreCompileInputs.cache
 C:\Backup\V4\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.dll
 C:\Backup\V4\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.pdb
+D:\Freelance\ServerVersion\Youth\Entities\bin\Debug\netcoreapp3.0\Entities.deps.json
+D:\Freelance\ServerVersion\Youth\Entities\bin\Debug\netcoreapp3.0\Entities.dll
+D:\Freelance\ServerVersion\Youth\Entities\bin\Debug\netcoreapp3.0\Entities.pdb
+D:\Freelance\ServerVersion\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.AssemblyInfoInputs.cache
+D:\Freelance\ServerVersion\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.AssemblyInfo.cs
+D:\Freelance\ServerVersion\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.dll
+D:\Freelance\ServerVersion\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.pdb
+D:\Freelance\ServerVersion\Youth\Entities\obj\Debug\netcoreapp3.0\Entities.csprojAssemblyReference.cache

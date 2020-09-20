@@ -117,7 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="../css/sb-admin-2.min.css" xml:space="preserve">
+    <value>../css/sb-admin-2.min.css</value>
+  </data>
+  <data name="../vendor/fontawesome-free/css/all.min.css" xml:space="preserve">
+    <value>../vendor/fontawesome-free/css/all.min.css</value>
+  </data>
+  <data name="Dont Have An Account ? Register" xml:space="preserve">
+    <value>ليس لديك حساب ؟ انشاء حساب </value>
+  </data>
+  <data name="Enter Phonenumber..." xml:space="preserve">
+    <value>ادخل رقم الهاتف </value>
+  </data>
   <data name="HellowWorld" xml:space="preserve">
     <value>مرحبا بك</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>تسجيل دخول </value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>رقم السر </value>
+  </data>
+  <data name="Sign In" xml:space="preserve">
+    <value>تسجيل الدخول</value>
   </data>
 </root>

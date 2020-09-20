@@ -117,16 +117,85 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="../../fontawesome-free/css/all.min.css" xml:space="preserve">
+    <value>../../fontawesome-free/css/all.min.css</value>
+  </data>
+  <data name="Arabic" xml:space="preserve">
+    <value>Arabic</value>
+  </data>
   <data name="Contact" xml:space="preserve">
     <value>Contact</value>
   </data>
+  <data name="Contact Us" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="dir" xml:space="preserve">
+    <value>ltr</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Home</value>
+  </data>
+  <data name="Log out" xml:space="preserve">
+    <value>Log out</value>
+  </data>
+  <data name="Logo" xml:space="preserve">
+    <value>/images/logo E.png</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="My Orders" xml:space="preserve">
+    <value>My Orders</value>
+  </data>
+  <data name="Personal Information" xml:space="preserve">
+    <value>Personal Information</value>
   </data>
   <data name="shop" xml:space="preserve">
     <value>Shop From En</value>
   </data>
   <data name="Sign In / Register" xml:space="preserve">
     <value>Sign In / Register</value>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>../../css/style.css</value>
+  </data>
+  <data name="StyleSheet" xml:space="preserve">
+    <value>../../css/StyleSheet.css</value>
+  </data>
+  <data name="~/css/animate.css" xml:space="preserve">
+    <value>../../css/animate.css</value>
+  </data>
+  <data name="~/css/aos.css" xml:space="preserve">
+    <value>../../css/aos.css</value>
+  </data>
+  <data name="~/css/bootstrap-datepicker.css" xml:space="preserve">
+    <value>../../css/bootstrap-datepicker.css</value>
+  </data>
+  <data name="~/css/flaticon.css" xml:space="preserve">
+    <value>../../css/flaticon.css</value>
+  </data>
+  <data name="~/css/icomoon.css" xml:space="preserve">
+    <value>../../css/icomoon.css</value>
+  </data>
+  <data name="~/css/ionicons.min.css" xml:space="preserve">
+    <value>../../css/ionicons.min.css</value>
+  </data>
+  <data name="~/css/jquery.timepicker.css" xml:space="preserve">
+    <value>../../css/jquery.timepicker.css</value>
+  </data>
+  <data name="~/css/magnific-popup.css" xml:space="preserve">
+    <value>../../css/magnific-popup.css</value>
+  </data>
+  <data name="~/css/open-iconic-bootstrap.min.css" xml:space="preserve">
+    <value>../../css/open-iconic-bootstrap.min.css</value>
+  </data>
+  <data name="~/css/owl.carousel.min.css" xml:space="preserve">
+    <value>../../css/owl.carousel.min.css</value>
+  </data>
+  <data name="~/css/owl.theme.default.min.css" xml:space="preserve">
+    <value>../../css/owl.theme.default.min.css</value>
   </data>
 </root>

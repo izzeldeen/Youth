@@ -28,3 +28,16 @@ C:\Backup\V4\Youth\Context\obj\Debug\netcoreapp3.0\Context.csproj.CopyComplete
 C:\Backup\V4\Youth\Context\obj\Debug\netcoreapp3.0\Context.dll
 C:\Backup\V4\Youth\Context\obj\Debug\netcoreapp3.0\Context.pdb
 C:\Backup\V4\Youth\Context\obj\Debug\netcoreapp3.0\Context.genruntimeconfig.cache
+D:\Freelance\ServerVersion\Youth\Context\bin\Debug\netcoreapp3.0\Context.deps.json
+D:\Freelance\ServerVersion\Youth\Context\bin\Debug\netcoreapp3.0\Context.runtimeconfig.json
+D:\Freelance\ServerVersion\Youth\Context\bin\Debug\netcoreapp3.0\Context.runtimeconfig.dev.json
+D:\Freelance\ServerVersion\Youth\Context\bin\Debug\netcoreapp3.0\Context.dll
+D:\Freelance\ServerVersion\Youth\Context\bin\Debug\netcoreapp3.0\Context.pdb
+D:\Freelance\ServerVersion\Youth\Context\bin\Debug\netcoreapp3.0\Entities.dll
+D:\Freelance\ServerVersion\Youth\Context\bin\Debug\netcoreapp3.0\Entities.pdb
+D:\Freelance\ServerVersion\Youth\Context\obj\Debug\netcoreapp3.0\Context.csprojAssemblyReference.cache
+D:\Freelance\ServerVersion\Youth\Context\obj\Debug\netcoreapp3.0\Context.AssemblyInfoInputs.cache
+D:\Freelance\ServerVersion\Youth\Context\obj\Debug\netcoreapp3.0\Context.AssemblyInfo.cs
+D:\Freelance\ServerVersion\Youth\Context\obj\Debug\netcoreapp3.0\Context.csproj.CopyComplete
+D:\Freelance\ServerVersion\Youth\Context\obj\Debug\netcoreapp3.0\Context.dll
+D:\Freelance\ServerVersion\Youth\Context\obj\Debug\netcoreapp3.0\Context.pdb

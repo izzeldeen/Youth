@@ -19,22 +19,22 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="~/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="~/css/animate.css">
-    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="~/css/magnific-popup.css">
-    <link rel="stylesheet" href="~/css/aos.css">
-    <link rel="stylesheet" href="~/css/ionicons.min.css">
-    <link rel="stylesheet" href="~/css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="~/css/jquery.timepicker.css">
-    <link rel="stylesheet" href="~/css/flaticon.css">
-    <link rel="stylesheet" href="~/css/icomoon.css">
-    <link rel="stylesheet" href="~/css/style.css">
-    <link rel="stylesheet" href="~/css/StyleSheet.css">
-    <link href="../../fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="@localizer["~/css/open-iconic-bootstrap.min.css"]">
+    <link rel="stylesheet" href="@localizer["~/css/animate.css"]">
+    <link rel="stylesheet" href="@localizer["~/css/owl.carousel.min.css"]">
+    <link rel="stylesheet" href="@localizer["~/css/owl.theme.default.min.css"]">
+    <link rel="stylesheet" href="@localizer["~/css/magnific-popup.css"]">
+    <link rel="stylesheet" href="@localizer["~/css/aos.css"]">
+    <link rel="stylesheet" href="@localizer["~/css/ionicons.min.css"]">
+    <link rel="stylesheet" href="@localizer["~/css/bootstrap-datepicker.css"]">
+    <link rel="stylesheet" href="@localizer["~/css/jquery.timepicker.css"]">
+    <link rel="stylesheet" href="@localizer["~/css/flaticon.css"]">
+    <link rel="stylesheet" href="@localizer["~/css/icomoon.css"]">
+    <link rel="stylesheet" href="@localizer["Style"]">
+    <link rel="stylesheet" href="@localizer["StyleSheet"]">
+    <link href="@localizer["../../fontawesome-free/css/all.min.css"]" rel="stylesheet" type="text/css">
 </head>
-<body class="goto-here">
+<body class="goto-here" dir="@localizer["dir"]">
     @* <div class="py-1 bg-primary">
             <div class="container">
                 <div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
@@ -58,7 +58,7 @@
         </div> *@
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
-            <a class="navbar-brand" asp-controller="Home" asp-action="Index"><img src="/images/logo E.png" style="height:100px; width:160px"></a>
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index"><img src="@localizer["Logo"]" style="height:100px; width:160px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
             </button>
@@ -155,18 +155,7 @@
                             </div>
                         </div>
                     </div> *@
-                <div class="col-md">
-                    <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">Have a Questions?</h2>
-                        <div class="block-23 mb-3">
-                            <ul>
-                                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-                                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+               
             </div>
             <div class="row">
                 <div class="col-md-12 text-center">

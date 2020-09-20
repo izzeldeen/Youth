@@ -92,7 +92,7 @@ namespace PublicWebsite.Controllers
                 if (!_modelValidations.IsValid(model))
                     return View();
 
-                var user = _usersRepository.Register(new RegisterDto { Phonenumber = model.Phonenumber, Firstname = model.Firstname, Lastname = model.Lastname, Password = model.Password, RoleId = 2 });
+                var user = _usersRepository.Register(new RegisterDto { Phonenumber = model.Phonenumber, Firstname = model.Firstname, Lastname = model.Lastname, Password = model.Password, RoleId = 1 });
 
                 if (user == null)
                     return View();

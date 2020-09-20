@@ -33,7 +33,7 @@ namespace CMS.Helpers
 
             var Url = $"{dbPath}";
 
-            return Url;
+            return "http://dashboard.alamanahdairy.com/" + Url;
 
         }
 
@@ -61,7 +61,7 @@ namespace CMS.Helpers
 
             var Url = $"{dbPath}";
 
-            return Url;
+            return "http://dashboard.alamanahdairy.com/" + Url;
 
         }
     }

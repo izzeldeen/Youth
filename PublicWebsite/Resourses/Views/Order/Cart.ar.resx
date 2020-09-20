@@ -117,7 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Cart is Empty" xml:space="preserve">
+    <value>السلة فارغة </value>
+  </data>
+  <data name="Cart Totals" xml:space="preserve">
+    <value>مجموع المنتقيات </value>
+  </data>
   <data name="HellowWorld" xml:space="preserve">
     <value>مرحبا بك</value>
+  </data>
+  <data name="JOD" xml:space="preserve">
+    <value>د.أ</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>السعر</value>
+  </data>
+  <data name="Proceed to Checkout" xml:space="preserve">
+    <value>خروج </value>
+  </data>
+  <data name="Product name" xml:space="preserve">
+    <value>اسم المنتج</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>الكمية </value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>المجمل </value>
   </data>
 </root>

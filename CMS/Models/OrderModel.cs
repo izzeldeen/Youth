@@ -12,6 +12,8 @@ namespace CMS.Models
         public string Phonenumber { get; set; }
         public string OrderStatus { get; set; }
         public string DeliveryInfo { get; set; }
+        public string DeliveryDate { get; set; }
+        public string DeliveryTime { get; set; }
         public float DeliveryLatitude { get; set; }
         public float DeliveryLongitude { get; set; }
         public int TotalPrice { get; set; }

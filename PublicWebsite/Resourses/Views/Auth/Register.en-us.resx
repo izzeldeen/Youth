@@ -117,7 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Already Have An Account ? Sign In" xml:space="preserve">
+    <value>Already Have An Account ? Sign In</value>
+  </data>
+  <data name="Firstname" xml:space="preserve">
+    <value>Firstname</value>
+  </data>
   <data name="HellowWorld" xml:space="preserve">
     <value>Welecome to Out Shop</value>
+  </data>
+  <data name="Lastname" xml:space="preserve">
+    <value>Lastname</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Phonenumber" xml:space="preserve">
+    <value>Phonenumber</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
   </data>
 </root>

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Youth\\V4\\Youth\\PublicWebsite\\PublicWebsite.csproj": {}
+    "D:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\PublicWebsite.csproj": {}
   },
   "projects": {
-    "E:\\Youth\\V4\\Youth\\Context\\Context.csproj": {
+    "D:\\Freelance\\ServerVersion\\Youth\\Context\\Context.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Youth\\V4\\Youth\\Context\\Context.csproj",
+        "projectUniqueName": "D:\\Freelance\\ServerVersion\\Youth\\Context\\Context.csproj",
         "projectName": "Context",
-        "projectPath": "E:\\Youth\\V4\\Youth\\Context\\Context.csproj",
-        "packagesPath": "C:\\Users\\izzel\\.nuget\\packages\\",
-        "outputPath": "E:\\Youth\\V4\\Youth\\Context\\obj\\",
+        "projectPath": "D:\\Freelance\\ServerVersion\\Youth\\Context\\Context.csproj",
+        "packagesPath": "C:\\Users\\mkisw\\.nuget\\packages\\",
+        "outputPath": "D:\\Freelance\\ServerVersion\\Youth\\Context\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\izzel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mkisw\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "E:\\Youth\\V4\\Youth\\Entities\\Entities.csproj": {
-                "projectPath": "E:\\Youth\\V4\\Youth\\Entities\\Entities.csproj"
+              "D:\\Freelance\\ServerVersion\\Youth\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\Freelance\\ServerVersion\\Youth\\Entities\\Entities.csproj"
               }
             }
           }
@@ -67,32 +67,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.0.1, 3.0.1]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Youth\\V4\\Youth\\DAL\\DAL.csproj": {
+    "D:\\Freelance\\ServerVersion\\Youth\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Youth\\V4\\Youth\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\Freelance\\ServerVersion\\Youth\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "E:\\Youth\\V4\\Youth\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\izzel\\.nuget\\packages\\",
-        "outputPath": "E:\\Youth\\V4\\Youth\\DAL\\obj\\",
+        "projectPath": "D:\\Freelance\\ServerVersion\\Youth\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\mkisw\\.nuget\\packages\\",
+        "outputPath": "D:\\Freelance\\ServerVersion\\Youth\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\izzel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mkisw\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -105,11 +99,11 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "E:\\Youth\\V4\\Youth\\Context\\Context.csproj": {
-                "projectPath": "E:\\Youth\\V4\\Youth\\Context\\Context.csproj"
+              "D:\\Freelance\\ServerVersion\\Youth\\Context\\Context.csproj": {
+                "projectPath": "D:\\Freelance\\ServerVersion\\Youth\\Context\\Context.csproj"
               },
-              "E:\\Youth\\V4\\Youth\\Entities\\Entities.csproj": {
-                "projectPath": "E:\\Youth\\V4\\Youth\\Entities\\Entities.csproj"
+              "D:\\Freelance\\ServerVersion\\Youth\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\Freelance\\ServerVersion\\Youth\\Entities\\Entities.csproj"
               }
             }
           }
@@ -138,32 +132,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.0.1, 3.0.1]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Youth\\V4\\Youth\\Entities\\Entities.csproj": {
+    "D:\\Freelance\\ServerVersion\\Youth\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Youth\\V4\\Youth\\Entities\\Entities.csproj",
+        "projectUniqueName": "D:\\Freelance\\ServerVersion\\Youth\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "E:\\Youth\\V4\\Youth\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\izzel\\.nuget\\packages\\",
-        "outputPath": "E:\\Youth\\V4\\Youth\\Entities\\obj\\",
+        "projectPath": "D:\\Freelance\\ServerVersion\\Youth\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\mkisw\\.nuget\\packages\\",
+        "outputPath": "D:\\Freelance\\ServerVersion\\Youth\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\izzel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mkisw\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -196,32 +184,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.0.1, 3.0.1]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Youth\\V4\\Youth\\PublicWebsite\\PublicWebsite.csproj": {
+    "D:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\PublicWebsite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Youth\\V4\\Youth\\PublicWebsite\\PublicWebsite.csproj",
+        "projectUniqueName": "D:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\PublicWebsite.csproj",
         "projectName": "PublicWebsite",
-        "projectPath": "E:\\Youth\\V4\\Youth\\PublicWebsite\\PublicWebsite.csproj",
-        "packagesPath": "C:\\Users\\izzel\\.nuget\\packages\\",
-        "outputPath": "E:\\Youth\\V4\\Youth\\PublicWebsite\\obj\\",
+        "projectPath": "D:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\PublicWebsite.csproj",
+        "packagesPath": "C:\\Users\\mkisw\\.nuget\\packages\\",
+        "outputPath": "D:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\izzel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mkisw\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -234,11 +216,11 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "E:\\Youth\\V4\\Youth\\Context\\Context.csproj": {
-                "projectPath": "E:\\Youth\\V4\\Youth\\Context\\Context.csproj"
+              "D:\\Freelance\\ServerVersion\\Youth\\Context\\Context.csproj": {
+                "projectPath": "D:\\Freelance\\ServerVersion\\Youth\\Context\\Context.csproj"
               },
-              "E:\\Youth\\V4\\Youth\\DAL\\DAL.csproj": {
-                "projectPath": "E:\\Youth\\V4\\Youth\\DAL\\DAL.csproj"
+              "D:\\Freelance\\ServerVersion\\Youth\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\Freelance\\ServerVersion\\Youth\\DAL\\DAL.csproj"
               }
             }
           }
@@ -291,16 +273,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.0.1, 3.0.1]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.0.3, 3.0.3]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -309,7 +281,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
