@@ -1,4 +1,5 @@
 ﻿@model DAL.Dto.EditProfileDto
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 <section class="ftco-section contact-section bg-light">
     <div class="container">
         <div class="row block-9">
@@ -18,25 +19,23 @@
                         <input type="hidden" class="form-control" value="@Model.Id"  placeholder="Firstname" name="Id">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control"  value="@Model.Firstname" placeholder="Firstname" name="Firstname">
+                        <input type="text" class="form-control"  value="@Model.Firstname" placeholder="@localizer["Firstname"]" name="Firstname">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control"  value="@Model.Lastname" placeholder="Lastname" name="Lastname">
+                        <input type="text" class="form-control"  value="@Model.Lastname" placeholder="@localizer["Lastname"]" name="Lastname">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control"  value="@Model.Phonenumber" placeholder="Phonenumber" name="Phonenumber">
+                        <input type="text" class="form-control"  value="@Model.Phonenumber" placeholder="@localizer["Phonenumber"]" name="Phonenumber">
                     </div>
                     <div class="form-group">
                         <input type="file" class="form-control-file"  name="Avatar">
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Update" class="btn btn-primary py-3 px-5  float-right">
+                        <input type="submit" value="@localizer["Update"]" class="btn btn-primary py-3 px-5  float-right">
                     </div>
                 </form>
 
             </div>
-
-
         </div>
     </div>
 </section>

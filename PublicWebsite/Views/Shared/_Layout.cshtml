@@ -60,7 +60,7 @@
         <div class="container">
             <a class="navbar-brand" asp-controller="Home" asp-action="Index"><img src="@localizer["Logo"]" style="height:100px; width:160px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="oi oi-menu"></span> Menu
+                <span class="oi oi-menu"></span> @localizer["Menu"]
             </button>
 
             <div class="collapse navbar-collapse" id="ftco-nav">
@@ -71,10 +71,10 @@
                         <li class="nav-item"><a asp-controller="Home" asp-action="Blog" class="nav-link">Blog</a></li> *@
                     <li class="nav-item"><a asp-controller="Home" asp-action="Contact" class="nav-link">@localizer["Contact"]</a></li>
                      <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@localizer["language"]</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown04">
-                                <a class="dropdown-item" onclick="UpdateLanguage('en')" >English</a>
-                                <a class="dropdown-item" onclick="UpdateLanguage('ar')" >Arabic</a>
+                                <a class="dropdown-item" onclick="UpdateLanguage('en')" >@localizer["English"]</a>
+                                <a class="dropdown-item" onclick="UpdateLanguage('ar')" >@localizer["Arabic"]</a>
                             </div>
                         </li>
                     @if (((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.Name) == null)
@@ -90,9 +90,9 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@name</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown04">
-                                <a class="dropdown-item" asp-controller="User" asp-action="UserOrders"><i class="fas fa-list mr-1"></i> My Orders</a>
-                                <a class="dropdown-item" asp-controller="User" asp-action="Index"><i class="fas fa-user mr-1"></i>Personal Information</a>
-                                <a class="dropdown-item" asp-controller="Auth" asp-action="Logout"><i class="fas fa-sign-out-alt mr-1"></i> Log out</a>
+                                <a class="dropdown-item" asp-controller="User" asp-action="UserOrders"><i class="fas fa-list mr-1"></i> @localizer["My Orders"]</a>
+                                <a class="dropdown-item" asp-controller="User" asp-action="Index"><i class="fas fa-user mr-1"></i>@localizer["Personal Information"]</a>
+                                <a class="dropdown-item" asp-controller="Auth" asp-action="Logout"><i class="fas fa-sign-out-alt mr-1"></i> @localizer["Log out"]</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -129,12 +129,12 @@
                 </div>
                 <div class="col-md">
                     <div class="ftco-footer-widget mb-4 ml-md-5">
-                        <h2 class="ftco-heading-2">Menu</h2>
+                        <h2 class="ftco-heading-2">@localizer["Menu"]</h2>
                         <ul class="list-unstyled">
-                            <li><a asp-controller="Product" asp-action="Index" class="py-2 d-block">@localizer["Shop"]</a></li>
+                            <li><a asp-controller="Product" asp-action="Index" class="py-2 d-block">@localizer["shop"]</a></li>
                             @* <li><a href="#" class="py-2 d-block">About</a></li>
                                 <li><a href="#" class="py-2 d-block">Journal</a></li> *@
-                            <li><a asp-controller="Home" asp-action="Contact" class="py-2 d-block">Contact Us</a></li>
+                            <li><a asp-controller="Home" asp-action="Contact" class="py-2 d-block">@localizer["Contact Us"]</a></li>
                         </ul>
                     </div>
                 </div>

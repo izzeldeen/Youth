@@ -1,4 +1,5 @@
 ﻿@model PublicWebsite.Models.LoginModel
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,14 +38,14 @@
                             <div class="col-lg-8 mx-auto">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Sign In</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">@localizer["Sign In"]</h1>
                                     </div>
                                     <form class="user" method="post" asp-controller="Auth" asp-action="Login">
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Phonenumber..." name="Phonenumber" required>
+                                            <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="@localizer["Enter Phonenumber..."]" name="Phonenumber" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="Password" required>
+                                            <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="@localizer["Sign In"]" name="Password" required>
                                         </div>
                                         @*<div class="form-group">
                                                 <div class="custom-control custom-checkbox small">
@@ -52,7 +53,7 @@
                                                     <label class="custom-control-label" for="customCheck">Remember Me</label>
                                                 </div>
                                             </div>*@
-                                        <input type="submit" value="Login" class="btn btn-primary btn-user btn-block">
+                                        <input type="submit" value="@localizer["Login"]" class="btn btn-primary btn-user btn-block">
 
                                         @*<hr>*@
                                         @*<a href="index.html" class="btn btn-google btn-user btn-block">
@@ -70,7 +71,7 @@
                                             <a class="small" href="register.html">Create an Account!</a>
                                         </div>*@
                                     <div class="col-md-12 text-center mt-3">
-                                        <a asp-controller="Auth" asp-action="Register">Dont Have An Account ? Register</a>
+                                        <a asp-controller="Auth" asp-action="Register">@localizer["Dont Have An Account ? Register"]</a>
                                     </div>
                                 </div>
                             </div>

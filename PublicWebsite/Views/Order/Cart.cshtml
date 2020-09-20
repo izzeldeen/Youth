@@ -1,4 +1,5 @@
 @model Entities.ShoppingCart
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 
 <section class="ftco-section ftco-cart">
     <div class="container">
@@ -14,10 +15,10 @@
                                 <tr class="text-center">
                                     <th>&nbsp;</th>
                                     <th>&nbsp;</th>
-                                    <th>Product name</th>
-                                    <th>Price</th>
-                                    <th>Quantity</th>
-                                    <th>Total</th>
+                                    <th>@localizer["Product name"]</th>
+                                    <th>@localizer["Price"]</th>
+                                    <th>@localizer["Quantity"]</th>
+                                    <th>@localizer["Total"]</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -59,21 +60,21 @@
             <div class="row justify-content-end">
                 <div class="col-lg-4 mt-5 cart-wrap ftco-animate fadeInUp ftco-animated">
                     <div class="cart-total mb-3">
-                        <h3>Cart Totals</h3>
+                        <h3>@localizer["Cart Totals"]</h3>
                        
                         <hr>
                         <p class="d-flex total-price">
-                            <span>Total</span>
+                            <span>@localizer["Total"]</span>
                             <span>@Model.Price</span>
                         </p>
                     </div>
-                    <p><a asp-controller="Order" asp-action="Order" asp-route-TotalPrice="@Model.Price"  class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
+                    <p><a asp-controller="Order" asp-action="Order" asp-route-TotalPrice="@Model.Price"  class="btn btn-primary py-3 px-4">@localizer["Proceed to Checkout"]</a></p>
                 </div>
             </div>
  </form>
         }
         else {
-<h1>Cart is Empty</h1>
+<h1>@localizer["Cart is Empty"]</h1>
         }
 
        

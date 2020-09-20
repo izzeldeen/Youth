@@ -2,6 +2,7 @@
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @model DAL.Dto.RegisterDto
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 
 
 <section class="ftco-section contact-section bg-light">
@@ -19,29 +20,29 @@
                         </div>
                         }*@
                     <div class="col-md-12 text-center">
-                         <h2 class="text-center">Register</h2>
+                         <h2 class="text-center">@localizer["Register"]</h2>
                     </div>  
 
                     <div class="form-group col-md-12">
-                        <input type="text" class="form-control" placeholder="Firstname" name="Firstname">
+                        <input type="text" class="form-control" placeholder="@localizer["Firstname"]" name="Firstname">
                     </div>
                     <div class="form-group col-md-12">
-                        <input type="text" class="form-control" placeholder="Lastname" name="Lastname">
+                        <input type="text" class="form-control" placeholder="@localizer["Lastname"]" name="Lastname">
                     </div>
                     <div class="form-group col-md-12">
-                        <input type="text" class="form-control" placeholder="Phonenumber" name="Phonenumber">
+                        <input type="text" class="form-control" placeholder="@localizer["Phonenumber"]" name="Phonenumber">
                     </div>
                     <div class="form-group col-md-12">
-                        <input type="password" class="form-control" placeholder="Password" name="Password">
+                        <input type="password" class="form-control" placeholder="@localizer["Password"]" name="Password">
                     </div>
                     <div class="form-group col-md-12">
                         <input type="file" class="form-control-file" name="Avatar">
                     </div>
                     <div class="form-group col-md-12 text-center">
-                        <input type="submit" value="Register" class="btn btn-primary py-3 px-5">
+                        <input type="submit" value="@localizer["Register"]" class="btn btn-primary py-3 px-5">
                     </div>
                     <div class="col-md-12 text-center mt-3">
-                        <a asp-controller="Auth" asp-action="Login">Already Have An Account ? Sign In</a>
+                        <a asp-controller="Auth" asp-action="Login">@localizer["Already Have An Account ? Sign In"]</a>
                     </div>
                 </form>
 

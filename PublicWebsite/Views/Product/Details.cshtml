@@ -2,6 +2,7 @@
     int counter = 0;
  }
 @model PublicWebsite.ViewModels.ProductViewModel
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 
 <div class="home-slider owl-carousel">
     <div class="slider-item" style="background-image: url(../../images/bg_1.jpg);">
@@ -61,7 +62,7 @@
                             
                                 <h3>@Model.Name</h3>
 
-                                <p class="price"><span> @Model.Price JOD</span></p>
+                                <p class="price"><span> @Model.Price @localizer["JOD"]</span></p>
                                 <br>
                                 <p>
                                  @Model.Description 
@@ -70,14 +71,14 @@
                                <p>@Model.Message </p>
                                     <div class="input-group itemCartHolder">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text">Quantity</span>
+                                            <span class="input-group-text">@localizer["Quantity"]</span>
                                         </div>
                                         @*<input type="number" class="form-control productQuantity" value="1" min="1" max="100" title="Quantity">*@
                                         <input type="number" class="quantity form-control input-number" id="input-number-@Model.Id" placeholder=""   name="Quntity" min="1" max="100">
                                         <div class="input-group-append">
                                             <button data-id="1939" type="button" onclick="labelCounter(@Model.Id)" class="noZButton btnAddToCart btn btn-primary" title="Add to Cart">
                                                 <i class="fas fa-shopping-cart mr-1"></i>
-                                                Add to Cart
+                                               @localizer["Add to Cart"]
                                             </button>
                                         </div>
                                     </div>

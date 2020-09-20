@@ -1,5 +1,5 @@
 {
-  "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\PublicWebsite.csproj",
+  "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\PublicWebsite.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -10238,127 +10238,127 @@
   "RootNamespace": "PublicWebsite",
   "Documents": [
     {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\Product\\Details.cshtml",
-      "TargetPath": "Views\\Product\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\Auth\\Register.cshtml",
-      "TargetPath": "Views\\Auth\\Register.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\User\\Index.cshtml",
-      "TargetPath": "Views\\User\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\Home\\Cart.cshtml",
-      "TargetPath": "Views\\Home\\Cart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\Home\\Checkout.cshtml",
-      "TargetPath": "Views\\Home\\Checkout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\Home\\Product.cshtml",
-      "TargetPath": "Views\\Home\\Product.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\Order\\Cart.cshtml",
-      "TargetPath": "Views\\Order\\Cart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\Auth\\Login.cshtml",
-      "TargetPath": "Views\\Auth\\Login.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\Home\\Blog.cshtml",
-      "TargetPath": "Views\\Home\\Blog.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\User\\UserOrders.cshtml",
-      "TargetPath": "Views\\User\\UserOrders.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\User\\Details.cshtml",
-      "TargetPath": "Views\\User\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\Shared\\Error.cshtml",
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\Order\\Order.cshtml",
-      "TargetPath": "Views\\Order\\Order.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\Home\\Contact.cshtml",
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\Home\\Contact.cshtml",
       "TargetPath": "Views\\Home\\Contact.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\Product\\Details.cshtml",
+      "TargetPath": "Views\\Product\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\Home\\Blog.cshtml",
+      "TargetPath": "Views\\Home\\Blog.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\Home\\About.cshtml",
-      "TargetPath": "Views\\Home\\About.cshtml",
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\Home\\Checkout.cshtml",
+      "TargetPath": "Views\\Home\\Checkout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\Home\\Shop.cshtml",
-      "TargetPath": "Views\\Home\\Shop.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\Home\\BlogSingle.cshtml",
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\Home\\BlogSingle.cshtml",
       "TargetPath": "Views\\Home\\BlogSingle.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\Home\\Wishlist.cshtml",
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\Auth\\Register.cshtml",
+      "TargetPath": "Views\\Auth\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\User\\UserOrders.cshtml",
+      "TargetPath": "Views\\User\\UserOrders.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\Home\\Wishlist.cshtml",
       "TargetPath": "Views\\Home\\Wishlist.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Freelance\\ServerVersion\\Youth\\PublicWebsite\\Views\\Product\\Index.cshtml",
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\Order\\Cart.cshtml",
+      "TargetPath": "Views\\Order\\Cart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\Auth\\Login.cshtml",
+      "TargetPath": "Views\\Auth\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\User\\Index.cshtml",
+      "TargetPath": "Views\\User\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\Order\\Order.cshtml",
+      "TargetPath": "Views\\Order\\Order.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\User\\Details.cshtml",
+      "TargetPath": "Views\\User\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\Home\\Shop.cshtml",
+      "TargetPath": "Views\\Home\\Shop.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\Home\\About.cshtml",
+      "TargetPath": "Views\\Home\\About.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\Home\\Product.cshtml",
+      "TargetPath": "Views\\Home\\Product.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\Home\\Cart.cshtml",
+      "TargetPath": "Views\\Home\\Cart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Youth\\V5\\Youth\\PublicWebsite\\Views\\Product\\Index.cshtml",
       "TargetPath": "Views\\Product\\Index.cshtml",
       "FileKind": "mvc"
     }

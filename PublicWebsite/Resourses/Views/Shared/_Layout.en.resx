@@ -138,6 +138,9 @@
   <data name="Home" xml:space="preserve">
     <value>Home</value>
   </data>
+  <data name="language" xml:space="preserve">
+    <value>language</value>
+  </data>
   <data name="Log out" xml:space="preserve">
     <value>Log out</value>
   </data>
@@ -154,7 +157,7 @@
     <value>Personal Information</value>
   </data>
   <data name="shop" xml:space="preserve">
-    <value>Shop From En</value>
+    <value>Shop</value>
   </data>
   <data name="Sign In / Register" xml:space="preserve">
     <value>Sign In / Register</value>

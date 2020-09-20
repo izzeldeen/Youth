@@ -1,4 +1,5 @@
 @model PublicWebsite.Models.OrderModel
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 
 <div class="container">
     <div class="row">
@@ -13,17 +14,17 @@
                 <form class="bg-white p-5 contact-form" method="post">
                     @* <h5 class="text-center">Place Order</h5> *@
                     <div class="form-group">
-                        <label>Delivery Info</label>
+                        <label>@localizer["Delivery Info"]</label>
                         <input type="text" class="form-control" placeholder="Delivery Info" name="DeliveryInfo">
                     </div>
                     <div>
                         <div class="form-group">
-                        <label>Time To Deliver</label>
+                        <label>@localizer["Time To Deliver"]</label>
                         <input type="time" class="form-control" name="DeliveryTime">
                     </div>
                     <div>
                         <div class="form-group">
-                        <label>Date To Deliver</label>
+                        <label>@localizer["Date To Deliver"]</label>
                         <input type="date" class="form-control" name="DeliveryDate">
                     </div>
 
@@ -38,7 +39,7 @@
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary py-3 px-5"> Place Order </button>
+                        <button type="submit" class="btn btn-primary py-3 px-5"> @localizer["Place Order"]</button>
                     </div>
                 </form>
             </div>
